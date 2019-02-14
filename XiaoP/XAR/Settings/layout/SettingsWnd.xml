@@ -1,0 +1,482 @@
+<xlue>
+<objtreetemplate id="XiaoP.Settings.Tree" class="ObjectTreeTemplate">
+	<attr>
+			<left>-200</left>
+			<top>-200</top>
+			<width>2000</width>
+			<height>2000</height>
+			
+	</attr>	
+	<obj id="root" class="LayoutObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>536</width>
+			<height>396</height>
+		</attr>
+		<children>
+			<obj id="mirrorBkg" class="ImageObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<visible>0</visible> 
+				</attr>	
+			</obj>		
+			
+			<obj id="bkg_border" class="TextureObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<texture>texture.wndborder.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>
+				<children>
+					<obj id="bkg" class="FillObject">
+					<attr>
+						<left>6</left>
+						<top>6</top>
+						<width>father.width-12</width>
+						<height>father.height-12</height>
+						<filltype>Monochrome</filltype>
+						<blendtype>Source</blendtype>
+						<srcpt>0,0</srcpt>
+						<destpt>0,height</destpt>
+						<srccolor>107,166,49,255</srccolor>
+					</attr>
+					<children>
+						<obj id="settingswnd.caption" class="CaptionObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>father.height</height>
+							</attr>
+							<children>
+								<obj  id="xiaop.logo" class="ImageObject">
+									<attr>
+										<left>14</left>
+										<top>7</top>
+										<width>17</width>
+										<height>16</height>
+										<image>xiaop</image>
+									</attr>
+								</obj>
+								
+								<obj id="xiaop.text" class="TextObject">
+								<attr>
+										<left>36</left>
+										<top>5</top>
+										<width>50</width>
+										<height>20</height>
+										<text>系统设置</text>
+										<font>settingswnd.13.font</font>
+										<halign>center</halign>
+										<valign>center</valign>
+										<textcolor>settingswnd.white.color</textcolor>
+									</attr>
+								</obj>
+								<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+									<attr>
+										<left>father.width-60</left>
+										<top>0</top>
+										<width>60</width>
+										<height>60</height>
+										<MaxShow>false</MaxShow>
+										<Mini_NormalImageID>settingswndsys.min.icon.normal</Mini_NormalImageID>
+										<Mini_HoverImageID>settingswndsys.min.icon.hover</Mini_HoverImageID>
+										<Mini_DownImageID>settingswndsys.min.icon.down</Mini_DownImageID>
+										<Close_NormalImageID>settingswndsys.close.icon.normal</Close_NormalImageID>
+										<Close_HoverImageID>settingswndsys.close.icon.hover</Close_HoverImageID	>
+										<Close_DownImageID>settingswndsys.close.icon.down</Close_DownImageID>														
+									</attr>
+									<eventlist>
+										<event name="OnMinisize" file="SettingsWnd.xml.lua" func="OnMinisize" />
+										<event name="OnClose" file="SettingsWnd.xml.lua" func="OnClose" />
+									</eventlist>
+								</obj>
+							</children>
+						</obj>
+						<obj id="body" class="FillObject">
+							<attr>
+								<left>0</left>
+								<top>30</top>
+								<width>father.width</width>
+								<height>father.height-30</height>
+								<filltype>Monochrome</filltype>
+								<blendtype>Source</blendtype>
+								<srcpt>0,0</srcpt>
+								<destpt>0,height</destpt>
+								<srccolor>251,252,248,255</srccolor>
+							</attr>
+							<children>
+								<obj id="loginLayout" class="LayoutObject">
+								<attr>
+									<left>0</left>
+									<top>0</top>
+									<width>father.width</width>
+									<height>52</height>
+								</attr>
+								<children>
+									<obj id="login.fill" class="FillObject">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>120</width>
+										<height>father.height</height>
+										<filltype>Monochrome</filltype>
+										<blendtype>Source</blendtype>
+										<srcpt>0,0</srcpt>
+										<destpt>0,height</destpt>
+										<srccolor>244,249,240,255</srccolor>								
+									</attr>
+									<children>
+										<obj id="login.title" class="TextObject">
+										<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height</height>
+										<halign>center</halign>
+										<valign>center</valign>
+										<text>登录</text>
+										<font>settingswnd.14.font</font>
+										</attr>										
+										</obj>
+									</children>
+									</obj>
+									
+									<obj id="autostart.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>15</top>
+											<width>200</width>
+											<height>24</height>
+											<Text>开机时自动启动</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnAutoStartCheck" />
+										</eventlist>
+									</obj>	
+									
+									<!--obj id="autologin.check1" class="Thunder.ComboBox">
+										<attr>
+											<left>250</left>
+											<top>15</top>
+											<width>100</width>
+											<height>24</height>
+											<Text>开机自动登录</Text>
+											<taborder>4</taborder>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+
+									</obj-->
+												
+									<obj id="autoLogin.spliter" class="LineObject">
+									  <attr>
+										<left>0</left>
+										<top>father.height</top>
+										<width>father.width-4</width>
+										<height>1</height>
+										<color>settingswnd.white.color</color>
+										<srcpt>0,0</srcpt>
+										<destpt>father.width,0</destpt>
+										<pen>pen.solid</pen>
+									  </attr>
+									</obj>
+								</children>
+								</obj>	
+								
+								
+								<obj id="mainLayout" class="LayoutObject">
+								<attr>
+									<left>0</left>
+									<top>53</top>
+									<width>father.width</width>
+									<height>102</height>
+								</attr>
+								<children>
+									<obj id="main.fill" class="FillObject">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>120</width>
+										<height>father.height</height>
+										<filltype>Monochrome</filltype>
+										<blendtype>Source</blendtype>
+										<srcpt>0,0</srcpt>
+										<destpt>0,height</destpt>
+										<srccolor>244,249,240,255</srccolor>								
+									</attr>
+									<children>
+										<obj id="main.title" class="TextObject">
+										<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height</height>
+										<halign>center</halign>
+										<valign>center</valign>
+										<text>主面板</text>
+										<font>settingswnd.14.font</font>
+										</attr>										
+										</obj>
+									</children>
+									</obj>
+									
+									<obj id="main.desc" class="TextObject">
+										<attr>
+										<left>150</left>
+										<top>15</top>
+										<width>200</width>
+										<height>20</height>
+										<valign>center</valign>
+										<text>关闭主面板时</text>
+										<font>settingswnd.12.font</font>
+										</attr>										
+									</obj>
+									<obj id="hide.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>35</top>
+											<width>250</width>
+											<height>24</height>
+											<Text>隐藏到任务栏通知区域，不退出程序</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnHideCheck" />
+										</eventlist>
+									</obj>	
+									<obj id="exit.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>65</top>
+											<width>100</width>
+											<height>24</height>
+											<Text>退出程序</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnExitCheck" />
+										</eventlist>	
+									</obj>	
+									
+									<obj id="main.spliter" class="LineObject">
+									  <attr>
+										<left>0</left>
+										<top>father.height</top>
+										<width>father.width-4</width>
+										<height>1</height>
+										<color>settingswnd.white.color</color>
+										<srcpt>0,0</srcpt>
+										<destpt>father.width,0</destpt>
+										<pen>pen.solid</pen>
+									  </attr>
+									</obj>
+								</children>
+								</obj>								
+
+								<obj id="noticeLayout" class="LayoutObject">
+								<attr>
+									<left>0</left>
+									<top>156</top>
+									<width>father.width</width>
+									<height>95</height>
+								</attr>
+								<children>
+									<obj id="notice.fill" class="FillObject">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>120</width>
+										<height>father.height</height>
+										<filltype>Monochrome</filltype>
+										<blendtype>Source</blendtype>
+										<srcpt>0,0</srcpt>
+										<destpt>0,height</destpt>
+										<srccolor>244,249,240,255</srccolor>								
+									</attr>
+									<children>
+										<obj id="notice.title" class="TextObject">
+										<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height</height>
+										<halign>center</halign>
+										<valign>center</valign>
+										<text>提醒</text>
+										<font>settingswnd.14.font</font>
+										</attr>										
+										</obj>
+									</children>
+									</obj>
+									<obj id="notice.desc" class="TextObject">
+										<attr>
+											<left>150</left>
+											<top>5</top>
+											<width>200</width>
+											<height>20</height>
+											<valign>center</valign>
+											<text>待办到达时</text>
+											<font>settingswnd.12.font</font>
+										</attr>								
+									</obj>
+									<obj id="alwayspop.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>25</top>
+											<width>200</width>
+											<height>24</height>
+											<Text>始终显示</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnAlwaysPopCheck" />
+										</eventlist>	
+									</obj>	
+									<obj id="twominpop.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>47</top>
+											<width>150</width>
+											<height>24</height>
+											<Text>弹窗两分钟后消失</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnTwoMinPopCheck" />
+										</eventlist>	
+									</obj>		
+									<obj id="nopop.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>70</top>
+											<width>100</width>
+											<height>24</height>
+											<Text>不再显示</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnNoPopCheck" />
+										</eventlist>					
+									</obj>										
+									<obj id="notice.spliter" class="LineObject">
+									  <attr>
+										<left>0</left>
+										<top>father.height</top>
+										<width>father.width-4</width>
+										<height>1</height>
+										<color>settingswnd.white.color</color>
+										<srcpt>0,0</srcpt>
+										<destpt>father.width,0</destpt>
+										<pen>pen.solid</pen>
+									  </attr>
+									</obj>
+								</children>
+								</obj>	
+
+								<obj id="infoLayout" class="LayoutObject">
+								<attr>
+									<left>0</left>
+									<top>252</top>
+									<width>father.width</width>
+									<height>100</height>
+								</attr>
+								<children>
+									<obj id="info.fill" class="FillObject">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>120</width>
+										<height>father.height</height>
+										<filltype>Monochrome</filltype>
+										<blendtype>Source</blendtype>
+										<srcpt>0,0</srcpt>
+										<destpt>0,height</destpt>
+										<srccolor>244,249,240,255</srccolor>								
+									</attr>
+									<children>
+										<obj id="info.title" class="TextObject">
+										<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height</height>
+										<halign>center</halign>
+										<valign>center</valign>
+										<text>信息展示</text>
+										<font>settingswnd.14.font</font>
+										</attr>										
+										</obj>
+										
+										<obj id="mobile.check" class="Thunder.CheckBox">
+										<attr>
+											<left>150</left>
+											<top>37</top>
+											<width>150</width>
+											<height>24</height>
+											<Text>显示个人手机号</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+										</attr>
+										<eventlist>
+											<event name="OnCheck" file="SettingsWnd.xml.lua" func="OnMobileCheck" />
+										</eventlist>								
+										</obj>	
+									</children>
+									</obj>
+
+								</children>
+								</obj>									
+							</children>
+						</obj>
+					</children>
+					<eventlist>
+							<event name="OnInitControl" file="SettingsWnd.xml.lua" func="OnInit" />
+							<!--event name="OnHotKey" file="LoginWnd.xml.lua" func="OnHotKey" /-->
+					</eventlist>				
+				</obj>
+				</children>	
+			</obj>		
+		</children>
+	</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.Settings.Wnd" class="FrameHostWnd">
+	<attr> 
+		<title>系统设置</title>
+		<layered>1</layered>
+		<left>200</left> 
+		<top>100</top>
+		<width>536</width>
+		<height>396</height>
+		<cacheleft>0</cacheleft> 
+		<cachetop>0</cachetop>
+		<cachewidth>1200</cachewidth>
+		<cacheheight>1000</cacheheight>
+		<topmost>1</topmost>
+		<visible>1</visible>
+		<enable>1</enable>
+		<active>1</active>
+		<maxbox>0</maxbox>
+		<minbox>0</minbox>
+		<minwidth>536</minwidth>
+		<minheight>396</minheight>
+		<appwindow>0</appwindow>
+		<fps>30</fps>
+	</attr>
+	<eventlist>
+		<event name="OnCreate">
+			local arg = {...}
+			local self = arg[1]
+			self:Center()
+		</event>
+		<!--event name="OnDestroy" file="LoginWnd.xml.lua" func = "OnLoginWndDestroy"/-->
+	</eventlist>
+</hostwndtemplate>
+</xlue>

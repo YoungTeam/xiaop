@@ -1,0 +1,408 @@
+<xlue>
+<control class="XiaoP.Chat.ChatSpliterCtrl">
+	<attr_def>	
+		<attr name="BarMinTop" type="int">
+			<default>100</default>
+		</attr>
+		<attr name="BarTop" type="int">
+			<default>300</default>
+		</attr>
+		<attr name="BarMaxTop" type="int">
+			<default>350</default>
+		</attr>
+		<attr name="BarHeight" type="int">
+			<default>30</default>
+		</attr>
+	</attr_def>
+	<method_def>
+			<!--CreateList  file="DeptUserList.xml.lua" func="CreateDeptUserList"/-->
+			<!--UpdateUser  file="DeptUserList.xml.lua" func="UpdateUser"/-->
+	</method_def>
+	<event_def>
+	   <OnCtrlInit>
+				<param></param>
+	   </OnCtrlInit>
+	   	<OnSendGetObjectText>
+		<param>
+				<layoutobj/>
+		</param>
+		<return>
+			<string/>
+			<bool/>
+		</return>			
+		</OnSendGetObjectText>
+	   <OnFontStyleClick><param><bool/><bool/><bool/></param></OnFontStyleClick>
+	   <OnFontColorClick><param></param></OnFontColorClick>
+	   <OnCaptureClick><param></param></OnCaptureClick>
+	   <OnEmotionClick><param><int/><int/></param></OnEmotionClick>
+	   <OnHistoryClick><param></param></OnHistoryClick>
+	   
+    </event_def>
+
+	
+	<objtemplate>
+		<children>
+		
+			<obj id = "chat.spliter.part1" class="LayoutObject">
+			<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>300</height>
+			</attr>
+			<children>
+					<!--obj id="chat.richedit" class="RealObject">
+						<attr>
+							<left>0</left>
+							<top>0</top>
+							<width>father.width</width>
+							<height>father.height</height>
+						</attr>
+					</obj-->	
+					<obj id="chat.richedit" class="Thunder.RichEdit">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<WordWrap>true</WordWrap>
+						<Multiline>true</Multiline>
+						<AllowVSB>true</AllowVSB>
+						<BkgNormalTextureID></BkgNormalTextureID>
+						<BkgHoverTextureID></BkgHoverTextureID>
+						<BkgDisableTextureID></BkgDisableTextureID>
+						<ReadOnly>true</ReadOnly>
+					</attr>
+					<eventlist>
+						<event name="OnLinkNotify" file="ChatSpliterCtrl.xml.lua" func="OnLinkNotify"/>
+					</eventlist>
+				</obj>							
+			</children>
+			</obj>
+
+			<obj id = "chat.spliter.bar" class="LayoutObject">
+			<attr>
+					<left>0</left>
+					<top>301</top>
+					<width>father.width</width>
+					<height>30</height>
+			</attr>
+			<children>
+				<obj id ="test.txt" class="TextObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>30</height>
+					<text>312</text>
+					<visible>0</visible >
+				</attr>				
+				</obj>
+				<obj id="spliter.bar.mousearea" class="LayoutObject">
+				  <attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>3</height>
+					<cursor>IDC_SIZENS</cursor>
+					<zorder>1000</zorder>
+				  </attr>
+				 <eventlist>
+						<event name="OnLButtonDown" file="ChatSpliterCtrl.xml.lua" func="OnSpliterBarDown" />
+						<event name="OnMouseMove" file="ChatSpliterCtrl.xml.lua" func="OnSpliterBarMove" />						
+						<event name="OnMouseEnter" file="ChatSpliterCtrl.xml.lua" func="OnSpliterBarEnter"/>
+						<event name="OnLButtonUp" file="ChatSpliterCtrl.xml.lua" func="OnSpliterBarUp"/>
+				</eventlist>
+				</obj>
+
+				
+				<obj id="spliter.bar.bordertop" class="LineObject">
+				  <attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>1</height>
+					<color>chatwnd.spliter.color</color>
+					<srcpt>0,0</srcpt>
+					<destpt>father.width,0</destpt>
+					<pen>pen.solid</pen>
+					<cursor>IDC_SIZENS</cursor>
+				  </attr>
+				</obj>	
+				<obj id="spliter.bar.font.tools" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>30</height>
+					</attr>
+					<children>
+						<obj id="font.style.combobox" class="RealObject">
+						<attr>
+							<left>5</left>
+							<top>5</top>
+							<width>100</width>
+							<height>25</height>
+						</attr>
+						</obj>
+						<obj id="font.size.combobox" class="RealObject">
+						<attr>
+							<left>110</left>
+							<top>5</top>
+							<width>40</width>
+							<height>25</height>
+						</attr>
+						</obj>
+						
+						<obj id="font.style.u.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>155</left>
+							<top>6</top>
+							<width>30</width>
+							<height>20</height>
+							<Text></Text>
+							<IconWidth>30</IconWidth>
+							<IconHeight>20</IconHeight>
+							<IconBitmapID>font.style.u.normal</IconBitmapID>
+							<IconBitmapID_Hover>font.style.u.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>font.style.u.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnFontStyleUButtonClick"/>
+						</eventlist>		
+						</obj>	
+						<obj id="font.style.i.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>180</left>
+							<top>6</top>
+							<width>30</width>
+							<height>20</height>
+							<Text></Text>
+							<IconWidth>30</IconWidth>
+							<IconHeight>20</IconHeight>
+							<IconBitmapID>font.style.i.normal</IconBitmapID>
+							<IconBitmapID_Hover>font.style.i.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>font.style.i.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnFontStyleIButtonClick"/>
+						</eventlist>		
+						</obj>	
+						<obj id="font.style.b.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>205</left>
+							<top>6</top>
+							<width>30</width>
+							<height>20</height>
+							<Text></Text>
+							<IconWidth>30</IconWidth>
+							<IconHeight>20</IconHeight>
+							<IconBitmapID>font.style.b.normal</IconBitmapID>
+							<IconBitmapID_Hover>font.style.b.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>font.style.b.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnFontStyleBButtonClick"/>
+						</eventlist>		
+						</obj>							
+						<obj id="font.color.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>235</left>
+							<top>6</top>
+							<width>30</width>
+							<height>20</height>
+							<Text></Text>
+							<IconWidth>30</IconWidth>
+							<IconHeight>20</IconHeight>
+							<IconBitmapID>font.color.normal</IconBitmapID>
+							<IconBitmapID_Hover>font.color.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>font.color.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnFontColorButtonClick"/>
+						</eventlist>		
+						</obj>						
+						<!--obj id="font.style.combobox" class="Thunder.ComboBox">
+						<attr>
+							<left>0</left>
+							<top>5</top>
+							<width>100</width>
+							<height>20</height>
+							<EnableEdit>false</EnableEdit>
+						</attr>
+						<children>
+							<obj id="listbox" class="Thunder.ComboListBox"/>
+						</children>
+						</obj-->
+					</children>
+				</obj>
+				<obj id="spliter.bar.tools" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>30</height>
+					</attr>
+					<children>
+					
+					<obj id="spliter.bar.font.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>14</left>
+							<top>3</top>
+							<width>24</width>
+							<height>24</height>
+							<Text></Text>
+							<TipText>字体</TipText>
+							<IconWidth>24</IconWidth>
+							<IconHeight>24</IconHeight>
+							<IconBitmapID>chattoolbar.font.icon.normal</IconBitmapID>
+							<IconBitmapID_Hover>chattoolbar.font.icon.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>chattoolbar.font.icon.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnFontButtonClick"/>
+						</eventlist>		
+					</obj>	
+
+					<obj id="spliter.bar.face.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>48</left>
+							<top>3</top>
+							<width>24</width>
+							<height>24</height>
+							<TipText>表情</TipText>
+							<Text></Text>
+							<IconWidth>24</IconWidth>
+							<IconHeight>24</IconHeight>
+							<IconBitmapID>chattoolbar.face.icon.normal</IconBitmapID>
+							<IconBitmapID_Hover>chattoolbar.face.icon.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>chattoolbar.face.icon.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnEmotionButtonClick"/>
+						</eventlist>		
+					</obj>	
+
+					<!--obj id="spliter.bar.file.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>82</left>
+							<top>3</top>
+							<width>24</width>
+							<height>24</height>
+							<Text></Text>
+							<IconWidth>24</IconWidth>
+							<IconHeight>24</IconHeight>
+							<IconBitmapID>chattoolbar.file.icon.normal</IconBitmapID>
+							<IconBitmapID_Hover>chattoolbar.file.icon.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>chattoolbar.file.icon.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							
+						</eventlist>		
+					</obj-->	
+
+					<obj id="spliter.bar.capture.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>82</left>
+							<top>3</top>
+							<width>24</width>
+							<height>24</height>
+							<TipText>屏幕截图</TipText>
+							<Text></Text>
+							<IconWidth>24</IconWidth>
+							<IconHeight>24</IconHeight>
+							<IconBitmapID>chattoolbar.capture.icon.normal</IconBitmapID>
+							<IconBitmapID_Hover>chattoolbar.capture.icon.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>chattoolbar.capture.icon.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+								<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnCaptureButtonClick"/>
+						</eventlist>		
+					</obj>					
+
+					<obj id="spliter.bar.history.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>father.width-100</left>
+							<top>3</top>
+							<width>90</width>
+							<height>24</height>
+							<Text>消息记录</Text>
+							<TipText>消息记录</TipText>
+							<IconLeftPos>0</IconLeftPos>
+							<IconWidth>24</IconWidth>
+							<IconHeight>24</IconHeight>
+							<TextLeftPos>17</TextLeftPos>
+							<TextTopPos>3</TextTopPos>
+							<BkgTextureID_Normal>toolbar.history.btn.bkg.normal</BkgTextureID_Normal>
+							<BkgTextureID_Hover>toolbar.history.btn.bkg.hover</BkgTextureID_Hover>
+							<BkgTextureID_Down>toolbar.history.btn.bkg.down</BkgTextureID_Down>
+							<IconBitmapID>chattoolbar.history.icon.normal</IconBitmapID>
+							<IconBitmapID_Hover>chattoolbar.history.icon.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>chattoolbar.history.icon.down</IconBitmapID_Down>									
+						</attr>
+						<eventlist>
+							<event name="OnButtonClick" file="ChatSpliterCtrl.xml.lua" func="OnHistoryButtonClick"/>
+						</eventlist>		
+					</obj>						
+						
+					
+					</children>
+				</obj>
+				
+				
+			</children>
+			</obj>
+			
+					
+			<obj id = "chat.spliter.part2" class="LayoutObject">
+			<attr>
+					<left>0</left>
+					<top>300+30+1</top>
+					<width>father.width</width>
+					<height>70</height>
+					<limitchild>1</limitchild>
+			</attr>
+			<children>	
+				<obj id="send.richedit" class="Thunder.RichEdit">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<AllowVSB>true</AllowVSB>
+						<WordWrap>true</WordWrap>
+						<Multiline>true</Multiline>
+						<BkgNormalTextureID></BkgNormalTextureID>
+						<BkgHoverTextureID></BkgHoverTextureID>
+						<BkgDisableTextureID></BkgDisableTextureID>
+					</attr>
+					<eventlist>
+						<event name="OnGetObjectUniqueID" file="ChatSpliterCtrl.xml.lua" func="OnSendGetObjectUniqueID"/>
+						<event name="OnGetObjectText" file="ChatSpliterCtrl.xml.lua" func="OnSendGetObjectText"/>
+						<event name="OnLinkNotify" file="ChatSpliterCtrl.xml.lua" func="OnLinkNotify"/>
+					</eventlist>
+				</obj>	
+				<!--obj id="send.richedit" class="RealObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<eventlist>
+						<event name="OnInitControl" file="ChatSpliterCtrl.xml.lua" func="OnInitSendRichTextBox" />
+						
+					</eventlist>
+				</obj-->
+				
+			</children>
+			</obj>	
+	
+		</children>
+		<eventlist>
+			<event name="OnInitControl" file="ChatSpliterCtrl.xml.lua" func="OnInitControl" />					
+		</eventlist>
+	</objtemplate>
+</control>
+
+</xlue>

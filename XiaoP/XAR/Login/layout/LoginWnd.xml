@@ -1,0 +1,440 @@
+<xlue>
+<objtreetemplate id="XiaoP.Login.Tree" class="ObjectTreeTemplate">
+	<attr>
+			<left>-200</left>
+			<top>-200</top>
+			<width>2000</width>
+			<height>2000</height>
+			
+	</attr>
+
+	
+	<obj id="root" class="LayoutObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>286</width>
+			<height>614</height>
+		</attr>
+		<children>
+			<obj id="mirrorBkg" class="ImageObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<visible>0</visible> 
+				</attr>	
+			</obj>		
+			
+			<obj id="bkg_border" class="TextureObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<texture>texture.wndborder.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>
+				<children>
+					
+
+					<obj id="bkg" class="TextureObject">
+							<attr>
+								<left>6</left>
+								<top>6</top>
+								<width>father.width-12</width>
+								<height>father.height-12</height>
+								<texture>texture.loginwnd.bkg</texture>
+							</attr>
+							<children>
+								<obj id="body" class="LayoutObject">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height</height>
+									</attr>
+									<children>
+										<obj id="loginwnd.caption" class="CaptionObject">
+											<attr>
+												<left>0</left>
+												<top>0</top>
+												<width>father.width</width>
+												<height>father.height</height>
+											</attr>
+											<children>
+												<obj  id="xiaop.logo" class="ImageObject">
+													<attr>
+														<left>10</left>
+														<top>5</top>
+														<width>17</width>
+														<height>16</height>
+														<image>xiaop</image>
+													</attr>
+												</obj>
+												
+												<obj id="xiaop.text" class="TextObject">
+												<attr>
+														<left>18</left>
+														<top>3</top>
+														<width>50</width>
+														<height>20</height>
+														<text>小P</text>
+														<font>loginwnd.13.font</font>
+														<halign>center</halign>
+														<valign>center</valign>
+														<textcolor>loginwnd.white.color</textcolor>
+													</attr>
+												</obj>
+												<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+													<attr>
+														<left>father.width-60</left>
+														<top>0</top>
+														<width>60</width>
+														<height>30</height>
+														<MaxShow>false</MaxShow>
+														<Mini_NormalImageID>wndsys.min.icon.normal</Mini_NormalImageID>
+														<Mini_HoverImageID>wndsys.min.icon.hover</Mini_HoverImageID>
+														<Mini_DownImageID>wndsys.min.icon.down</Mini_DownImageID>
+														<Close_NormalImageID>wndsys.close.icon.normal</Close_NormalImageID>
+														<Close_HoverImageID>wndsys.close.icon.hover</Close_HoverImageID	>
+														<Close_DownImageID>wndsys.close.icon.down</Close_DownImageID>														
+													</attr>
+													<eventlist>
+														<event name="OnMinisize" file="LoginWnd.xml.lua" func="OnMinisize" />
+														<event name="OnClose" file="LoginWnd.xml.lua" func="OnClose" />
+													</eventlist>
+												</obj>
+											</children>
+										</obj>
+										
+										<obj  id="userFace.mask" class="MaskObject">
+											<attr>
+												<left>(father.width-90)/2</left>
+												<top>120</top>
+												<height>90</height>
+												<width>90</width>
+												<type>bitmap</type>
+												<chanel>r</chanel>
+												<resid>login.face.mask</resid>
+												<masksizex>90</masksizex>
+												<masksizey>90</masksizey>
+												<maskorgx>0</maskorgx>
+												<maskorgy>0</maskorgy>	
+											</attr>
+											<children>
+												<obj id="userFace"  class="ImageObject">
+													<attr>
+														<left>5</left>
+														<top>5</top>
+														<width>80</width>
+														<height>80</height>
+														<drawmode>1</drawmode>
+														<inheritmask>1</inheritmask> 
+														<maskwidth>80</maskwidth>
+														<maskheight>80</maskheight>										
+														<image></image>
+													</attr>
+												</obj>	
+												
+											</children>
+										</obj>
+
+
+										<!--obj id="user.name" class="TextObject">
+										<attr>
+												<left>0</left>
+												<top>200</top>
+												<width>father.width</width>
+												<height>40</height>
+												<text>杨挺</text>
+												<font>loginwnd.16.font</font>
+												<halign>center</halign>
+												<valign>center</valign>
+												<textcolor>loginwnd.green.color</textcolor>
+											</attr>
+										</obj-->
+
+										
+										<obj id = "loginwnd.normal.layout" class="LayoutObject">
+										<attr>
+											<left>0</left>
+											<top>277</top>
+											<width>father.width</width>
+											<height>father.height</height>			
+										</attr>
+										<children>
+											
+												<obj id="un.icon"  class="ImageObject">
+													<attr>
+														<left>56</left>
+														<top>7</top>
+														<width>14</width>
+														<height>16</height>																				
+														<image>login.un.icon</image>
+														<zorder>900</zorder>
+													</attr>
+												</obj>	
+												<obj id ="username" class="Thunder.Edit">
+													<attr>
+														<left>50</left>
+														<top>0</top>
+														<width>185</width>
+														<height>30</height>
+														<Font>loginwnd.12.font</Font>
+														<Text>请输入邮箱ID</Text>
+														<EditCustom>true</EditCustom>
+														<EditLeft>16</EditLeft>
+														<EditTop>6</EditTop>
+														<EditWidth>180</EditWidth>
+														<EditHeight>30</EditHeight>
+														<NormalBkgID>texture.loginwnd.edit.bkg.normal</NormalBkgID>
+														<HoverBkgID>texture.loginwnd.edit.bkg.hover</HoverBkgID>
+														<SelectBkgID>texture.loginwnd.edit.bkg.select</SelectBkgID>
+														<taborder>1</taborder>
+													</attr>
+													<eventlist>
+														<event name="OnInitControl">
+															local arg = {...}
+															local self = arg[1]
+															self:SetTextColor("loginwnd.green.color")
+														</event>
+														<event name="OnEditFocusChange" file="LoginWnd.xml.lua" func="OnEditFocusChange"/>
+													</eventlist>
+												</obj>	
+
+													
+												<obj id="pwd.icon"  class="ImageObject">
+													<attr>
+														<left>56</left>
+														<top>47</top>
+														<width>14</width>
+														<height>16</height>																				
+														<image>login.pwd.icon</image>
+														<zorder>900</zorder>
+													</attr>
+												</obj>	
+												<obj id ="password" class="Thunder.Edit">
+													<attr>
+														<left>50</left>
+														<top>40</top>
+														<width>185</width>
+														<height>30</height>
+														<Font>loginwnd.12.font</Font>
+														<HitSelAll>false</HitSelAll>
+														<EditCustom>true</EditCustom>
+														<EditLeft>16</EditLeft>
+														<EditTop>6</EditTop>
+														<EditWidth>180</EditWidth>
+														<EditHeight>30</EditHeight>
+														<Text>请输入密码</Text>
+														<Password>false</Password>
+														<ShowMenu>false</ShowMenu>
+														<NormalBkgID>texture.loginwnd.edit.bkg.normal</NormalBkgID>
+														<HoverBkgID>texture.loginwnd.edit.bkg.hover</HoverBkgID>
+														<SelectBkgID>texture.loginwnd.edit.bkg.select</SelectBkgID>
+														<taborder>2</taborder>
+													</attr>
+													<eventlist>
+														<event name="OnInitControl">
+															local arg = {...}
+															local self = arg[1]
+															self:SetTextColor("loginwnd.green.color")
+														</event>
+														<event name="OnEditFocusChange" file="LoginWnd.xml.lua" func="OnEditFocusChange"/>
+													</eventlist>
+												</obj>	
+						
+												<obj id="remember.check" class="Thunder.CheckBox">
+													<attr>
+														<left>50</left>
+														<top>70</top>
+														<width>100</width>
+														<height>24</height>
+														<Text>记住密码</Text>
+														<TextFont>loginwnd.12.font</TextFont>
+														<taborder>3</taborder>
+														<TextColor>loginwnd.green.color</TextColor>
+														<ShowFocusRect>false</ShowFocusRect>
+													</attr>
+												</obj>	
+
+												<obj id="autologin.check" class="Thunder.CheckBox">
+													<attr>
+														<left>50+115</left>
+														<top>70</top>
+														<width>100</width>
+														<height>24</height>
+														<Text>自动登录</Text>
+														<TextFont>loginwnd.12.font</TextFont>
+														<TextColor>loginwnd.green.color</TextColor>
+														<taborder>4</taborder>
+														<ShowFocusRect>false</ShowFocusRect>
+													</attr>
+												</obj>										
+
+												<obj id="loginwnd.login.btn" class="Thunder.Button">
+													<attr>
+														<left>50</left>
+														<top>140</top>
+														<width>185</width>
+														<height>30</height>
+														<Text>登        录</Text>
+														<TextColor>loginwnd.white.color</TextColor>
+														<TextFont>loginwnd.14.font</TextFont>
+														<ShowFocusRect>false</ShowFocusRect>
+														<NormalBkgID>wnd.login.button.normal</NormalBkgID>
+														<DownBkgID>wnd.login.button.down</DownBkgID>
+														<DisableBkgID>wnd.login.button.disable</DisableBkgID>
+														<HoverBkgID>wnd.login.button.hover</HoverBkgID>																							
+													</attr>
+													<eventlist>
+														<event name="OnClick" file="LoginWnd.xml.lua" func="OnClickLogin" />
+													</eventlist>
+												</obj>
+												
+										</children>
+										</obj>
+										
+	
+	
+										<obj id = "loginwnd.logining.layout" class="LayoutObject">
+										<attr>
+											<left>0</left>
+											<top>277</top>
+											<width>father.width</width>
+											<height>father.height</height>			
+										</attr>
+										<children>
+											<obj id="loginwnd.progress" class="Thunder.Progress">
+												<attr>
+													<left>(father.width-185)/2</left>
+													<top>10</top>
+													<width>185</width>
+													<height>10</height>
+													<Progress>0</Progress>
+													<ShowText>false</ShowText>
+													<EmptyID>texture.loginwnd.progress.empty</EmptyID>
+													<FullID>texture.loginwnd.progress.full</FullID>
+													<ShowAni>true</ShowAni>
+												</attr>
+												<eventlist>
+												
+												</eventlist>
+											</obj>	
+											<obj id="loginwnd.process.txt" class="TextObject">
+											<attr>
+												<left>0</left>
+												<top>30</top>
+												<width>father.width</width>
+												<height>20</height>
+												<font>loginwnd.12.font</font>
+												<halign>center</halign>
+												<textcolor>loginwnd.white.color</textcolor>
+												<text>正在登录中...</text>
+											</attr>
+											</obj>
+											<obj id="loginwnd.cancel.btn" class="Thunder.Button">
+												<attr>
+													<left>50</left>
+													<top>140</top>
+													<width>185</width>
+													<height>30</height>
+													<Text>取        消</Text>
+													<TextColor>loginwnd.white.color</TextColor>
+													<TextFont>loginwnd.14.font</TextFont>
+													<ShowFocusRect>false</ShowFocusRect>
+													<NormalBkgID>wnd.login.button.normal</NormalBkgID>
+													<DownBkgID>wnd.login.button.down</DownBkgID>
+													<DisableBkgID>wnd.login.button.disable</DisableBkgID>
+													<HoverBkgID>wnd.login.button.hover</HoverBkgID>																							
+												</attr>
+												<eventlist>
+													<event name="OnClick" file="LoginWnd.xml.lua" func="OnLoginCancel" />
+												</eventlist>
+											</obj>
+											
+										</children>
+										</obj>
+
+							
+							
+										<obj id="xiaop.copyright" class="TextObject">
+										<attr>
+												<left>father.width-70</left>
+												<top>father.height-20</top>
+												<width>100</width>
+												<height>20</height>
+												<text>搜狗运维部</text>
+												<font>loginwnd.12.font</font>
+												<valign>center</valign>
+												<textcolor>loginwnd.blue.color</textcolor>
+											</attr>
+										</obj>	
+										<!--obj id="CloseBtn" class="Thunder.Button">
+											<attr>
+												<left>father.width-100</left>
+												<top>father.height-50</top>
+												<width>86</width>
+												<height>23</height>
+												<Text>取消</Text>
+											</attr>
+											<eventlist>
+												<event name="OnClick" file="LoginWnd.xml.lua" func="OnClickClose" />
+											</eventlist>
+										</obj-->
+								
+									</children>
+								</obj>
+							</children>
+							<eventlist>
+									<!--event name="OnInitControl" file="LoginWnd.xml.lua" func="OnInit" /-->
+									<!--event name="OnHotKey" file="LoginWnd.xml.lua" func="OnHotKey" /-->
+							</eventlist>
+						
+						</obj>				
+	
+				</children>	
+			</obj>		
+		</children>
+	</obj>
+<eventlist>
+	<event name="OnBindHostWnd" file="LoginWnd.xml.lua" func="OnBindHostWnd"/>
+</eventlist>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.Login.Wnd" class="FrameHostWnd">
+	<attr> 
+		<loginwnd>1</loginwnd>
+		<title>XiaoP</title>
+		<layered>1</layered>
+		<left>200</left> 
+		<top>100</top>
+		<width>286</width>
+		<height>614</height>
+		<cacheleft>0</cacheleft> 
+		<cachetop>0</cachetop>
+		<cachewidth>1200</cachewidth>
+		<cacheheight>1000</cacheheight>
+		<topmost>1</topmost>
+		<visible>1</visible>
+		<enable>1</enable>
+		<active>1</active>
+		<maxbox>0</maxbox>
+		<minbox>0</minbox>
+		<minwidth>286</minwidth>
+		<minheight>614</minheight>
+		<appwindow>0</appwindow>
+		<fps>30</fps>
+	</attr>
+	<eventlist>
+		<event name="OnCreate">
+			local arg = {...}
+			local self = arg[1]
+			self:Center()
+		</event>
+		<event name="OnDestroy" file="LoginWnd.xml.lua" func = "OnLoginWndDestroy"/>
+	</eventlist>
+</hostwndtemplate>
+</xlue>

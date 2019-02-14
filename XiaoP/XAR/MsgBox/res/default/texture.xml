@@ -1,0 +1,7 @@
+<XLUE>
+<resource>
+	<texture id="texture.wndborder.bkg" type="NineInOne" image="bitmap\wnd.border.bkg.png" />
+	<texture id="texture.msgwnd.bkg" image="bitmap\msgwnd.bkg.png" />
+	<texture id="texture.aboutwnd.bkg" image="bitmap\aboutwnd.bkg.png" />
+</resource>
+</XLUE>	

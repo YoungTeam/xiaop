@@ -1,0 +1,10 @@
+<XLUE>
+<resource>
+  <font id="settingswnd.16.font" height="16" facename="微软雅黑" />
+  <font id="settingswnd.12.font" height="12" facename="微软雅黑" />
+  <font id="settingswnd.13.font" height="13" weight="bold" facename="微软雅黑" />
+  <font id="settingswnd.14.font" height="14" facename="微软雅黑" />
+  <color id="settingswnd.white.color" red="255" green="255" blue="255" alpha="255" />
+  <color id="settingswnd.black.color" red="0" green="0" blue="0" alpha="255" />
+</resource>
+</XLUE>

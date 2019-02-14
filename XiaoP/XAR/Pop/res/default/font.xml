@@ -1,0 +1,8 @@
+<XLUE>
+<resource>
+  <font id="popwnd.16.font" height="16" facename="微软雅黑" />
+  <font id="popwnd.12.font" height="12" facename="微软雅黑" />
+  <font id="popwnd.13.bold.font" height="13" weight="bold" facename="微软雅黑" />
+  <font id="popwnd.14.font" height="14" facename="微软雅黑" />
+</resource>
+</XLUE>

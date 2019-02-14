@@ -1,0 +1,22 @@
+local templateMananger = XLGetObject("Xunlei.UIEngine.TemplateManager")
+
+function LoadModule()
+    local pos1, pos2 = string.find(__document, "XAR")
+    local root = string.sub(__document, 1, pos2);
+    
+    local Json = XLLoadModule(root.."/Util/libs/json.lua")
+    Json["RegisterObject"]()
+end
+
+
+local idCardHostWndTemplate = templateMananger:GetTemplate("XiaoP.IDCard.Wnd","HostWndTemplate")
+if idCardHostWndTemplate then
+	LoadModule()
+	local idCardHostWnd = idCardHostWndTemplate:CreateInstance("XiaoP.IDCard.Instance")
+	if tipsHostWnd then
+		tipsHostWnd:SetTipTemplate("xiaop.notify.panel")
+		tipsHostWnd:SetPosition(1100,800)
+		tipsHostWnd:Popup()
+	end
+end
+

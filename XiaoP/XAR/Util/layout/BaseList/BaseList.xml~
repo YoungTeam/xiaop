@@ -1,0 +1,236 @@
+<xlue>
+<control class="XiaoP.DeptUserList.DeptItem">
+	<method_def>
+			<!--CreateList  file="DeptUserList.xml.lua" func="CreateDeptUserList"/-->
+			<UpdateDept  file="DeptUserList.xml.lua" func="UpdateDept"/>
+	</method_def>
+<objtemplate>
+	<children>
+	<obj id="dept.bkg" class="FillObject">
+		<attr>
+			<width>father.width-2</width>
+			<height>30</height>
+			<left>0</left>
+			<top>0</top>
+			<filltype>Monochrome</filltype>
+			<blendtype>Source</blendtype>
+			<srcpt>0,0</srcpt>
+			<destpt>0,height</destpt>
+			<srccolor>255,255,255,255</srccolor>
+		</attr>
+		<children>
+			<obj id="dept.status" class="ImageObject">
+				<attr>
+					<width>11</width>
+					<height>10</height>
+					<left>2</left>
+					<top>10</top>
+					<drawmode >1</drawmode>
+					<image>userlist.collapse</image>
+				</attr>	
+			</obj>
+			<obj id="dept.name" class="TextObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<left>20</left>
+					<top>7</top>
+					<text></text>
+				</attr>	
+			</obj>			
+		</children>
+		<eventlist>
+			<event name="OnLButtonUp" file="DeptUserList.xml.lua" func="OnDeptClick" />
+			<event name="OnMouseEnter" file="DeptUserList.xml.lua" func="OnDeptHover" />
+			<event name="OnMouseLeave" file="DeptUserList.xml.lua" func="OnDeptLeave" />
+		</eventlist>
+	</obj>	
+	<obj id="dept.users" class="TextureObject">
+	<attr>
+		<width>father.width</width>
+		<height>father.height</height>
+		<visible>0</visible>
+		<top>30</top>
+	</attr>
+	<children>
+	</children>
+	</obj>
+	</children>
+</objtemplate>			
+</control>
+
+
+<control class="XiaoP.DeptUserList.UserItem">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+	</attr_def>
+	<method_def>
+			<!--CreateList  file="DeptUserList.xml.lua" func="CreateDeptUserList"/-->
+			<UpdateUser  file="DeptUserList.xml.lua" func="UpdateUser"/>
+	</method_def>	
+	<objtemplate>
+		<children>
+			<obj id="user.bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>70</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>255,255,255,255</srccolor>			
+				</attr>
+				<children>
+					<obj id="user.face" class="ImageObject">
+						<attr>
+						<left>8</left>
+						<top>6</top>
+						<width>60</width>
+						<height>60</height>
+						<zorder>100</zorder>
+						<drawmode >1</drawmode>
+						<image>xiaop.face</image>
+						</attr>	
+					</obj>
+					<obj id="user.name" class="TextObject">
+						<attr>
+						<left>74</left>
+						<top>10</top>
+						<width>336</width>
+						<height>25</height>
+						<font>userlist.font</font>
+						<text>YoungTeam</text>
+						</attr>
+					</obj>				
+				
+				</children>	
+			</obj>	
+		</children>
+		<eventlist>
+			<event name="OnLButtonUp" file="DeptUserList.xml.lua" func="OnUserClick" />
+			<event name="OnMouseEnter" file="DeptUserList.xml.lua" func="OnUserHover" />
+			<event name="OnMouseLeave" file="DeptUserList.xml.lua" func="OnUserLeave" />	
+			<event name="OnMouseWheel" file="DeptUserList.xml.lua" func="OnUserMouseWheel" />			
+		</eventlist>
+	</objtemplate>
+</control>
+
+<control class="XiaoP.DeptUserList">
+	<attr_def>
+		<attr name="select" type="int" desc="只支持选中一个任务,taskID，0表示未选中,"/>
+	</attr_def>
+	<method_def>
+			<CreateDeptList  file="DeptUserList.xml.lua" func="CreateDeptList"/>
+			<CreateDept  file="DeptUserList.xml.lua" func="CreateDept"/>
+			<SetListPos file="DeptUserList.xml.lua" func="SetListPos" />
+			<MouseWheel file="DeptUserList.xml.lua" func="MouseWheel" />
+			<UpdateScroll file="DeptUserList.xml.lua" func="UpdateScroll" />
+	</method_def>
+	
+	<!--event_def>
+			<OnScrollPosChange>
+				<param>
+				</param>
+			</OnScrollPosChange>
+		</event_def-->	
+	<objtemplate>
+		<children>
+			<obj id="bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>100,255,255,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+				</children>
+				<eventlist>
+					<event name="OnMouseWheel" file="DeptUserList.xml.lua" func="OnMouseWheel" />
+				</eventlist>
+			</obj>
+			<obj id="scrollCtrl" class="Thunder.ScrollBar">
+			<attr>
+				<Type>1</Type>
+				<ThumbBtn_normal>texture.vsb.small.thumb.normal</ThumbBtn_normal>
+				<ThumbBtn_hover>texture.vsb.small.thumb.hover</ThumbBtn_hover>
+				<ThumbBtn_down>texture.vsb.small.thumb.down</ThumbBtn_down>
+				<LeftBtn_normal>texture.vsb.leftbtn.normal</LeftBtn_normal>
+				<LeftBtn_hover>texture.vsb.leftbtn.hover</LeftBtn_hover>
+				<LeftBtn_down>texture.vsb.leftbtn.down</LeftBtn_down>
+				<RightBtn_normal>texture.vsb.rightbtn.normal</RightBtn_normal>
+				<RightBtn_hover>texture.vsb.rightbtn.hover</RightBtn_hover>
+				<RightBtn_down>texture.vsb.rightbtn.down</RightBtn_down>
+				<SideBtnLength>12</SideBtnLength>
+				<ThumbBtnWidth>15</ThumbBtnWidth>
+				<PageSize>10</PageSize>
+				<RangeBegin>0</RangeBegin>
+				<RangeEnd>0</RangeEnd>
+				<ScrollPos>0</ScrollPos>
+				<left>father.width-26</left>
+				<top>0</top>
+				<width>25</width>
+				<height>father.height - 4</height>
+				<zorder>600</zorder>
+				<cursor>IDC_ARROW</cursor>
+			</attr>
+			<eventlist>
+				<event name="OnVScroll" file="DeptUserList.xml.lua" func="OnVScroll" />
+				<event name="OnScrollBarMouseWheel" file="DeptUserList.xml.lua" func="OnScrollBarMouseWheel" />
+			</eventlist>			
+			</obj>		
+		</children>
+		<eventlist>
+			<event name="OnBind" file="DeptUserList.xml.lua" func="OnBind" />
+			<event name="OnInitControl">
+					local arg = {...}
+					local self = arg[1]
+					
+					local dept = {}
+					dept.deptId = 1
+					dept.deptName = "OP"
+					dept.expand = true
+					
+					local dept1 = {}
+					dept1.deptId = 2
+					dept1.deptName = "INFO"
+					dept1.expand = true
+					
+					local user = {}
+					user.userId = "yangting"
+					user.userName = "YoungTeam"
+					
+					local user1 = {}
+					user1.userId = "zhangxiaowen"
+					user1.userName = "Daisy"
+					
+					dept.users = {}
+					dept.users[1] = user
+					self:CreateDept(dept)
+					
+					dept1.users = {}
+					dept1.users[1] = user
+					dept1.users[2] = user1
+					self:CreateDept(dept1)
+					self:CreateDept(dept1)
+					self:CreateDept(dept1)
+					dept.users[3] = user1
+					--self:CreateDept(dept)
+					--local attr=self:GetAttribute()
+			</event>
+			<!--event name="OnLButtonDown">
+				local arg = {...}
+				local self = arg[1]
+				self:SelectUser(-1,false)
+			</event>
+			<event name="OnMouseWheel" file="UserList.xml.lua" func="OnListMouseWheel" /-->		
+		</eventlist>
+	</objtemplate>	
+</control>
+
+</xlue>

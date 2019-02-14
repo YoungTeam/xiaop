@@ -1,0 +1,10 @@
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\XiaoP.UI.Core.BackGroundForm.resources
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\GenerateResource.read.1.tlog
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\GenerateResource.write.1.tlog
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\bin\Debug\XiaoP.UI.Core.dll
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\bin\Debug\XiaoP.UI.Core.pdb
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\XiaoP.UI.Core.dll
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\XiaoP.UI.Core.pdb
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\GenerateResource-ResGen.read.1.tlog
+D:\workspace\C#\XiaoP\XiaoP.UI.Core\obj\Debug\GenerateResource-ResGen.write.1.tlog

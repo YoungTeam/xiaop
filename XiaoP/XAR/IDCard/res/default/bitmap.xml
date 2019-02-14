@@ -1,0 +1,8 @@
+<XLUE>
+<resource>
+	<bitmap id="idcard.face"  path="bitmap\face.png"/>
+	<bitmap id="idcard.face.mask"  path="bitmap\face_mask.png"/>
+	<bitmap id="xiaop"  path="bitmap\xiaop.png"/>
+
+</resource>
+</XLUE>	

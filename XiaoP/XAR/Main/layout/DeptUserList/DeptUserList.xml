@@ -1,0 +1,422 @@
+<xlue>
+<control class="XiaoP.DeptUserList.DeptItem">
+	<method_def>
+			<AddDeptUser  file="DeptUserList.xml.lua" func="AddDeptUser"/>
+			<UpdateDept  file="DeptUserList.xml.lua" func="UpdateDept"/>
+	</method_def>
+<objtemplate>
+	<children>
+	<obj id="dept.bkg" class="FillObject">
+		<attr>
+			<width>father.width</width>
+			<height>30</height>
+			<left>0</left>
+			<top>0</top>
+			<filltype>Monochrome</filltype>
+			<blendtype>Source</blendtype>
+			<srcpt>0,0</srcpt>
+			<destpt>0,height</destpt>
+			<srccolor>255,255,255,0</srccolor>
+		</attr>
+		<children>
+			<obj id="dept.status" class="ImageObject">
+				<attr>
+					<width>10</width>
+					<height>10</height>
+					<left>14</left>
+					<top>13</top>
+					<drawmode >1</drawmode>
+					<image>userlist.collapse</image>
+				</attr>	
+			</obj>
+			<obj id="dept.name" class="TextObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<left>32</left>
+					<top>7</top>
+					<text></text>
+					<font>wnd.14.font</font>
+				</attr>	
+			</obj>	
+			<obj id="dept.info" class="TextObject">
+				<attr>
+					<width>150</width>
+					<height>20</height>
+					<left>100</left>
+					<top>9</top>
+					<text></text>
+					<font>wnd.12.font</font>
+				</attr>	
+			</obj>				
+		</children>
+		<eventlist>
+			<event name="OnLButtonUp" file="DeptUserList.xml.lua" func="OnDeptClick" />
+			<event name="OnMouseEnter" file="DeptUserList.xml.lua" func="OnDeptHover" />
+			<event name="OnMouseLeave" file="DeptUserList.xml.lua" func="OnDeptLeave" />
+			<event name="OnMouseWheel" file="DeptUserList.xml.lua" func="OnDeptMouseWheel" />	
+		</eventlist>
+	</obj>	
+	<obj id="dept.users" class="TextureObject">
+	<attr>
+		<width>father.width</width>
+		<height>father.height</height>
+		<visible>0</visible>
+		<top>30</top>
+	</attr>
+	<children>
+	</children>
+	</obj>
+	</children>
+</objtemplate>			
+</control>
+
+
+<control class="XiaoP.DeptUserList.UserItem">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+	</attr_def>
+	<method_def>
+			<!--CreateList  file="DeptUserList.xml.lua" func="CreateDeptUserList"/-->
+			<UpdateUser  file="DeptUserList.xml.lua" func="UpdateUser"/>
+	</method_def>	
+	<objtemplate>
+		<children>
+			<obj id="user.bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>56</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>255,255,255,0</srccolor>		
+				</attr>
+				<children>
+				
+					<obj  id="userFace.mask" class="MaskObject">
+						<attr>
+							<left>5</left>
+							<top>3</top>
+							<height>50</height>
+							<width>50</width>
+							<type>bitmap</type>
+							<chanel>r</chanel>
+							<resid>userlist.face.mask</resid>
+							<masksizex>50</masksizex>
+							<masksizey>50</masksizey>
+							<maskorgx>0</maskorgx>
+							<maskorgy>0</maskorgy>	
+						</attr>
+						<children>
+							<obj id="userFace"  class="ImageObject">
+								<attr>
+									<left>5</left>
+									<top>5</top>
+									<width>40</width>
+									<height>40</height>
+									<drawmode>1</drawmode>
+									<inheritmask>1</inheritmask> 
+									<maskwidth>40</maskwidth>
+									<maskheight>40</maskheight>										
+									<image></image>
+								</attr>
+								<eventlist>
+									<event name="OnLButtonDbClick" file="DeptUserList.xml.lua" func = "OnUserFaceDbClick"/>
+									<event name="OnMouseEnter" file="DeptUserList.xml.lua" func="OnUserFaceEnter" />
+									<event name="OnMouseLeave" file="DeptUserList.xml.lua" func="OnUserFaceLeave" />	
+								</eventlist>
+							</obj>	
+						</children>
+					</obj>
+
+					<obj id="user.name" class="TextObject">
+						<attr>
+						<left>60</left>
+						<top>9</top>
+						<width>400</width>
+						<height>25</height>
+						<font>wnd.12.font</font>
+						<textcolor>userlist.userName.color</textcolor>
+						<text></text>
+						</attr>
+					</obj>				
+					<obj id="user.intro" class="TextObject">
+						<attr>
+						<left>60</left>
+						<top>30</top>
+						<width>father.width-100</width>
+						<height>50</height>
+						<font>wnd.12.font</font>
+						<textcolor>mainwnd.gray.color</textcolor>
+						<multiline>0</multiline>
+						<wordellipsis>1</wordellipsis>
+						<text></text>
+						</attr>
+					</obj>					
+				</children>	
+			</obj>	
+		</children>
+		<eventlist>
+			<event name="OnLButtonDbClick" file="DeptUserList.xml.lua" func = "OnUserDbClick"/>
+			<event name="OnRButtonUp" file="DeptUserList.xml.lua" func="OnUserRClick" />
+			<event name="OnLButtonUp" file="DeptUserList.xml.lua" func="OnUserClick" />
+			<event name="OnMouseEnter" file="DeptUserList.xml.lua" func="OnUserHover" />
+			<event name="OnMouseLeave" file="DeptUserList.xml.lua" func="OnUserLeave" />	
+			<event name="OnMouseWheel" file="DeptUserList.xml.lua" func="OnUserMouseWheel" />			
+		</eventlist>
+	</objtemplate>
+</control>
+
+<control class="XiaoP.DeptUserList">
+	<attr_def>
+		<attr name="select" type="int" desc="只支持选中一个任务,taskID，0表示未选中,"/>
+	</attr_def>
+	<method_def>
+			<InsertUser file="DeptUserList.xml.lua" func="InsertUser"/>
+			<RemoveUser file="DeptUserList.xml.lua" func="RemoveUser"/>
+			<UpdateUserInfo file="DeptUserList.xml.lua" func = "UpdateUserInfo"/>
+			<TwinkleUser file="DeptUserList.xml.lua" func = "TwinkleUser"/>
+			<CreateDeptList  file="DeptUserList.xml.lua" func="CreateDeptList"/>
+			<ClearDeptList  file="DeptUserList.xml.lua" func="ClearDeptList"/>
+			<CreateDept  file="DeptUserList.xml.lua" func="CreateDept"/>
+			<SetListPos file="DeptUserList.xml.lua" func="SetListPos" />
+			<MouseWheel file="DeptUserList.xml.lua" func="MouseWheel" />
+			<UpdateScroll file="DeptUserList.xml.lua" func="UpdateScroll" />
+	</method_def>
+	
+	<event_def>
+			<OnUserItemDelete>
+			<param>
+				<string/>
+			</param>			
+			</OnUserItemDelete>
+			<OnUserItemDbClick>
+			<param>
+				<string/>
+			</param>
+			</OnUserItemDbClick>
+	</event_def>	
+	<objtemplate>
+		<children>
+			<obj id="bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>248,250,241,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+				</children>
+				<eventlist>
+					<event name="OnMouseWheel" file="DeptUserList.xml.lua" func="OnMouseWheel" />
+				</eventlist>
+			</obj>
+			
+			<obj id="empty.layout" class="LayoutObject">
+			<attr>
+				<left>0</left>
+				<top>40</top>
+				<width>father.width</width>
+				<height>400</height>
+			</attr>
+			<children>
+				<obj id="empty.icon" class="ImageObject">
+				<attr>
+					<left>(father.width-155)/2</left>
+					<top>0</top>
+					<width>155</width>
+					<height>167</height>
+					<image>contact.empty.icon</image>
+				</attr>
+				</obj>
+				<obj id="empty.txt" class="TextObject">
+				<attr>
+					<left>(father.width-225)/2</left>
+					<top>190</top>
+					<width>225</width>
+					<height>40</height>
+					<font></font>
+					<text>可通过　　　查找相关人员分机号等信息并在对话窗口添加</text>
+					<font>wnd.12.font</font>
+					<multiline>1</multiline>
+					<textcolor>mainwnd.gray.color</textcolor>
+				</attr>
+				</obj>
+				<obj id="empty.highlights.txt" class="TextObject">
+				<attr>
+					<left>(father.width-225)/2+36</left>
+					<top>190</top>
+					<width>225</width>
+					<height>40</height>
+					<font></font>
+					<text>搜索框</text>
+					<font>wnd.12.bold.font</font>
+					<multiline>1</multiline>
+					<textcolor>mainwnd.green.color</textcolor>
+				</attr>
+				</obj>				
+			</children>
+			</obj>
+			
+			<obj id="scrollCtrl" class="Thunder.ScrollBar">
+			<attr>
+				<Type>1</Type>
+				<ThumbBtn_normal>texture.vsb.small.thumb.normal</ThumbBtn_normal>
+				<ThumbBtn_hover>texture.vsb.small.thumb.hover</ThumbBtn_hover>
+				<ThumbBtn_down>texture.vsb.small.thumb.down</ThumbBtn_down>
+				<LeftBtn_normal>texture.vsb.leftbtn.normal</LeftBtn_normal>
+				<LeftBtn_hover>texture.vsb.leftbtn.hover</LeftBtn_hover>
+				<LeftBtn_down>texture.vsb.leftbtn.down</LeftBtn_down>
+				<RightBtn_normal>texture.vsb.rightbtn.normal</RightBtn_normal>
+				<RightBtn_hover>texture.vsb.rightbtn.hover</RightBtn_hover>
+				<RightBtn_down>texture.vsb.rightbtn.down</RightBtn_down>
+				<SideBtnLength>0</SideBtnLength>
+				<ThumbBtnWidth>10</ThumbBtnWidth>
+				<PageSize>10</PageSize>
+				<RangeBegin>0</RangeBegin>
+				<RangeEnd>0</RangeEnd>
+				<ScrollPos>0</ScrollPos>
+				<left>father.width-11</left>
+				<top>0</top>
+				<width>10</width>
+				<height>father.height - 4</height>
+				<zorder>600</zorder>
+				<cursor>IDC_ARROW</cursor>
+			</attr>
+			<eventlist>
+				<event name="OnVScroll" file="DeptUserList.xml.lua" func="OnVScroll" />
+				<event name="OnScrollBarMouseWheel" file="DeptUserList.xml.lua" func="OnScrollBarMouseWheel" />
+			</eventlist>			
+			</obj>		
+		</children>
+		<eventlist>
+			<event name="OnBind" file="DeptUserList.xml.lua" func="OnBind" />
+			
+			<!--event name="OnInitControl">
+					local arg = {...}
+					local self = arg[1]
+					
+					local dept = {}
+					dept.deptId = 1
+					dept.deptName = "OP"
+					dept.expand = true
+					
+					local dept1 = {}
+					dept1.deptId = 2
+					dept1.deptName = "INFO"
+					dept1.expand = false
+					
+					local user = {}
+					user.userId = "yangting"
+					user.userName = "YoungTeam"
+					
+					local user1 = {}
+					user1.userId = "zhangxiaowen"
+					user1.userName = "Daisy"
+					
+					dept.users = {}
+					dept.users[1] = user
+					
+					dept1.users = {}
+					dept1.users[1] = user
+					dept1.users[2] = user1
+					
+					dept.users[2] = user1
+					
+					local depts = {}
+					
+					depts[1] = dept
+					depts[2] = dept1
+					depts[3] = dept
+					
+					self:CreateDeptList(depts)
+							
+			</event-->
+			<!--event name="OnLButtonDown">
+				local arg = {...}
+				local self = arg[1]
+				self:SelectUser(-1,false)
+			</event>
+			<event name="OnMouseWheel" file="UserList.xml.lua" func="OnListMouseWheel" /-->		
+		</eventlist>
+	</objtemplate>	
+</control>
+
+
+
+
+<objtemplate id="XiaoP.DeptUserList.Context" class="MenuObject" templateid="menu.object.template">
+<attr>
+</attr>
+<children>
+	<obj id="menu.sendmsg" class="MenuItemObject" templateid="menu.main.item">
+		<attr>		
+			<height>25</height>
+			<Text>发送即时消息</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="DeptUserList.xml.lua" func="OnSendMsg"/>	
+		</eventlist>
+	</obj>
+	<obj id="menu.sendmail" class="MenuItemObject" templateid="menu.main.item">
+		<attr>		
+			<height>25</height>
+			<Text>发送电子邮件</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="DeptUserList.xml.lua" func="OnSendMail"/>	
+		</eventlist>
+	</obj>
+	<obj id="menu.removeContact" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<!--Icon>menu.feedback.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight-->
+			<height>25</height>
+			<Text>删除常用联系人</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="DeptUserList.xml.lua" func="OnDelContact"/>
+		</eventlist>
+	</obj>
+</children>
+</objtemplate>
+	
+<objtreetemplate id="XiaoP.DeptUserList.Menu">
+<attr>
+	<left>-1000</left>
+	<top>-1000</top>
+	<width>2000</width>
+	<height>2000</height>
+</attr>
+<obj id="XiaoP.DeptListMenu" class="NormalMenu">
+	<attr>
+		<ContextID>XiaoP.DeptUserList.Context</ContextID>
+		<BknID>texture.wndborder.bkg</BknID>
+		<ShadingID>mainmenu.light</ShadingID>
+		<SrcColorID>menu.color.src</SrcColorID>
+		<DestColorID>menu.color.dest</DestColorID>
+		<DefaultItemTemplate>menu.main.itemex</DefaultItemTemplate>
+		<DefaultSpliterTemplate>menu.main.splitter</DefaultSpliterTemplate>
+	</attr>
+</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.DeptUserListMenu.Wnd" class="MenuHostWnd">
+
+	<attr>
+	</attr>
+	<eventlist>
+		<!--event name="OnPopupMenu" file="MainMenuCtl.xml.lua" func="OnPopupMenu" /-->
+	</eventlist>
+</hostwndtemplate>
+
+
+</xlue>

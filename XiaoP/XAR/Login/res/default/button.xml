@@ -1,0 +1,19 @@
+<xlue>
+	<resource>
+	<imagelist id="imagelist.wndsys.close.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.close.btn.png"/>
+	<imagelist id="imagelist.wndsys.min.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.min.btn.png"/>
+		<imagelist id="wnd.login.button.bkg" vertical="0" splitter="1" varyblock="1" image="bitmap/wnd.login.button.png"/>
+		<texture id="wnd.login.button.normal" type="ThreeInOneH" imagelist="wnd.login.button.bkg" index="1"/>
+		<texture id="wnd.login.button.down" type="ThreeInOneH" imagelist="wnd.login.button.bkg" index="2"/>
+		<texture id="wnd.login.button.hover" type="ThreeInOneH" imagelist="wnd.login.button.bkg" index="3"/>
+		<texture id="wnd.login.button.disable" type="ThreeInOneH" imagelist="wnd.login.button.bkg" index="4"/>
+		
+	<bitmap id="wndsys.min.icon.normal"  imagelist = "imagelist.wndsys.min.btn" index = "1" />
+	<bitmap id="wndsys.min.icon.hover"  imagelist = "imagelist.wndsys.min.btn" index = "2" />
+	<bitmap id="wndsys.min.icon.down"  imagelist = "imagelist.wndsys.min.btn" index = "3" />	
+
+	<bitmap id="wndsys.close.icon.normal"  imagelist = "imagelist.wndsys.close.btn" index = "1" />
+	<bitmap id="wndsys.close.icon.hover"  imagelist = "imagelist.wndsys.close.btn" index = "2" />
+	<bitmap id="wndsys.close.icon.down"  imagelist = "imagelist.wndsys.close.btn" index = "3" />			
+	</resource>
+</xlue>

@@ -1,0 +1,30 @@
+<XLUE>
+<resource>
+	<pen id="pen.solid" width="1" penstyle="solid" />
+
+	<texture id="texture.wndborder.bkg" type="NineInOne" image="bitmap\wnd.border.bkg.png" />
+	<texture id="texture.chatwnd.bkg" type="NineInOne" image="bitmap\wnd.bkg.png" />
+	
+	<imagelist id="imagelist.chatwnd.close.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\chatwnd.close.btn.png"/>
+	<imagelist id="imagelist.chatwnd.send.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\chatwnd.send.btn.png"/>
+	<imagelist id="imagelist.chatwnd.sendtype.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\chatwnd.sendtype.btn.png"/>
+	<imagelist id="imagelist.toolbar.history.btn.bkg" vertical="0" splitter="1" varyblock="1" image="bitmap\toolbar.history.btn.bkg.png"/>
+	
+	<texture id="toolbar.history.btn.bkg.normal"  imagelist = "imagelist.toolbar.history.btn.bkg" index = "1" />
+	<texture id="toolbar.history.btn.bkg.hover"  imagelist = "imagelist.toolbar.history.btn.bkg" index = "2" />
+	<texture id="toolbar.history.btn.bkg.down" imagelist = "imagelist.toolbar.history.btn.bkg" index = "3" />
+	
+	<texture id="chatwnd.close.bkg.normal" type="ThreeInOneH" imagelist = "imagelist.chatwnd.close.btn" index = "1" />
+	<texture id="chatwnd.close.bkg.hover" type="ThreeInOneH" imagelist = "imagelist.chatwnd.close.btn" index = "3" />
+	<texture id="chatwnd.close.bkg.down" type="ThreeInOneH" imagelist = "imagelist.chatwnd.close.btn" index = "2" />
+	
+	<texture id="chatwnd.send.bkg.normal" type="ThreeInOneH" imagelist = "imagelist.chatwnd.send.btn" index = "1" />
+	<texture id="chatwnd.send.bkg.hover" type="ThreeInOneH"  imagelist = "imagelist.chatwnd.send.btn" index = "3" />
+	<texture id="chatwnd.send.bkg.down" type="ThreeInOneH" imagelist = "imagelist.chatwnd.send.btn" index = "2" />
+	
+	<texture id="chatwnd.sendtype.bkg.normal" type="ThreeInOneH" imagelist = "imagelist.chatwnd.sendtype.btn" index = "1" />
+	<texture id="chatwnd.sendtype.bkg.hover" type="ThreeInOneH" imagelist = "imagelist.chatwnd.sendtype.btn" index = "3" />
+	<texture id="chatwnd.sendtype.bkg.down" type="ThreeInOneH" imagelist = "imagelist.chatwnd.sendtype.btn" index = "3" />
+
+</resource>
+</XLUE>	

@@ -1,0 +1,14 @@
+<xlue>
+<resource>
+	<font id="font.tip" height="12" facename="微软雅黑" />
+	<color id="color.toolbar.tiptext" value="#000000" />
+	<color id="tips.fonts.color" value="#000000" />
+	<color id="white.shadow.color" value="#FFFFFF" />
+	<texture id="texture.mainwnd.tip.bkg" type="NineInOne" image="tips\tips.bkg.png" />
+	<texture id="texture.tip.bkg.left.up" type="NineInOne" image="tips\tips.bkg.png" />
+	<texture id="texture.tip.bkg.right.up" type="NineInOne" image="tips\tips.bkg.png" />
+	<texture id="texture.tip.bkg.left.down" type="NineInOne" image="tips\tips.bkg.png" />
+	<texture id="texture.tip.bkg.right.down" type="NineInOne" image="tips\tips.bkg.png" />
+</resource>
+</xlue>
+

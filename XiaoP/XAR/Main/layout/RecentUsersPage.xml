@@ -1,0 +1,149 @@
+<xlue>
+<control class="XiaoP.RecentUserList.UserItem">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+		<attr name="height" type="int">
+			<default>56</default>
+		</attr>		
+	</attr_def>
+	<method_def>
+			<!--CreateList  file="DeptUserList.xml.lua" func="CreateDeptUserList"/-->
+			<UpdateUserItem  file="RecentUsersPage.xml.lua" func="UpdateUserItem"/>
+	</method_def>	
+	<objtemplate>
+		<children>
+			<obj id="user.bkg" class="FillObject">
+			<attr>
+				<width>father.width</width>
+				<height>56</height>
+				<filltype>Monochrome</filltype>
+				<blendtype>Source</blendtype>
+				<srcpt>0,0</srcpt>
+				<destpt>0,height</destpt>
+				<srccolor>255,255,255,0</srccolor>			
+			</attr>
+			<children>
+				
+					<obj  id="userFace.mask" class="MaskObject">
+						<attr>
+							<left>5</left>
+							<top>3</top>
+							<height>50</height>
+							<width>50</width>
+							<type>bitmap</type>
+							<chanel>r</chanel>
+							<resid>userlist.face.mask</resid>
+							<masksizex>50</masksizex>
+							<masksizey>50</masksizey>
+							<maskorgx>0</maskorgx>
+							<maskorgy>0</maskorgy>	
+						</attr>
+						<children>
+							<obj id="userFace"  class="ImageObject">
+								<attr>
+									<left>5</left>
+									<top>5</top>
+									<width>40</width>
+									<height>40</height>
+									<drawmode>1</drawmode>
+									<inheritmask>1</inheritmask> 
+									<maskwidth>40</maskwidth>
+									<maskheight>40</maskheight>										
+									<image>xiaop.face</image>
+								</attr>
+								<eventlist>
+									<event name="OnLButtonDbClick" file="RecentUsersPage.xml.lua" func = "OnUserFaceDbClick"/>
+									<event name="OnMouseEnter" file="RecentUsersPage.xml.lua" func="OnUserFaceEnter" />
+									<event name="OnMouseLeave" file="RecentUsersPage.xml.lua" func="OnUserFaceLeave" />	
+								</eventlist>
+							</obj>	
+						</children>
+					</obj>
+
+					<obj id="user.name" class="TextObject">
+						<attr>
+						<left>60</left>
+						<top>9</top>
+						<width>400</width>
+						<height>25</height>
+						<font>wnd.12.font</font>
+						<text></text>
+						</attr>
+					</obj>				
+					<obj id="user.intro" class="TextObject">
+						<attr>
+						<left>60</left>
+						<top>30</top>
+						<width>180</width>
+						<height>50</height>
+						<font>wnd.12.font</font>
+						<textcolor>mainwnd.gray.color</textcolor>
+						<multiline>0</multiline>
+						<wordellipsis>1</wordellipsis>
+						<text></text>
+						</attr>
+					</obj>					
+				</children>	
+			</obj>	
+		</children>
+		<eventlist>
+			<event name="OnInitControl" file="RecentUsersPage.xml.lua" func="OnInitUser"/>
+			<event name="OnLButtonDbClick" file="RecentUsersPage.xml.lua" func = "OnUserDbClick"/>
+			<event name="OnMouseEnter" file="RecentUsersPage.xml.lua" func="OnUserHover"/>
+			<event name="OnMouseLeave" file="RecentUsersPage.xml.lua" func="OnUserLeave"/>
+			<event name="OnLButtonDown" file="RecentUsersPage.xml.lua" func="OnUserClick"/>	
+			<event name="OnMouseWheel" file="RecentUsersPage.xml.lua" func="OnUserMouseWheel" />			
+		</eventlist>
+	</objtemplate>
+</control>
+
+	<control class="XiaoP.TabPage.RecentUsersPage">
+		<method_def>
+			<AddRecentUser file="RecentUsersPage.xml.lua" func = "AddRecentUser"/>
+			<UpdateUser file="RecentUsersPage.xml.lua" func = "UpdateUser"/>
+			<TwinkleUser file="RecentUsersPage.xml.lua" func = "TwinkleUser"/>
+		</method_def>
+		<objtemplate>
+			<children>
+			<obj id="page.bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>222,235,209,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+					<obj id="recentUserList" class="XiaoP.Ctrl.BaseList">
+						<attr>
+							<left>0</left>
+							<top>0</top>
+							<width>father.width</width>
+							<height>father.height-1</height>
+							<itemCtrl>XiaoP.RecentUserList.UserItem</itemCtrl>
+							<bgColor>RGBA(241,250,248,255)</bgColor>
+						</attr>
+						<eventlist>
+							<event name="OnItemDbClick" file="MainWnd.xml.lua" func="OnUserItemDbClick"/>
+						</eventlist>
+					</obj>	
+				</children>
+			</obj>
+				
+			</children>
+			<eventlist>
+				<event name="OnBind">
+					local arg = {...}
+					local self = arg[1]
+					self:SetObjPos(0,0,"father.width","father.height")
+				</event>
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>
+

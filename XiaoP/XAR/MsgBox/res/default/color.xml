@@ -1,0 +1,7 @@
+<XLUE>
+<resource>
+ <color id="msgboxwnd.white.color" red="255" green="255" blue="255" alpha="255" />
+  <color id="msgboxwnd.green.color" red="43" green="136" blue="89" alpha="255" />
+  <color id="msgboxwnd.black.color" red="0" green="0" blue="0" alpha="255" />
+</resource>
+</XLUE>

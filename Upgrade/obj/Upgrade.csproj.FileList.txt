@@ -1,0 +1,7 @@
+bin\Debug\Upgrade.exe
+bin\Debug\Upgrade.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\Upgrade.Properties.Resources.resources
+obj\Debug\Upgrade.csproj.GenerateResource.Cache
+obj\Debug\Upgrade.exe
+obj\Debug\Upgrade.pdb

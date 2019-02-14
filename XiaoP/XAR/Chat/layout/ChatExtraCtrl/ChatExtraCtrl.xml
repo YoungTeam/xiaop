@@ -1,0 +1,430 @@
+<xlue>
+<control class="XiaoP.Chat.ChatExtraCtrl">
+<attr_def>	
+		<attr name="infoWidth" type="int">
+			<default>166</default>
+		</attr>
+		<attr name="historyWidth" type="int">
+			<default>335</default>
+		</attr>
+		<attr name="chatType" type="string">
+			<default>chat</default>
+		</attr>
+</attr_def>
+<method_def>
+			<SwitchLayout  file="ChatExtraCtrl.xml.lua" func="SwitchLayout"/>
+			<UpdateInfo  file="ChatExtraCtrl.xml.lua" func="UpdateInfo"/>
+			<UpdatePageInfo file="ChatExtraCtrl.xml.lua" func="UpdatePageInfo"/>
+			<CreateMembersList file="ChatExtraCtrl.xml.lua" func="CreateMembersList"/>
+			<UpdateMember file="ChatExtraCtrl.xml.lua" func="UpdateMember"/>
+</method_def>
+<event_def>
+		<OnHistoryFirstClick><param></param></OnHistoryFirstClick>
+		<OnHistoryPrevClick><param></param></OnHistoryPrevClick>
+		<OnHistoryNextClick><param></param></OnHistoryNextClick>
+		<OnHistoryLastClick><param></param></OnHistoryLastClick>
+	   <OnCtrlInit>
+				<param>
+					
+				</param>
+	   </OnCtrlInit>
+</event_def>
+<objtemplate>
+		<children>
+				<obj id="chat.info.borderleft" class="LineObject">
+					  <attr>
+						<left>1</left>
+						<top>0</top>
+						<width>1</width>
+						<height>father.height-62</height>
+						<color>chatwnd.spliter.color</color>
+						<srcpt>0,0</srcpt>
+						<destpt>0,father.height</destpt>
+						<pen>pen.solid</pen>
+					  </attr>
+				</obj>	
+				<!---->
+				<obj id = "chat.extra.history.layout" class="FillObject">
+				<attr>
+						<left>2</left>
+						<top>0</top>
+						<width>father.width-2</width>
+						<height>father.height-60</height>
+						<filltype>Monochrome</filltype>
+						<blendtype>Source</blendtype>
+						<srcpt>0,0</srcpt>
+						<destpt>0,height</destpt>
+						<srccolor>247,250,243,255</srccolor>	
+						
+				</attr>
+				<children>
+						<obj id="chat.extra.history.richedit" class="Thunder.RichEdit">
+						<!--attr>
+							<left>0</left>
+							<top>0</top>
+							<width>father.width</width>
+							<height>father.height-40</height>									
+						</attr-->
+						<attr>
+							<left>0</left>
+							<top>0</top>
+							<width>father.width</width>
+							<height>father.height-40</height>
+							<WordWrap>true</WordWrap>
+							<Multiline>true</Multiline>
+							<AllowVSB>true</AllowVSB>
+							<BkgNormalTextureID></BkgNormalTextureID>
+							<BkgHoverTextureID></BkgHoverTextureID>
+							<BkgDisableTextureID></BkgDisableTextureID>
+							<ReadOnly>true</ReadOnly>
+						</attr>
+						<eventlist>
+							<event name="OnLinkNotify" file="ChatExtraCtrl.xml.lua" func="OnLinkNotify"/>
+						</eventlist>
+						</obj>
+						
+						
+						
+						<obj id="chat.extra.history.first.page" class="Thunder.ImageTextButton">
+							<attr>
+								<left>60</left>
+								<top>father.height-30</top>
+								<width>22</width>
+								<height>22</height>
+								<Text></Text>
+								<IconWidth>22</IconWidth>
+								<IconHeight>22</IconHeight>
+								<IconBitmapID>chathistory.first.page.normal</IconBitmapID>
+								<IconBitmapID_Hover>chathistory.first.page.hover</IconBitmapID_Hover>
+								<IconBitmapID_Down>chathistory.first.page.down</IconBitmapID_Down>									
+							</attr>
+							<eventlist>
+								<event name="OnLButtonUp" file="ChatExtraCtrl.xml.lua" func="OnHistoryFirstClick"/>
+							</eventlist>		
+						</obj>	
+						<obj id="chat.extra.history.prev.page" class="Thunder.ImageTextButton">
+							<attr>
+								<left>90</left>
+								<top>father.height-30</top>
+								<width>22</width>
+								<height>22</height>
+								<Text></Text>
+								<IconWidth>22</IconWidth>
+								<IconHeight>22</IconHeight>
+								<IconBitmapID>chathistory.prev.page.normal</IconBitmapID>
+								<IconBitmapID_Hover>chathistory.prev.page.hover</IconBitmapID_Hover>
+								<IconBitmapID_Down>chathistory.prev.page.down</IconBitmapID_Down>									
+							</attr>
+							<eventlist>
+								<event name="OnLButtonUp" file="ChatExtraCtrl.xml.lua" func="OnHistoryPrevClick"/>
+							</eventlist>		
+						</obj>	
+						<obj id = "chat.extra.history.info.page" class="TextObject">
+						<attr>
+							<left>110</left>
+							<top>father.height-40</top>
+							<width>130</width>
+							<height>40</height>
+							<halign>center</halign>
+							<valign>center</valign>
+							<font>chatwnd.12.font</font>
+							<textcolor>chatwnd.groupinfo.board.color</textcolor>
+							<text>第（1/1）页</text>
+						</attr>
+						</obj>
+						<obj id="chat.extra.history.next.page" class="Thunder.ImageTextButton">
+							<attr>
+								<left>240</left>
+								<top>father.height-30</top>
+								<width>22</width>
+								<height>22</height>
+								<Text></Text>
+								<IconWidth>22</IconWidth>
+								<IconHeight>22</IconHeight>
+								<IconBitmapID>chathistory.next.page.normal</IconBitmapID>
+								<IconBitmapID_Hover>chathistory.next.page.hover</IconBitmapID_Hover>
+								<IconBitmapID_Down>chathistory.next.page.down</IconBitmapID_Down>									
+							</attr>
+							<eventlist>
+								<event name="OnLButtonUp" file="ChatExtraCtrl.xml.lua" func="OnHistoryNextClick"/>
+							</eventlist>		
+						</obj>							
+						<obj id="chat.extra.history.last.page" class="Thunder.ImageTextButton">
+							<attr>
+								<left>270</left>
+								<top>father.height-30</top>
+								<width>22</width>
+								<height>22</height>
+								<Text></Text>
+								<IconWidth>22</IconWidth>
+								<IconHeight>22</IconHeight>
+								<IconBitmapID>chathistory.last.page.normal</IconBitmapID>
+								<IconBitmapID_Hover>chathistory.last.page.hover</IconBitmapID_Hover>
+								<IconBitmapID_Down>chathistory.last.page.down</IconBitmapID_Down>									
+							</attr>
+							<eventlist>
+								<event name="OnLButtonUp" file="ChatExtraCtrl.xml.lua" func="OnHistoryLastClick"/>
+							</eventlist>		
+						</obj>	
+						
+				</children>
+				</obj>
+				
+				<!---->
+				<obj id="chat.extra.groupinfo.layout" class="FillObject">
+				<attr>
+						<left>2</left>
+						<top>0</top>
+						<width>father.width-2</width>
+						<height>father.height-60</height>
+						<filltype>Monochrome</filltype>
+						<blendtype>Source</blendtype>
+						<srcpt>0,0</srcpt>
+						<destpt>0,height</destpt>
+						<srccolor>247,250,243,255</srccolor>	
+						
+				</attr>
+				<children>
+					<obj id="chat.groupinfo.board.text" class="TextObject">
+					<attr>
+						<left>10</left>
+						<top>5</top>
+						<width>father.width-20</width>
+						<height>40</height>
+						<text>群通知</text>
+						<halign>left</halign>
+						<valign>center</valign>
+						<font>chatwnd.14.font</font>											
+					  </attr>
+					</obj>
+					
+					<obj id="chat.groupinfo.detail.spliter" class="LineObject">
+					  <attr>
+						<left>(father.width-140)/2</left>
+						<top>40</top>
+						<width>140</width>
+						<height>1</height>
+						<color>chatwnd.spliter.color</color>
+						<srcpt>0,0</srcpt>
+						<destpt>father.width,0</destpt>
+						<pen>pen.solid</pen>
+					  </attr>
+					</obj>
+					
+					<obj id="chat.groupinfo.board" class="TextObject">
+					  <attr>
+						<left>2</left>
+						<top>41</top>
+						<width>father.width-4</width>
+						<height>80</height>
+						<!--transparent>1</transparent>
+						<readonly>1</readonly-->
+						<halign>center</halign>
+						<valign>center</valign>
+						<multiline>1</multiline>
+						<text></text>
+						<textcolor>chatwnd.groupinfo.board.color</textcolor>
+					  </attr>
+					</obj>
+					
+					<obj id="chat.groupinfo.members" class="XiaoP.Chat.MembersCtrl">
+					<attr>
+						<left>1</left>
+						<top>130</top>
+						<width>father.width-4</width>
+						<height>father.height-160</height>					
+					</attr>
+					</obj>
+				</children>	
+				</obj>
+				<!-- -->
+				<obj id = "chat.extra.info.layout" class="FillObject">
+				<attr>
+						<left>2</left>
+						<top>0</top>
+						<width>father.width-2</width>
+						<height>father.height-60</height>
+						<filltype>Monochrome</filltype>
+						<blendtype>Source</blendtype>
+						<srcpt>0,0</srcpt>
+						<destpt>0,height</destpt>
+						<srccolor>247,250,243,255</srccolor>							
+				</attr>
+				<children>
+					<obj id="chat.info.username.text" class="TextObject">
+					<attr>
+						<left>10</left>
+						<top>5</top>
+						<width>father.width</width>
+						<height>40</height>
+						<text></text>
+						<halign>left</halign>
+						<valign>center</valign>
+						<font>chatwnd.14.font</font>											
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.detail.spliter" class="LineObject">
+					  <attr>
+						<left>(father.width-140)/2</left>
+						<top>40</top>
+						<width>140</width>
+						<height>1</height>
+						<color>chatwnd.spliter.color</color>
+						<srcpt>0,0</srcpt>
+						<destpt>father.width,0</destpt>
+						<pen>pen.solid</pen>
+					  </attr>
+					</obj>	
+
+					<obj id="chat.info.userno.icon" class="ImageObject">
+					  <attr>
+						<left>10</left>
+						<top>50</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chatwnd.info.userno.icon</image>
+					  </attr>
+					</obj>
+
+					<obj id="chat.info.userno.text" class="EditObject">
+					  <attr>
+						<left>25</left>
+						<top>50</top>
+						<width>father.width-40</width>
+						<height>23</height>
+						<text>114114</text>
+						<textcolor>chatwnd.userinfo.name.color</textcolor>
+						<transparent>1</transparent>
+						<readonly>1</readonly> 
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.dept.icon" class="ImageObject">
+					  <attr>
+						<left>10</left>
+						<top>73</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chatwnd.info.dept.icon</image>
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.dept.text" class="EditObject">
+					  <attr>
+						<left>25</left>
+						<top>73</top>
+						<width>father.width-40</width>
+						<height>23</height>
+						<text>运维部</text>
+						<textcolor>chatwnd.userinfo.name.color</textcolor>
+						<transparent>1</transparent>
+						<readonly>1</readonly> 
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.mobile.icon" class="ImageObject">
+					  <attr>
+						<left>10</left>
+						<top>95</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chatwnd.info.mobile.icon</image>
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.mobile.text" class="EditObject">
+					  <attr>
+						<left>25</left>
+						<top>95</top>
+						<width>father.width-40</width>
+						<height>23</height>
+						<text>15810027735</text>
+						<textcolor>chatwnd.userinfo.name.color</textcolor>
+						<transparent>1</transparent>
+						<readonly>1</readonly> 						
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.phone.icon" class="ImageObject">
+					  <attr>
+						<left>10</left>
+						<top>118</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chatwnd.info.phone.icon</image>
+					  </attr>
+					</obj>
+					<obj id="chat.info.phone.text" class="EditObject">
+					  <attr>
+						<left>25</left>
+						<top>118</top>
+						<width>father.width-40</width>
+						<height>23</height>
+						<textcolor>chatwnd.userinfo.name.color</textcolor>
+						<text>8835</text>
+						<transparent>1</transparent>
+						<readonly>1</readonly> 
+					  </attr>
+					</obj>
+					
+					<obj id="chat.info.mail.icon" class="ImageObject">
+					  <attr>
+						<left>10</left>
+						<top>141</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chatwnd.info.mail.icon</image>
+					  </attr>
+					</obj>	
+					<obj id="chat.info.mail.text" class="EditObject">
+					  <attr>
+						<left>25</left>
+						<top>141</top>
+						<width>father.width-40</width>
+						<textcolor>chatwnd.userinfo.name.color</textcolor>
+						<height>23</height>
+						<text>yangting</text>
+						<transparent>1</transparent>
+						<readonly>1</readonly> 
+					  </attr>
+					</obj>											
+					<obj id="chat.info.signature.icon" class="ImageObject">
+					  <attr>
+						<left>10</left>
+						<top>164</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chatwnd.info.signature.icon</image>
+					  </attr>
+					</obj>	
+					<obj id="chat.info.signature.text" class="EditObject">
+					  <attr>
+						<left>25</left>
+						<top>164</top>
+						<width>father.width-50</width>
+						<textcolor>chatwnd.userinfo.name.color</textcolor>
+						<height>250</height>
+						<text>fdsff</text>
+						<multiline>1</multiline>
+						<transparent>1</transparent>
+						<readonly>1</readonly> 
+					  </attr>
+					</obj>	
+
+			
+					
+				</children>
+				</obj>
+				
+								
+				<!---->		
+		</children>
+		
+		<eventlist>
+			<event name="OnInitControl" file="ChatExtraCtrl.xml.lua" func="OnInitControl" />					
+		</eventlist>		
+</objtemplate>		
+</control>
+
+</xlue>

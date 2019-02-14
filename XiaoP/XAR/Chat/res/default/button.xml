@@ -1,0 +1,99 @@
+<xlue>
+	<resource>
+	<imagelist id="imagelist.chatwndsys.max.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.max.btn.png"/>
+	<imagelist id="imagelist.chatwndsys.restore.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.restore.btn.png"/>
+	<imagelist id="imagelist.chatwndsys.min.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.min.btn.png"/>
+	<imagelist id="imagelist.chatwndsys.close.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.close.btn.png"/>
+	
+	<imagelist id="imagelist.chattoolbar.font.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\toolbar.font.btn.png"/>
+	<imagelist id="imagelist.chattoolbar.face.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\toolbar.face.btn.png"/>
+	<imagelist id="imagelist.chattoolbar.file.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\toolbar.file.btn.png"/>
+	<imagelist id="imagelist.chattoolbar.capture.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\toolbar.capture.btn.png"/>
+	
+	<imagelist id="imagelist.chathistory.first.page.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\history.first.page.png"/>
+	<imagelist id="imagelist.chathistory.prev.page.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\history.prev.page.png"/>
+	<imagelist id="imagelist.chathistory.next.page.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\history.next.page.png"/>
+	<imagelist id="imagelist.chathistory.last.page.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\history.last.page.png"/>
+	
+	<imagelist id="imagelist.chattoolbar.history.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\toolbar.history.btn.png"/>
+	
+	
+	<imagelist id="imagelist.font.style.u.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\font.style.u.png"/>
+	<imagelist id="imagelist.font.style.i.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\font.style.i.png"/>
+	<imagelist id="imagelist.font.style.b.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\font.style.b.png"/>
+	<imagelist id="imagelist.font.color.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\font.color.png"/>
+	
+	<bitmap id="font.style.u.normal"  imagelist = "imagelist.font.style.u.btn" index = "1" />
+	<bitmap id="font.style.u.hover"  imagelist = "imagelist.font.style.u.btn" index = "2" />
+	<bitmap id="font.style.u.down"  imagelist = "imagelist.font.style.u.btn" index = "3" />	
+
+	<bitmap id="font.style.i.normal"  imagelist = "imagelist.font.style.i.btn" index = "1" />
+	<bitmap id="font.style.i.hover"  imagelist = "imagelist.font.style.i.btn" index = "2" />
+	<bitmap id="font.style.i.down"  imagelist = "imagelist.font.style.i.btn" index = "3" />	
+
+	<bitmap id="font.style.b.normal"  imagelist = "imagelist.font.style.b.btn" index = "1" />
+	<bitmap id="font.style.b.hover"  imagelist = "imagelist.font.style.b.btn" index = "2" />
+	<bitmap id="font.style.b.down"  imagelist = "imagelist.font.style.b.btn" index = "3" />		
+
+	<bitmap id="font.color.normal"  imagelist = "imagelist.font.color.btn" index = "1" />
+	<bitmap id="font.color.hover"  imagelist = "imagelist.font.color.btn" index = "2" />
+	<bitmap id="font.color.down"  imagelist = "imagelist.font.color.btn" index = "3" />			
+	
+	<bitmap id="chathistory.first.page.normal"  imagelist = "imagelist.chathistory.first.page.btn" index = "1" />
+	<bitmap id="chathistory.first.page.hover"  imagelist = "imagelist.chathistory.first.page.btn" index = "2" />
+	<bitmap id="chathistory.first.page.down"  imagelist = "imagelist.chathistory.first.page.btn" index = "3" />	
+	<bitmap id="chathistory.prev.page.normal"  imagelist = "imagelist.chathistory.prev.page.btn" index = "1" />
+	<bitmap id="chathistory.prev.page.hover"  imagelist = "imagelist.chathistory.prev.page.btn" index = "2" />
+	<bitmap id="chathistory.prev.page.down"  imagelist = "imagelist.chathistory.prev.page.btn" index = "3" />	
+	<bitmap id="chathistory.next.page.normal"  imagelist = "imagelist.chathistory.next.page.btn" index = "1" />
+	<bitmap id="chathistory.next.page.hover"  imagelist = "imagelist.chathistory.next.page.btn" index = "2" />
+	<bitmap id="chathistory.next.page.down"  imagelist = "imagelist.chathistory.next.page.btn" index = "3" />	
+	<bitmap id="chathistory.last.page.normal"  imagelist = "imagelist.chathistory.last.page.btn" index = "1" />
+	<bitmap id="chathistory.last.page.hover"  imagelist = "imagelist.chathistory.last.page.btn" index = "2" />
+	<bitmap id="chathistory.last.page.down"  imagelist = "imagelist.chathistory.last.page.btn" index = "3" />	
+	
+	<bitmap id="chattoolbar.font.icon.normal"  imagelist = "imagelist.chattoolbar.font.btn" index = "1" />
+	<bitmap id="chattoolbar.font.icon.hover"  imagelist = "imagelist.chattoolbar.font.btn" index = "2" />
+	<bitmap id="chattoolbar.font.icon.down"  imagelist = "imagelist.chattoolbar.font.btn" index = "3" />	
+
+	<bitmap id="chattoolbar.face.icon.normal"  imagelist = "imagelist.chattoolbar.face.btn" index = "1" />
+	<bitmap id="chattoolbar.face.icon.hover"  imagelist = "imagelist.chattoolbar.face.btn" index = "2" />
+	<bitmap id="chattoolbar.face.icon.down"  imagelist = "imagelist.chattoolbar.face.btn" index = "3" />
+
+	<bitmap id="chattoolbar.file.icon.normal"  imagelist = "imagelist.chattoolbar.file.btn" index = "1" />
+	<bitmap id="chattoolbar.file.icon.hover"  imagelist = "imagelist.chattoolbar.file.btn" index = "2" />
+	<bitmap id="chattoolbar.file.icon.down"  imagelist = "imagelist.chattoolbar.file.btn" index = "3" />
+
+	<bitmap id="chattoolbar.capture.icon.normal"  imagelist = "imagelist.chattoolbar.capture.btn" index = "1" />
+	<bitmap id="chattoolbar.capture.icon.hover"  imagelist = "imagelist.chattoolbar.capture.btn" index = "2" />
+	<bitmap id="chattoolbar.capture.icon.down"  imagelist = "imagelist.chattoolbar.capture.btn" index = "3" />	
+
+	<bitmap id="chattoolbar.history.icon.normal"  imagelist = "imagelist.chattoolbar.history.btn" index = "1" />
+	<bitmap id="chattoolbar.history.icon.hover"  imagelist = "imagelist.chattoolbar.history.btn" index = "2" />
+	<bitmap id="chattoolbar.history.icon.down"  imagelist = "imagelist.chattoolbar.history.btn" index = "3" />	
+	
+	<bitmap id="chatwndsys.max.icon.normal"  imagelist = "imagelist.chatwndsys.max.btn" index = "1" />
+	<bitmap id="chatwndsys.max.icon.hover"  imagelist = "imagelist.chatwndsys.max.btn" index = "2" />
+	<bitmap id="chatwndsys.max.icon.down"  imagelist = "imagelist.chatwndsys.max.btn" index = "3" />	
+
+	<bitmap id="chatwndsys.restore.icon.normal"  imagelist = "imagelist.chatwndsys.restore.btn" index = "1" />
+	<bitmap id="chatwndsys.restore.icon.hover"  imagelist = "imagelist.chatwndsys.restore.btn" index = "2" />
+	<bitmap id="chatwndsys.restore.icon.down"  imagelist = "imagelist.chatwndsys.restore.btn" index = "3" />	
+	
+	<bitmap id="chatwndsys.min.icon.normal"  imagelist = "imagelist.chatwndsys.min.btn" index = "1" />
+	<bitmap id="chatwndsys.min.icon.hover"  imagelist = "imagelist.chatwndsys.min.btn" index = "2" />
+	<bitmap id="chatwndsys.min.icon.down"  imagelist = "imagelist.chatwndsys.min.btn" index = "3" />	
+
+	<bitmap id="chatwndsys.close.icon.normal"  imagelist = "imagelist.chatwndsys.close.btn" index = "1" />
+	<bitmap id="chatwndsys.close.icon.hover"  imagelist = "imagelist.chatwndsys.close.btn" index = "2" />
+	<bitmap id="chatwndsys.close.icon.down"  imagelist = "imagelist.chatwndsys.close.btn" index = "3" />	
+
+
+	<imagelist id="imagelist.addcontact.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\addcontact.btn.png"/>
+	
+	<bitmap id="addcontact.icon.normal"  imagelist = "imagelist.addcontact.btn" index = "1" />
+	<bitmap id="addcontact.icon.hover"  imagelist = "imagelist.addcontact.btn" index = "2" />
+	<bitmap id="addcontact.icon.down"  imagelist = "imagelist.addcontact.btn" index = "3" />
+	
+	</resource>
+</xlue>

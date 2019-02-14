@@ -1,0 +1,96 @@
+function OnInitControl(self)
+	
+	local membersList = self:GetObject("members.list")
+
+	local  data = {}
+	
+	local user = {}
+	user.userId = "yangting"
+	user.userName = "杨挺"
+	user.userNo = "114114"
+	
+	
+	local user1 = {}
+	user1.userId = "zhangxiaowen"
+	user1.userName = "张晓雯"
+	user1.userNo = "114114"
+	
+	data[1] = user
+	data[2] = user1
+	
+	membersList:CreateList(data)
+end
+
+function UpdateMember(self)
+	local attr = self:GetAttribute()
+	if attr.data == nil then
+		return
+	else
+		if type(attr.data) ~= "table" then
+			return
+		end
+	end
+	
+	local memberName = self:GetObject("user.name")
+	
+	memberName:SetText(attr.data.userName)
+		--加载用户信息
+	local ImageFactory = XLGetObject("XiaoP.Wnds.XImage.Factory")
+	imageClass = ImageFactory:CreateInstance()
+	imageClass:AttachImgListener(
+		function(r)
+			detailFace:SetBitmap(r)
+			normalFace:SetBitmap(r)
+		end
+	)
+	
+	imageClass:GetFace(attr.data.userId,40,40,1)	
+end
+
+function OnInitMember(self)
+	self:UpdateMember()
+end
+function OnMemberHover(self)
+	local attr = self:GetAttribute()
+	if attr.selected then
+		return
+	end
+	
+	local bkg = self:GetObject("user.bkg")
+	bkg:SetSrcColor("RGBA(255,255,204,255)")
+end
+function OnMemberLeave(self)
+	local attr = self:GetAttribute()
+	if attr.selected then
+		return
+	end
+	
+	local bkg = self:GetObject("user.bkg")
+	bkg:SetSrcColor("RGBA(255,255,255,255)")
+end
+function OnMemberClick(self)
+	local bkg = self:GetObject("user.bkg")
+	bkg:SetSrcColor("RGBA(255,255,153,255)")
+	
+	SetMemberSelected(self)
+end
+
+function SetMemberSelected(memberItem)
+	local memberAttr = memberItem:GetAttribute()
+	memberAttr.selected = true
+	
+	local list = memberItem:GetOwnerControl()
+	local attr = list:GetAttribute()
+	
+	--pre selected
+	local oldSelMember = attr.selectItem
+	if oldSelMember ~= nil then	
+		if oldSelMember:GetID() == memberItem:GetID() then
+			return
+		end
+		oldSelMember:GetAttribute().selected = false
+		OnMemberLeave(oldSelMember)
+	end
+	
+	attr.selectItem = memberItem
+end

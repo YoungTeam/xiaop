@@ -1,0 +1,210 @@
+<xlue>
+<objtreetemplate id="XiaoP.About.Tree" class="ObjectTreeTemplate">
+	<attr>
+			<left>-200</left>
+			<top>-200</top>
+			<width>2000</width>
+			<height>2000</height>
+			
+	</attr>	
+	<obj id="root" class="LayoutObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>392</width>
+			<height>312</height>
+		</attr>
+		<children>
+			<obj id="mirrorBkg" class="ImageObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<visible>0</visible> 
+				</attr>	
+			</obj>		
+			
+			<obj id="bkg_border" class="TextureObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<texture>texture.wndborder.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>
+				<children>
+					<obj id="bkg" class="TextureObject">
+					<attr>
+						<left>6</left>
+						<top>6</top>
+						<width>father.width-12</width>
+						<height>father.height-12</height>
+						<texture>texture.aboutwnd.bkg</texture>
+						<limitchild>1</limitchild> 			
+					</attr>
+					<children>
+						<obj id="aboutwnd.caption" class="CaptionObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>father.height</height>
+							</attr>
+							<children>
+								<obj id="xiaop.text" class="TextObject">
+								<attr>
+										<left>36</left>
+										<top>5</top>
+										<width>50</width>
+										<height>20</height>
+										<text>关于小P</text>
+										<font>msgboxwnd.13.font</font>
+										<halign>center</halign>
+										<valign>center</valign>
+										<textcolor>msgboxwnd.white.color</textcolor>
+									</attr>
+								</obj>
+								<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+									<attr>
+										<left>father.width-30</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<MaxShow>false</MaxShow>
+										<MiniShow>false</MiniShow>
+										<SingleClose_NormalImageID>mainwndsys.close.icon.normal</SingleClose_NormalImageID>
+										<SingleClose_HoverImageID>mainwndsys.close.icon.hover</SingleClose_HoverImageID>
+										<SingleClose_DownImageID>mainwndsys.close.icon.down</SingleClose_DownImageID>														
+									</attr>
+									<eventlist>
+										<event name="OnClose" file="AboutWnd.xml.lua" func="OnClose" />
+									</eventlist>
+								</obj>
+							</children>
+						</obj>
+						
+						<obj id="content.layout" class="LayoutObject">
+						<attr>
+							<left>0</left>
+							<top>20</top>
+							<width>father.width</width>
+							<height>father.height-30</height>						
+						</attr>
+						<children>
+							<obj id="version" class="TextObject">
+							<attr>
+								<left>25</left>
+								<top>20</top>
+								<width>father.width</width>
+								<height>20</height>
+								<text>XiaoP 1.0.0.31847 </text>
+								<font>msgboxwnd.13.font</font>								
+							</attr>
+							</obj>
+							<obj id="copyright.cn" class="TextObject">
+							<attr>
+								<left>25</left>
+								<top>50</top>
+								<width>300</width>
+								<height>30</height>
+								<text>北京搜狗科技发展有限公司 运维部 信息服务部 版权所有
+								</text>								
+							</attr>
+							</obj>	
+							<obj id="copyright.en" class="TextObject">
+							<attr>
+								<left>25</left>
+								<top>70</top>
+								<width>350</width>
+								<height>30</height>
+								<text>
+								Copyright © 2014 - 2015 yt.OP.INFO All Rights Reserved.
+								</text>								
+							</attr>
+							</obj>	
+							<obj id="tech.support.cn" class="TextObject">
+							<attr>
+								<left>25</left>
+								<top>130</top>
+								<width>340</width>
+								<height>60</height>
+								<multiline>1</multiline>
+								<text>
+								本软件中使用的BOLT界面引擎专利技术和商标归深圳市迅雷网络技术有限公司所有
+								</text>								
+							</attr>
+							</obj>	
+							<obj id="tech.support.en" class="TextObject">
+							<attr>
+								<left>25</left>
+								<top>170</top>
+								<width>340</width>
+								<height>60</height>
+								<multiline>1</multiline>
+								<text>
+								Powered by BOLT UIEngine © ShenZhen XunLei Networking Te-chnologies,LTD,ALL Rights Reserved.
+								</text>								
+							</attr>
+							</obj>											
+						</children>
+						</obj>
+
+						<obj id="ok.btn" class="Thunder.Button">
+							<attr>
+								<left>father.width-90</left>
+								<top>father.height-30</top>
+								<width>70</width>
+								<height>24</height>
+								<Text>确定</Text>
+								<TextColor>msgboxwnd.white.color</TextColor>
+								<TextFont>msgboxwnd.14.font</TextFont>
+								<ShowFocusRect>false</ShowFocusRect>
+								<NormalBkgID>wnd.msg.button.normal</NormalBkgID>
+								<DownBkgID>wnd.msg.button.down</DownBkgID>
+								<DisableBkgID>wnd.msg.button.disable</DisableBkgID>
+								<HoverBkgID>wnd.msg.button.hover</HoverBkgID>																							
+							</attr>
+							<eventlist>
+								<event name="OnClick" file="AboutWnd.xml.lua" func="OnClose" />
+							</eventlist>
+						</obj>
+						
+					</children>
+					<eventlist>
+							<event name="OnInitControl" file="AboutWnd.xml.lua" func="OnInit" />
+					</eventlist>				
+				</obj>
+				</children>	
+			</obj>		
+		</children>
+	</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.About.Wnd" class="ModalHostWnd">
+	<attr> 
+		<title>关于小P</title>
+		<layered>1</layered>
+		<left>200</left> 
+		<top>100</top>
+		<width>392</width>
+		<height>312</height>
+		<!--topmost>1</topmost-->
+		<visible>1</visible>
+		<enable>1</enable>
+		<minwidth>392</minwidth>
+		<minheight>312</minheight>
+		<appwindow>0</appwindow>
+		<fps>30</fps>
+	</attr>
+	<eventlist>
+		<event name="OnCreate">
+			local arg = {...}
+			local self = arg[1]
+			self:Center()
+		</event>
+		<!--event name="OnDestroy" file="LoginWnd.xml.lua" func = "OnLoginWndDestroy"/-->
+	</eventlist>
+</hostwndtemplate>
+</xlue>

@@ -1,0 +1,314 @@
+<xlue>
+<objtreetemplate id="XiaoP.Main.Tree" class="ObjectTreeTemplate">
+	<attr>
+			<left>-200</left>
+			<top>-200</top>
+			<width>2000</width>
+			<height>2000</height>
+	</attr>
+	<obj id="root" class="LayoutObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>274</width>
+			<height>602</height>
+		</attr>
+		<children>
+			<obj id="bkg" class="TextureObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<texture>texture.mainwnd.bkg</texture>
+				</attr>
+				<children>
+					<obj id="body" class="LayoutObject">
+						<attr>
+							<left>0</left>
+							<top>0</top>
+							<width>father.width</width>
+							<height>father.height</height>
+						</attr>
+						<children>
+							<obj id="mainwnd.resize.right" class="ResizeObject">
+								<attr>
+									<top>0</top>
+									<left>father.width-4</left>
+									<width>4</width>
+									<height>father.height</height>
+									<type>right</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.bottom" class="ResizeObject">
+								<attr>
+									<top>father.height-4</top>
+									<width>father.width</width>
+									<height>4</height>
+									<type>bottom</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.top" class="ResizeObject">
+								<attr>
+									<top>-2</top>
+									<width>father.width</width>
+									<height>4</height>
+									<type>top</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.left" class="ResizeObject">
+								<attr>
+									<left>-2</left>
+									<width>4</width>
+									<height>father.height</height>
+									<type>left</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.topleft" class="ResizeObject">
+								<attr>
+									<left>0</left>
+									<top>0</top>
+									<width>4</width>
+									<height>4</height>
+									<type>topleft</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.bottomleft" class="ResizeObject">
+								<attr>
+									<left>0</left>
+									<top>father.height-4</top>
+									<width>4</width>
+									<height>4</height>
+									<type>bottomleft</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.topright" class="ResizeObject">
+								<attr>
+									<left>father.width-4</left>
+									<top>0</top>
+									<width>4</width>
+									<height>4</height>
+									<type>topright</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.bottomright" class="ResizeObject">
+								<attr>
+									<left>father.width-4</left>
+									<top>father.height-4</top>
+									<width>4</width>
+									<height>4</height>
+									<type>bottomright</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+
+							<obj id="mainwnd.caption" class="CaptionObject">
+								<attr>
+									<left>0</left>
+									<top>10</top>
+									<width>father.width-20</width>
+									<height>32</height>
+								</attr>
+								<children>
+									<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+										<attr>
+											<left>father.width-87</left>
+											<top>1</top>
+											<width>86</width>
+											<height>29</height>
+										</attr>
+										<eventlist>
+											<event name="OnMinisize" file="MainWnd.xml.lua" func="OnMinisize" />
+											<event name="OnMaxSize" file="MainWnd.xml.lua" func="OnMaxSize" />
+											<event name="OnReStore" file="MainWnd.xml.lua" func="OnReStore" />
+											<event name="OnClose" file="MainWnd.xml.lua" func="OnClose" />
+										</eventlist>
+									</obj>
+								</children>
+							</obj>
+							
+							<obj  id="stars.app.bkg.mask" class="MaskObject">
+								<attr>
+									<left>8</left>
+									<top>23</top>
+									<width>70</width>
+									<height>70</height>
+									<maskorgx>8</maskorgx>
+									<maskorgy>23</maskorgy>
+									<masksizex>70</masksizex>
+									<masksizey>70</masksizey>
+									<type>bitmap</type>
+									<chanel>r</chanel>
+									<stretchbitmap>1</stretchbitmap>
+									<resid>xiaop.face</resid>
+								</attr>
+								<children>
+									<obj id="userFace"  class="ImageObject">
+										<attr>
+											<left>10</left>
+											<top>25</top>
+											<width>60</width>
+											<height>60</height>
+											<drawmode >1</drawmode >
+											<inheritmask>1</inheritmask> 
+											<maskleft>0</maskleft>
+											<masktop>0</masktop>
+											<maskwidth>60</maskwidth>
+											<maskheight>60</maskheight>
+											
+											<!--image>xiaop.face</image-->
+										</attr>
+									</obj>	
+								</children>
+							</obj>
+							
+							<obj id="userName" class="TextObject">
+								<attr>
+								<left>80</left>
+								<top>30</top>
+								<width>336</width>
+								<height>25</height>
+								<font>userlist.font</font>
+								<text></text>
+								</attr>
+							</obj>							
+							<obj id="userDept" class="TextObject">
+								<attr>
+								<left>80</left>
+								<top>60</top>
+								<width>336</width>
+								<height>25</height>
+								<font>userlist.font</font>
+								<text></text>
+								</attr>
+							</obj>							
+							
+							<!--obj id="suggCtrl" class="XiaoP.Main.SuggListCtrl">
+								<attr>
+									<left>1</left>
+									<top>98</top>
+									<width>father.width-2</width>
+									<height>350</height>
+								</attr>	
+							</obj-->
+
+							<obj id="tabCtrl" class="LayoutObject">
+								<attr>
+									<left>1</left>
+									<top>125</top>
+									<width>father.width-2</width>
+									<height>father.height-30</height>
+								
+								</attr>
+								<children>
+									<obj id="tabHeader" class="Thunder.TabCtrl">
+
+										<attr>
+											<left>0</left>
+											<top>0</top>
+											<width>father.width</width>
+											<height>28</height>
+
+											<ButtonWidth>76</ButtonWidth>
+
+                                            <ButtonHeight>28</ButtonHeight>
+
+                                            <ButtonInternalSpace>4</ButtonInternalSpace>     
+
+										    <TextLeftPos>0</TextLeftPos>
+
+                                            <TextTopPos>7</TextTopPos>
+
+											<IconLeftPos>4</IconLeftPos>
+
+											<IconTopPos>6</IconTopPos>
+
+											<IconSize>16</IconSize>
+										</attr>
+
+										<eventlist>
+											<event name="OnInitControl" file="MainWnd.xml.lua" func="OnInitTabHeader" />
+											<event name="OnActiveTabChanged" file="MainWnd.xml.lua" func="OnActiveTabChanged" />
+										</eventlist>
+									</obj>								
+									<obj id="tabbkg" class="Thunder.TabCtrlBkg">
+										<attr>
+											<zorder>-1</zorder>
+											<left>0</left>
+											<top>27</top>
+											<width>father.width</width>
+											<height>father.height-200</height>
+										</attr>
+										<children>	
+										</children>
+									</obj>									
+								</children>
+							</obj>
+							<obj id="MainMenuBtn" class="Thunder.Button">
+								<attr>
+									<left>10</left>
+									<top>father.height-30</top>
+									<width>50</width>
+									<height>25</height>
+									<Text>主菜单</Text>
+								</attr>	
+								<eventlist>
+									<event name="OnClick" file="MainWnd.xml.lua" func="OnClickMainMenu" />
+								</eventlist>		
+							</obj>
+							
+						</children>
+						<eventlist>
+							<!--event name="OnInitControl" file="MainWnd.xml.lua" func="OnInitUserInfo" /-->
+						</eventlist>
+					</obj>
+				</children>
+			</obj>
+		</children>
+	</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.Main.Wnd" class="FrameHostWnd">
+	<attr> 
+		<mainwnd>1</mainwnd>
+		<title>ControlDemo</title>
+		<layered>1</layered>
+		<left>200</left> 
+		<top>100</top>
+		<width>274</width>
+		<height>602</height>
+		<cacheleft>0</cacheleft> 
+		<cachetop>0</cachetop>
+		<cachewidth>1200</cachewidth>
+		<cacheheight>1000</cacheheight>
+		<topmost>1</topmost>
+		<visible>1</visible>
+		<enable>1</enable>
+		<active>1</active>
+		<maxbox>0</maxbox>
+		<minbox>0</minbox>
+		<minwidth>292</minwidth>
+		<minheight>540</minheight>
+		<appwindow>0</appwindow>
+		<fps>30</fps>
+	</attr>
+	<eventlist>
+		<!--event name="OnCreate" file="MainWnd.xml.lua" func="OnCreateWnd" /-->
+		<event name="OnSize" file="MainWnd.xml.lua" func="OnMainWndSize"/>
+	</eventlist>
+</hostwndtemplate>
+</xlue>

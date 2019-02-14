@@ -1,0 +1,14 @@
+<xlue>
+	<resource>
+	<imagelist id="wnd.msg.button.bkg" vertical="0" splitter="1" varyblock="1" image="bitmap/msgwnd.button.png"/>
+	<texture id="wnd.msg.button.normal" type="ThreeInOneH" imagelist="wnd.msg.button.bkg" index="1"/>
+	<texture id="wnd.msg.button.down" type="ThreeInOneH" imagelist="wnd.msg.button.bkg" index="2"/>
+	<texture id="wnd.msg.button.hover" type="ThreeInOneH" imagelist="wnd.msg.button.bkg" index="3"/>
+	<texture id="wnd.msg.button.disable" type="ThreeInOneH" imagelist="wnd.msg.button.bkg" index="4"/>	
+	
+	<imagelist id="imagelist.msgwndsys.close.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.close.btn.png"/>
+	<bitmap id="msgwndsys.close.icon.normal"  imagelist = "imagelist.msgwndsys.close.btn" index = "1" />
+	<bitmap id="msgwndsys.close.icon.hover"  imagelist = "imagelist.msgwndsys.close.btn" index = "2" />
+	<bitmap id="msgwndsys.close.icon.down"  imagelist = "imagelist.msgwndsys.close.btn" index = "3" />	
+	</resource>
+</xlue>

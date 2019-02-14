@@ -1,0 +1,19 @@
+<XLUE>
+<resource>
+  <font id="2000"  height="18" width="0" escapement="0" orientation="0" weight="FW_BOLD" charset="DEFAULT_CHARSET" outprecision="OUT_DEFAULT_PRECIS" clipprecision="CLIP_DEFAULT_PRECIS" quality="DEFAULT_QUALITY" pitch="DEFAULT_PITCH" family="FF_DONTCARE" facename="YouYuan" />
+  <font id="2001"  height="12" width="0" escapement="0" orientation="0" weight="FW_BOLD" charset="DEFAULT_CHARSET" outprecision="OUT_DEFAULT_PRECIS" clipprecision="CLIP_DEFAULT_PRECIS" quality="DEFAULT_QUALITY" pitch="DEFAULT_PITCH" family="FF_DONTCARE" facename="YouYuan" />
+  <color id="3000" red="0" green="255" blue="255" alpha="0" /> 
+  <color id="system.blue" red="159" green="78" blue="30" alpha="255" />
+  <color id="system.white" red="255" green="255" blue="255" alpha="255" />
+  <color id="system.black" red="0" green="0" blue="0" alpha="255" />
+  <color id="edit.text" red="255" green="0" blue="0" alpha="0" /> 
+  <color id="edit.bkn"  red="0" green="100" blue="0" alpha="0" /> 
+  <color id="tasklist.unselect" red="221" green="167" blue="127" alpha="255" />
+  <font id="edit.font" height="16" weight="FW_BOLD" facename="微软雅黑"/>
+  <font id="catalog.font" height="16"  weight="FW_BOLD" facename="微软雅黑"/>
+  <font id="loginpanel.rank.font" height="16" facename="微软雅黑" />
+  <font id="loginpanel.user.font" height="14" facename="微软雅黑" />
+  <font id="default.font" height="14" facename="微软雅黑" />
+  <font id="tasklist.font" height="16" facename="微软雅黑" />
+</resource>
+</XLUE>

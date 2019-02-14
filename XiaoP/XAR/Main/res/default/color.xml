@@ -1,0 +1,10 @@
+<XLUE>
+<resource>
+  <color id="userlist.select" red="221" green="167" blue="127" alpha="255" />
+  <color id="userlist.userName.color" red="51" green="51" blue="51" alpha="255" /> 
+  <color id="mainwnd.black.color" red="0" green="0" blue="0" alpha="255" />
+  <color id="mainwnd.gray.color" red="153" green="153" blue="153" alpha="255" />
+  <color id="mainwnd.white.color" red="255" green="255" blue="255" alpha="255" />
+  <color id="mainwnd.green.color" red="43" green="135" blue="89" alpha="255" />
+ </resource>
+</XLUE>

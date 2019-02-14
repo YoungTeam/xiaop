@@ -1,0 +1,6 @@
+local path = XLGetObject("xl.filesystem.path_utility"):get_path_dir(__document)
+XLLoadModule(path.."/TipsHelper.lua")["RegisterObject"]()
+
+XLLoadModule(path.."/MenuHelper.lua")["RegisterObject"]()
+
+XLLoadModule(path.."/Particle.Elements.lua")["RegisterObject"]()

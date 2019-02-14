@@ -1,0 +1,7 @@
+<XLUE>
+<resource>
+ 	<bitmap id="userlist.collapse"  path="bitmap\usrlist_collapse.png"/>
+	<bitmap id="userlist.expand"  path="bitmap\usrlist_expand.png"/>
+</resource>
+</XLUE>	
+

@@ -1,0 +1,7 @@
+@echo off
+set UE_LOADER=D:\boltsdk\tools\XLUEPack\XLUEPack.exe
+
+set XAR_SEARH_PATH=%~dp0%\
+
+%UE_LOADER% option=pack srcpath=%XAR_SEARH_PATH% destpath="D:\workspace\C#\XiaoP\XiaoP\bin\Release\xar" medium="uez" mode=union
+pause

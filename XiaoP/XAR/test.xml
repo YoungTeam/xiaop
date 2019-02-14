@@ -1,0 +1,33 @@
+<obj id="test_mask" class="MaskObject">
+	<attr>
+		<left>0</left>
+		<top>0</top>
+		<height>200</height>
+		<width>200</width>
+		<type>texture</type>
+		<chanel>r</chanel>
+		<resid>mainmask</resid>
+		<masksizex>width</masksizex>
+		<masksizey>height</masksizey>
+		<maskorgx>0</maskorgx>
+		<maskorgy>0</maskorgy>	
+
+	</attr>
+	<children>
+		<obj id="test_texture" class="TextureObject">
+			<attr>
+				<left>0</left>
+				<top>0</top>
+				<height>200</height>
+				<width>200</width>
+				<texture>test_img</texture>
+				<inheritmask>1</inheritmask>
+				<maskwidth>200</maskwidth>
+				<maskheight>200</maskheight>
+			</attr>
+		</obj>
+	</children>
+</obj>
+
+<texture id="mainmask" type="NineInOne" image="test_mask.png" />
+<texture id="test_img" type="NineInOne" image="texture_obj.png" />

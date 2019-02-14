@@ -1,0 +1,10 @@
+D:\workspace\C#\20130514\ImgView\bin\Debug\ImgView.dll
+D:\workspace\C#\20130514\ImgView\bin\Debug\ImgView.pdb
+D:\workspace\C#\20130514\ImgView\bin\Debug\PSkin.dll
+D:\workspace\C#\20130514\ImgView\bin\Debug\PSkin.pdb
+D:\workspace\C#\20130514\ImgView\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514\ImgView\obj\Debug\Pandora.ImgView.resources
+D:\workspace\C#\20130514\ImgView\obj\Debug\ImgView.Properties.Resources.resources
+D:\workspace\C#\20130514\ImgView\obj\Debug\ImgView.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514\ImgView\obj\Debug\ImgView.dll
+D:\workspace\C#\20130514\ImgView\obj\Debug\ImgView.pdb

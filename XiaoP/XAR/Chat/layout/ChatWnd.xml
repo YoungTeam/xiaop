@@ -1,0 +1,490 @@
+<xlue>
+<objtreetemplate id="XiaoP.Chat.Tree" class="ObjectTreeTemplate">
+	<attr>
+			<left>-200</left>
+			<top>-200</top>
+			<width>2000</width>
+			<height>2000</height>
+	</attr>
+	<obj id="root" class="LayoutObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>596</width>
+			<height>518</height>
+		</attr>
+		<children>
+		
+		<obj id="bkg_border" class="TextureObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<texture>texture.wndborder.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>
+				<children>
+	
+			<obj id="bkg" class="TextureObject">
+				<attr>
+					<left>6</left>
+					<top>6</top>
+					<width>father.width-14</width>
+					<height>father.height-14</height>
+					<texture>texture.chatwnd.bkg</texture>
+				</attr>
+				<children>
+					<obj id="body" class="LayoutObject">
+						<attr>
+							<left>0</left>
+							<top>0</top>
+							<width>father.width</width>
+							<height>father.height</height>
+						</attr>
+						<children>
+							<obj id="chatwnd.resize.right" class="ResizeObject">
+								<attr>
+									<top>0</top>
+									<left>father.width-4</left>
+									<width>4</width>
+									<height>father.height</height>
+									<type>right</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.bottom" class="ResizeObject">
+								<attr>
+									<top>father.height-4</top>
+									<width>father.width</width>
+									<height>4</height>
+									<type>bottom</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.top" class="ResizeObject">
+								<attr>
+									<top>-2</top>
+									<width>father.width</width>
+									<height>4</height>
+									<type>top</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.left" class="ResizeObject">
+								<attr>
+									<left>-2</left>
+									<width>4</width>
+									<height>father.height</height>
+									<type>left</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.topleft" class="ResizeObject">
+								<attr>
+									<left>0</left>
+									<top>0</top>
+									<width>4</width>
+									<height>4</height>
+									<type>topleft</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.bottomleft" class="ResizeObject">
+								<attr>
+									<left>0</left>
+									<top>father.height-4</top>
+									<width>4</width>
+									<height>4</height>
+									<type>bottomleft</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.topright" class="ResizeObject">
+								<attr>
+									<left>father.width-4</left>
+									<top>0</top>
+									<width>4</width>
+									<height>4</height>
+									<type>topright</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="chatwnd.resize.bottomright" class="ResizeObject">
+								<attr>
+									<left>father.width-4</left>
+									<top>father.height-4</top>
+									<width>4</width>
+									<height>4</height>
+									<type>bottomright</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+
+							<obj id="chatwnd.caption" class="CaptionObject">
+
+								<attr>
+
+									<left>0</left>
+
+									<top>0</top>
+
+									<width>father.width</width>
+
+									<height>father.height</height>
+
+								</attr>
+
+								<children>
+									<!--obj  id="xiaop.logo" class="ImageObject">
+										<attr>
+											<left>14</left>
+											<top>5</top>
+											<width>46</width>
+											<height>16</height>
+											<image>xiaop</image>
+										</attr>
+									</obj-->
+									<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+										<attr>
+											<left>father.width-89</left>
+											<top>0</top>
+											<width>90</width>
+											<height>30</height>
+											<MaxShow>true</MaxShow>
+											<Restore_NormalImageID>chatwndsys.restore.icon.normal</Restore_NormalImageID>
+											<Restore_HoverImageID>chatwndsys.restore.icon.hover</Restore_HoverImageID>
+											<Restore_DownImageID>chatwndsys.restore.icon.down</Restore_DownImageID>
+											<Max_NormalImageID>chatwndsys.max.icon.normal</Max_NormalImageID>
+											<Max_HoverImageID>chatwndsys.max.icon.hover</Max_HoverImageID>
+											<Max_DownImageID>chatwndsys.max.icon.down</Max_DownImageID>
+											<Mini_NormalImageID>chatwndsys.min.icon.normal</Mini_NormalImageID>
+											<Mini_HoverImageID>chatwndsys.min.icon.hover</Mini_HoverImageID>
+											<Mini_DownImageID>chatwndsys.min.icon.down</Mini_DownImageID>
+											<Close_NormalImageID>chatwndsys.close.icon.normal</Close_NormalImageID>
+											<Close_HoverImageID>chatwndsys.close.icon.hover</Close_HoverImageID	>
+											<Close_DownImageID>chatwndsys.close.icon.down</Close_DownImageID>	
+										</attr>
+										<eventlist>
+
+											<event name="OnMinisize" file="ChatWnd.xml.lua" func="OnMinisize" />
+
+											<event name="OnMaxSize" file="ChatWnd.xml.lua" func="OnMaxSize" />
+
+											<event name="OnReStore" file="ChatWnd.xml.lua" func="OnReStore" />
+
+											<event name="OnClose" file="ChatWnd.xml.lua" func="OnClose" />
+
+										</eventlist>
+									</obj>
+								</children>
+
+							</obj>
+
+							<obj  id="userFace.mask" class="MaskObject">
+								<attr>
+								 	<left>7</left>
+									<top>6</top>
+									<height>50</height>
+									<width>50</width>
+									<type>bitmap</type>
+									<chanel>r</chanel>
+									<resid>chat.face.mask</resid>
+									<masksizex>50</masksizex>
+									<masksizey>50</masksizey>
+									<maskorgx>0</maskorgx>
+									<maskorgy>0</maskorgy>									
+								</attr>
+								<children>
+									<obj id="userFace"  class="ImageObject">
+										<attr>
+											<left>5</left>
+											<top>5</top>
+											<width>40</width>
+											<height>40</height>
+											<drawmode>1</drawmode>
+											<inheritmask>1</inheritmask> 
+											<maskwidth>40</maskwidth>
+											<maskheight>40</maskheight>										
+											<image></image>
+										</attr>
+										
+									</obj>	
+								</children>
+							</obj>							
+							
+							<obj id="chat.userName" class="TextObject">
+							<attr>
+								<left>63</left>
+								<top>15</top>
+								<width>father.width-200</width>
+								<height>30</height>
+								<text></text>
+								<halign>left</halign>
+								<valign>center</valign>
+								<font>chatwnd.16.font</font>											
+							  </attr>
+							</obj>
+							
+							
+							<obj id="addContact.btn" class="Thunder.ImageTextButton">
+							<attr>
+								<left>115</left>
+								<top>18</top>
+								<width>100</width>
+								<height>26</height>
+								<Text>添加至通讯录</Text>
+								<TextFontID>chatwnd.12.font</TextFontID>
+								<TextColorID>chatwnd.green.color</TextColorID>
+								<TextLeftPos>13</TextLeftPos>
+								<TextTopPos>5</TextTopPos>
+								<IconWidth>100</IconWidth>
+								<IconHeight>26</IconHeight>
+								<Visible>0</Visible>
+								<IconBitmapID>addcontact.icon.normal</IconBitmapID>
+								<IconBitmapID_Hover>addcontact.icon.hover</IconBitmapID_Hover>
+								<IconBitmapID_Down>addcontact.icon.down</IconBitmapID_Down>	
+							</attr>		
+							<eventlist>
+								<event  name="OnButtonClick" file="ChatWnd.xml.lua" func="OnAddContact"/>
+							</eventlist>
+							</obj>		
+							
+								<obj id="chat.info.spliter" class="LineObject">
+								  <attr>
+									<left>0</left>
+									<top>60</top>
+									<width>father.width</width>
+									<height>1</height>
+									<color>chatwnd.spliter.color</color>
+									<srcpt>0,0</srcpt>
+									<destpt>father.width,0</destpt>
+									<pen>pen.solid</pen>
+								  </attr>
+								</obj>
+								
+								<obj id= "chat.area.layout" class="LayoutObject">
+								<attr>
+									<left>1</left>
+									<top>61</top>
+									<width>father.width-166</width>
+									<height>father.height-60</height>
+								</attr>
+								<children>
+									<obj id="chat.area" class="XiaoP.Chat.ChatSpliterCtrl">
+									<attr>
+										<left>0</left>
+										<top>0</top>
+										<width>father.width</width>
+										<height>father.height-37</height>							
+									</attr>	
+									<eventlist>
+										<event name="OnCtrlInit" file="ChatWnd.xml.lua" func="OnChatSpliterCtrlInit"/>
+										
+										<event name="OnFontStyleClick" file="ChatWnd.xml.lua" func="OnFontStyleClick"/>
+										<event name="OnFontColorClick" file="ChatWnd.xml.lua" func="OnFontColorClick"/>
+										<event name="OnSendGetObjectText" file="ChatWnd.xml.lua" func="OnSendGetObjectText"/>
+										<event name="OnHistoryClick" file="ChatWnd.xml.lua" func="OnHistoryClick"/>
+										<event name="OnEmotionClick" file="ChatWnd.xml.lua" func="OnEmotionClick"/>
+										<event name="OnCaptureClick" file="ChatWnd.xml.lua" func="OnCaptureClick"/>
+										
+										
+									</eventlist>
+									
+									</obj>
+									
+									<obj id="close.btn" class="Thunder.Button">
+									<attr>
+										<left>father.width-170</left>
+										<top>father.height-32</top>
+										<width>70</width>
+										<height>24</height>
+										<Text>关闭(C)</Text>									
+										<ShowFocusRect>false</ShowFocusRect>
+										<TextFont>chatwnd.14.font</TextFont>
+										<TextColor>chatwnd.white.color</TextColor>
+										<NormalBkgID>chatwnd.close.bkg.normal</NormalBkgID>
+										<DownBkgID>chatwnd.close.bkg.down</DownBkgID>
+										<HoverBkgID>chatwnd.close.bkg.hover</HoverBkgID>
+									</attr>
+									<eventlist>
+										<event name="OnClick" file="ChatWnd.xml.lua" func="OnClickClose" />
+									</eventlist>
+									</obj>								
+									<obj id="send.btn" class="Thunder.Button">
+										<attr>
+											<left>father.width-92</left>
+											<top>father.height-32</top>
+											<width>62</width>
+											<height>24</height>
+											<Text>发送(S)</Text>
+											<TextFont>chatwnd.14.font</TextFont>
+											<TextColor>chatwnd.white.color</TextColor>
+											<ShowFocusRect>false</ShowFocusRect>
+											<NormalBkgID>chatwnd.send.bkg.normal</NormalBkgID>
+											<DownBkgID>chatwnd.send.bkg.down</DownBkgID>
+											<HoverBkgID>chatwnd.send.bkg.hover</HoverBkgID>
+										</attr>
+										<eventlist>
+											<event name="OnClick" file="ChatWnd.xml.lua" func="OnClickSend"/>
+										</eventlist>
+									</obj>
+									<obj id="sendtype.btn" class="Thunder.Button">
+										<attr>
+											<left>father.width-30</left>
+											<top>father.height-32</top>
+											<width>20</width>
+											<height>24</height>
+											<Text>▼</Text>
+											<ShowFocusRect>false</ShowFocusRect>
+											<TextFont>chatwnd.14.font</TextFont>
+											<TextColor>chatwnd.white.color</TextColor>
+											<NormalBkgID>chatwnd.sendtype.bkg.normal</NormalBkgID>
+											<DownBkgID>chatwnd.sendtype.bkg.down</DownBkgID>
+											<HoverBkgID>chatwnd.sendtype.bkg.hover</HoverBkgID>
+										</attr>
+										<eventlist>
+											<event name="OnClick" file="ChatWnd.xml.lua" func="OnClickSendType"/>
+										</eventlist>
+									</obj>
+								</children>
+								</obj>
+								
+								<obj id = "chat.extra.ctrl" class="XiaoP.Chat.ChatExtraCtrl">
+									<attr>
+											<left>father.width-166</left>
+											<top>61</top>
+											<width>166</width>
+											<height>father.height-height-1</height>
+									</attr>
+									<eventlist>
+											<event name="OnHistoryFirstClick" file="ChatWnd.xml.lua" func="OnHistoryFirstClick"/>
+											<event name="OnHistoryPrevClick" file="ChatWnd.xml.lua" func="OnHistoryPrevClick"/>
+											<event name="OnHistoryNextClick" file="ChatWnd.xml.lua" func="OnHistoryNextClick"/>
+											<event name="OnHistoryLastClick" file="ChatWnd.xml.lua" func="OnHistoryLastClick"/>
+											<event name="OnCtrlInit" file="ChatWnd.xml.lua" func="OnChatExtraCtrlInit"/>
+									</eventlist>
+									
+								</obj>
+								
+								
+						</children>
+						<eventlist>
+							<event name="OnKeyUp" file="ChatWnd.xml.lua" func="OnHotKey" />
+							<!--event name="OnInitControl" file="ChatWnd.xml.lua" func="OnInitChatWnd" /-->
+						</eventlist>
+					</obj>
+				</children>
+			</obj>
+			</children>
+		</obj>		
+	</children>
+</obj>
+<eventlist>
+	<event name="OnBindHostWnd" file="ChatWnd.xml.lua" func="OnBindHostWnd"/>
+</eventlist>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.Chat.Wnd" class="FrameHostWnd">
+	<attr> 
+		<title></title>
+		<layered>1</layered>
+		<left>200</left> 
+		<top>100</top>
+		<width>596</width>
+		<height>518</height>
+		<cacheleft>0</cacheleft> 
+		<cachetop>0</cachetop>
+		<cachewidth>1200</cachewidth>
+		<cacheheight>1000</cacheheight>
+		<border>7,7,7,7</border> 
+		<topmost>0</topmost>
+		<visible>1</visible>
+		<enable>1</enable>
+		<active>1</active>
+		<maxbox>1</maxbox>
+		<minbox>1</minbox>
+		<minwidth>596</minwidth>
+		<minheight>518</minheight>
+		<appwindow>1</appwindow>
+		<fps>30</fps>
+	</attr>
+	<eventlist>
+		<!--event name="OnFocusChange" file="ChatWnd.xml.lua" func="OnChatWndFocusChange"/-->
+		<event name="OnSize" file="ChatWnd.xml.lua" func="OnChatWndSize"/>
+		<event name="OnCreate" file="ChatWnd.xml.lua" func = "OnChatWndCreate"/>
+		<event name="OnClose" file="ChatWnd.xml.lua" func = "OnChatWndClose"/>
+		<event name="OnNcActivate" file="ChatWnd.xml.lua" func="OnNcActivate"/> 
+	</eventlist>
+</hostwndtemplate>
+<!-- Ctrl+Enter Tips -->
+
+<objtemplate id="XiaoP.ChatSend.Context" class="MenuObject" templateid="menu.object.template">
+<attr>
+</attr>
+<children>
+	<obj id="menu.enter" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.item.check.icon</Icon>
+			<IconWidth>16</IconWidth>
+			<IconHeight>16</IconHeight>
+			<height>25</height>
+			<Text>按Enter发送消息</Text>
+		</attr>
+		<eventlist>
+			<event name="OnInit" file="ChatWnd.xml.lua" func="OnMenuEnterInit"/>
+			<event name="OnSelect" file="ChatWnd.xml.lua" func="OnSelSendEnter"/>	
+		</eventlist>
+	</obj>
+	<obj id="menu.ctrlenter" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.item.check.icon</Icon>
+			<IconWidth>16</IconWidth>
+			<IconHeight>16</IconHeight>		
+			<height>25</height>
+			<Text>按Ctrl+Enter发送消息</Text>
+		</attr>
+		<eventlist>
+			<event name="OnInit" file="ChatWnd.xml.lua" func="OnMenuCtrlEnterInit"/>
+			<event name="OnSelect" file="ChatWnd.xml.lua" func="OnSelSendCtrlEnter"/>	
+		</eventlist>
+	</obj>
+</children>
+</objtemplate>
+	
+<objtreetemplate id="XiaoP.ChatSend.Menu">
+<attr>
+	<left>-1000</left>
+	<top>-1000</top>
+	<width>2000</width>
+	<height>2000</height>
+</attr>
+<obj id="XiaoP.ChatSendMenu" class="NormalMenu">
+	<attr>
+		<ContextID>XiaoP.ChatSend.Context</ContextID>
+		<BknID>texture.wndborder.bkg</BknID>
+		<ShadingID>mainmenu.light</ShadingID>
+		<SrcColorID>menu.color.src</SrcColorID>
+		<DestColorID>menu.color.dest</DestColorID>
+		<DefaultItemTemplate>menu.main.itemex</DefaultItemTemplate>
+		<DefaultSpliterTemplate>menu.main.splitter</DefaultSpliterTemplate>
+	</attr>
+	<eventlist>
+		
+	</eventlist>
+</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.ChatSendMenu.Wnd" class="MenuHostWnd">
+	<attr>
+	</attr>
+</hostwndtemplate>
+
+</xlue>

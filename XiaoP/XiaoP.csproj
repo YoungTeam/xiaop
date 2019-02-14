@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{666CAF2D-CE19-4EFC-B096-2AD311D78793}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XiaoP</RootNamespace>
+    <AssemblyName>Pandora</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\app48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>Dll\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoltWarper.cs" />
+    <Compile Include="Classes\Data\AssemblyInfo.cs" />
+    <Compile Include="Classes\Data\Department.cs" />
+    <Compile Include="Classes\Data\Group.cs" />
+    <Compile Include="Classes\Data\Pop.cs" />
+    <Compile Include="Classes\Data\Signal.cs" />
+    <Compile Include="Classes\Data\TxtMsg.cs" />
+    <Compile Include="Classes\Data\XStack.cs" />
+    <Compile Include="Classes\Global.cs" />
+    <Compile Include="Classes\Service\ChatService.cs" />
+    <Compile Include="Classes\Service\GroupService.cs" />
+    <Compile Include="Classes\Service\SignalService.cs" />
+    <Compile Include="Classes\Util\ClassSerializers.cs" />
+    <Compile Include="Classes\Util\IdentifyEncoding.cs" />
+    <Compile Include="Classes\Util\INIOperation.cs" />
+    <Compile Include="Classes\Util\OSShellHelper.cs" />
+    <Compile Include="Classes\Util\RegexHelper.cs" />
+    <Compile Include="Classes\Util\StringHelper.cs" />
+    <Compile Include="Classes\Util\SystemHelper.cs" />
+    <Compile Include="Classes\Util\XEncrypt .cs" />
+    <Compile Include="Classes\Util\XmlHelper.cs" />
+    <Compile Include="Controls\EmotionDropdown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\EmotionDropdown.designer.cs">
+      <DependentUpon>EmotionDropdown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\EmotionPanel\EditorServiceContext.cs" />
+    <Compile Include="Controls\EmotionPanel\EmotionContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EmotionPanel\EmotionItem.cs" />
+    <Compile Include="Controls\EmotionPanel\EventArgs.cs" />
+    <Compile Include="Controls\EmotionPanel\GifBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EmotionPanel\GripBounds.cs" />
+    <Compile Include="Controls\EmotionPanel\ItemCollectionBase.cs" />
+    <Compile Include="Controls\EmotionPanel\Nativemethods.cs" />
+    <Compile Include="Controls\EmotionPanel\PanelDesigner.cs" />
+    <Compile Include="Controls\EmotionPanel\Popup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EmotionPanel\ScrollableControlDesigner.cs" />
+    <Compile Include="Controls\ImageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ImageBox.Designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PandoraPicture\GifPicture.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PandoraPicture\GifPicture.designer.cs">
+      <DependentUpon>GifPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Wnds\App.cs" />
+    <Compile Include="Classes\Data\User.cs" />
+    <Compile Include="Wnds\MainWnd.cs" />
+    <Compile Include="Classes\RabbitMQ\Exchange.cs" />
+    <Compile Include="Classes\RabbitMQ\Queue.cs" />
+    <Compile Include="Classes\RabbitMQ\RabbitMQHelper.cs" />
+    <Compile Include="Classes\RabbitMQ\RPCRequest.cs" />
+    <Compile Include="Classes\Service\NovaService.cs" />
+    <Compile Include="Classes\Service\StaffService.cs" />
+    <Compile Include="Classes\Service\UserService.cs" />
+    <Compile Include="Wnds\StaffClass.cs" />
+    <Compile Include="Classes\Util\DateHelper.cs" />
+    <Compile Include="Classes\Util\FileHelper.cs" />
+    <Compile Include="Classes\Util\HttpHelper.cs" />
+    <Compile Include="Classes\Util\ImgHelper.cs" />
+    <Compile Include="Classes\Util\LDAPHelper.cs" />
+    <Compile Include="Classes\Util\MFCAPI.cs" />
+    <Compile Include="Classes\Util\PLog.cs" />
+    <Compile Include="Wnds\LoginWnd.cs" />
+    <Compile Include="Wnds\AppLua.cs" />
+    <Compile Include="Wnds\MainWndLua.cs" />
+    <Compile Include="Wnds\LoginWndLua.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Wnds\LuaStaffClass.cs" />
+    <Compile Include="Wnds\ChatWnd.cs" />
+    <Compile Include="Wnds\ChatWndLua.cs" />
+    <Compile Include="Wnds\XImage.cs" />
+    <Compile Include="Wnds\XImageLua.cs" />
+    <Compile Include="XLLRTWarper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\EmotionDropdown.resx">
+      <DependentUpon>EmotionDropdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\split_left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\split_right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CaptureTool\CaptureTool.csproj">
+      <Project>{9786F3B5-866B-4B93-93A5-AC2379C92657}</Project>
+      <Name>CaptureTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ImgView\ImgView.csproj">
+      <Project>{40D13738-9924-4559-8798-3A9E2E1B3BAF}</Project>
+      <Name>ImgView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XiaoP.UI.Core\XiaoP.UI.Core.csproj">
+      <Project>{8E4401AC-E29E-43C8-A876-ED2A26A33F7F}</Project>
+      <Name>XiaoP.UI.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_null.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XAR\images\app16.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app32.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dept.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XAR\images\default_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dept_group.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app48.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app48.ico" />
+    <None Include="Resources\split.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

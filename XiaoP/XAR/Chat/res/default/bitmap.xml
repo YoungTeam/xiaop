@@ -1,0 +1,19 @@
+<XLUE>
+<resource>
+	<bitmap id="xiaop"  path="bitmap\xiaop.png"/>
+	<bitmap id="chat.face.mask"  path="bitmap\face_mask.png"/>
+	<bitmap id="chat.member.face.mask"  path="bitmap\member_face_mask.png"/>
+	<bitmap id="chat.member.manager"  path="bitmap\group_manager.png"/>
+	<bitmap id="chat.history.split"  path="bitmap\split.png"/>
+	<bitmap id="xiaop.face"  path="bitmap\face.png"/>
+	<bitmap id="dept.logo"  path="bitmap\dept_logo.png"/>
+	<bitmap id="mail.logo"  path="bitmap\mail_logo.png"/>
+	<bitmap id="chatwnd.info.userno.icon"  path="bitmap\info.userno.png"/>
+	<bitmap id="chatwnd.info.dept.icon"  path="bitmap\info.dept.png"/>
+	<bitmap id="chatwnd.info.mobile.icon"  path="bitmap\info.mobile.png"/>
+	<bitmap id="chatwnd.info.phone.icon"  path="bitmap\info.phone.png"/>
+	<bitmap id="chatwnd.info.mail.icon"  path="bitmap\info.mail.png"/>
+	<bitmap id="chatwnd.info.signature.icon"  path="bitmap\info.signature.png"/>
+	<bitmap id="menu.item.check.icon"  path="bitmap\menu_item_check.png"/>
+</resource>
+</XLUE>	

@@ -1,0 +1,19 @@
+D:\workspace\C#\20130514\xiaopcmd\bin\Release\xiaopcmd.exe
+D:\workspace\C#\20130514\xiaopcmd\bin\Release\xiaopcmd.pdb
+D:\workspace\C#\20130514\xiaopcmd\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514\xiaopcmd\obj\Release\xiaopcmd.exe
+D:\workspace\C#\20130514\xiaopcmd\obj\Release\xiaopcmd.pdb
+D:\workspace\C#\20130514\xiaopcmd\bin\Release\Newtonsoft.Json.dll
+D:\workspace\C#\20130514\xiaopcmd\bin\Release\RabbitMQ.Client.dll
+D:\workspace\C#\20130514 - 副本\xiaopcmd\bin\Release\xiaopcmd.exe
+D:\workspace\C#\20130514 - 副本\xiaopcmd\bin\Release\xiaopcmd.pdb
+D:\workspace\C#\20130514 - 副本\xiaopcmd\bin\Release\Newtonsoft.Json.dll
+D:\workspace\C#\20130514 - 副本\xiaopcmd\bin\Release\RabbitMQ.Client.dll
+D:\workspace\C#\20130514 - 副本\xiaopcmd\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514 - 副本\xiaopcmd\obj\Release\xiaopcmd.exe
+D:\workspace\C#\20130514 - 副本\xiaopcmd\obj\Release\xiaopcmd.pdb
+D:\workspace\C#\XiaoP\Xiaopcmd\bin\Release\xiaopcmd.exe
+D:\workspace\C#\XiaoP\Xiaopcmd\bin\Release\xiaopcmd.pdb
+D:\workspace\C#\XiaoP\Xiaopcmd\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\XiaoP\Xiaopcmd\obj\Release\xiaopcmd.exe
+D:\workspace\C#\XiaoP\Xiaopcmd\obj\Release\xiaopcmd.pdb

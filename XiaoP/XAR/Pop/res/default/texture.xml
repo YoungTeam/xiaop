@@ -1,0 +1,9 @@
+<xlue>
+	<resource>
+		<bitmap id="face.mask"  path="bitmap\face_mask.png"/>
+		<bitmap id="xiaop.face"  path="bitmap\face.png"/>
+		<texture id="texture.wndborder.bkg" type="NineInOne" image="bitmap\wnd.border.bkg.png" />
+		<texture id="texture.popwnd.bkg"  image="bitmap\popwnd.bkg.png" />
+		<texture id="texture.popwnd.txt.bkg"  image="bitmap\popwnd.txt.bkg.png" />
+	</resource>
+</xlue>

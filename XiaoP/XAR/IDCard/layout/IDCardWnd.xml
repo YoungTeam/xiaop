@@ -1,0 +1,211 @@
+<xlue>
+
+<control class="XiaoP.IDCard.Control">
+	<attr_def>
+		<attr name="Left" type="int"><default>300</default></attr>
+		<attr name="Top" type="int"><default>300</default></attr>
+		<attr name="DelayPopupInterval" type="int"><default>500</default></attr>
+		<attr name="DelayCancelInterval" type="int"><default>500</default></attr><!--从Tips出现到自动消失的时间间隔,单位毫秒-->
+	</attr_def>
+	<method_def>
+		<OnHostMouseHover file="IDCardWnd.xml.lua" func="OnHostMouseHover" />
+		<OnHostMouseLeave file="IDCardWnd.xml.lua" func="OnHostMouseLeave" />
+	</method_def>
+	<event_def>
+			<OnAddContact>
+				<param><table/></param>
+			</OnAddContact>
+	</event_def>	
+	<objtemplate>
+		<children>
+
+		</children>
+		<eventlist>
+			<event name="OnInitControl" file="IDCardWnd.xml.lua" func="OnInitControl"/>
+			<!--event name="OnPosChange" file="IDCardWnd.xml.lua" func="OnPosChange"/>
+			<event name="OnDestroy" file="IDCardWnd.xml.lua" func="OnDestroy"/-->
+		</eventlist>
+	</objtemplate>
+</control>
+
+
+<objtemplate id="XiaoP.IDCard.Panel" class="LayoutObject">
+<children>
+
+<obj id="bkg_border" class="TextureObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>312</width>
+			<height>318</height>
+			<texture>texture.wndborder.bkg</texture>
+			<limitchild>1</limitchild> 					
+		</attr>
+		<children>
+			<obj id="bkg" class="TextureObject">
+				<attr>
+					<left>6</left>
+					<top>6</top>
+					<width>father.width-12</width>
+					<height>father.height-12</height>
+					<texture>texture.idCard.bkg</texture>
+				</attr>
+				<children>
+					<obj  id="userFace.mask" class="MaskObject">
+						<attr>
+							<left>101</left>
+							<top>7</top>
+							<height>90</height>
+							<width>90</width>
+							<type>bitmap</type>
+							<chanel>r</chanel>
+							<resid>idcard.face.mask</resid>
+							<masksizex>90</masksizex>
+							<masksizey>90</masksizey>
+							<maskorgx>0</maskorgx>
+							<maskorgy>0</maskorgy>	
+						</attr>
+						<children>
+							<obj id="userFace"  class="ImageObject">
+								<attr>
+									<left>5</left>
+									<top>5</top>
+									<width>80</width>
+									<height>80</height>
+									<drawmode>1</drawmode>
+									<inheritmask>1</inheritmask> 
+									<maskwidth>80</maskwidth>
+									<maskheight>80</maskheight>										
+									<image></image>
+								</attr>
+							</obj>	
+						</children>
+					</obj>	
+					<obj id="user.name" class="TextObject">
+					<attr>
+							<left>0</left>
+							<top>95</top>
+							<width>father.width</width>
+							<height>20</height>
+							<font>wnd.14.font</font>
+							<halign>center</halign>
+							<valign>center</valign>
+							<text>YoungTeam</text>
+							<textcolor>wnd.default.font.color</textcolor> 
+					</attr>				
+					</obj>
+					<obj id="user.desc" class="TextObject">
+					<attr>
+							<left>25</left>
+							<top>120</top>
+							<width>father.width-50</width>
+							<height>40</height>
+							<font>wnd.12.font</font>
+							<halign>center</halign>
+							<valign>top</valign>
+							<text></text>
+							<endellipsis>1</endellipsis>
+							<multiline>1</multiline>
+							<textcolor>wnd.default.font.color</textcolor> 
+					</attr>				
+					</obj>		
+
+					<obj id="user.dept" class="TextObject">
+					<attr>
+							<left>60</left>
+							<top>177</top>
+							<width>father.width</width>
+							<height>20</height>
+							<font>wnd.12.font</font>
+							<valign>center</valign>
+							<text>运维部</text>
+							<textcolor>idcard.gray.color</textcolor> 
+					</attr>				
+					</obj>
+					<obj id="user.phone" class="TextObject">
+					<attr>
+							<left>60</left>
+							<top>202</top>
+							<width>father.width</width>
+							<height>20</height>
+							<font>wnd.12.font</font>
+							<valign>center</valign>
+							<text>8835</text>
+							<textcolor>idcard.gray.color</textcolor> 
+					</attr>				
+					</obj>
+					<obj id="user.mobile" class="TextObject">
+					<attr>
+							<left>60</left>
+							<top>224</top>
+							<width>father.width</width>
+							<height>20</height>
+							<font>wnd.12.font</font>
+							<valign>center</valign>
+							<text>15810027735</text>
+							<textcolor>idcard.gray.color</textcolor> 
+					</attr>				
+					</obj>
+					<obj id="user.mail" class="TextObject">
+					<attr>
+							<left>60</left>
+							<top>247</top>
+							<width>father.width</width>
+							<height>20</height>
+							<font>wnd.12.font</font>
+							<valign>center</valign>
+							<text>yangting@yt-inc.com</text>
+							<textcolor>idcard.gray.color</textcolor> 
+					</attr>				
+					</obj>	
+
+					<obj id="addContact.btn" class="Thunder.ImageTextButton">
+						<attr>
+							<left>183</left>
+							<top>270</top>
+							<width>100</width>
+							<height>26</height>
+							<Text>添加至通讯录</Text>
+							<TextFontID>wnd.12.font</TextFontID>
+							<TextColorID>idcard.green.color</TextColorID>
+							<TextLeftPos>13</TextLeftPos>
+							<TextTopPos>5</TextTopPos>
+							<IconWidth>100</IconWidth>
+							<IconHeight>26</IconHeight>
+							<IconBitmapID>idcard.addcontact.icon.normal</IconBitmapID>
+							<IconBitmapID_Hover>idcard.addcontact.icon.hover</IconBitmapID_Hover>
+							<IconBitmapID_Down>idcard.addcontact.icon.down</IconBitmapID_Down>	
+						</attr>		
+						<eventlist>
+							<event  name="OnButtonClick" file="IDCardWnd.xml.lua" func="OnAddContact"/>
+						</eventlist>
+					</obj>					
+				</children>
+			
+			</obj>
+			
+		</children>
+		<eventlist>
+			<event  name="OnMouseEnter" file="IDCardWnd.xml.lua" func="OnMouseEnter"/>
+			<event  name="OnMouseMove" file="IDCardWnd.xml.lua" func="OnMouseLeave"/>
+			<event name="OnInitControl" file="IDCardWnd.xml.lua" func="OnInitIDCard"/>
+		</eventlist>
+</obj>
+		
+</children>
+</objtemplate>
+
+<hostwndtemplate id="XiaoP.IDCard.Wnd" class = "TipsHostWnd">
+	<attr>
+		<layered>1</layered>
+		<left>200</left>
+		<top>0</top>
+		<width>312</width>
+		<height>318</height>
+		<topmost>1</topmost>
+		<visible>0</visible>
+		<fps>30</fps>
+	</attr>
+
+</hostwndtemplate>
+</xlue>

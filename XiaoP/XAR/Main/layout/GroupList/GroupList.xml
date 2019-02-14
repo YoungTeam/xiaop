@@ -1,0 +1,245 @@
+<xlue>
+<control class="XiaoP.GroupList.CategoryItem">
+	<method_def>
+			<!--AddDeptUser  file="GroupList.xml.lua" func="AddDeptUser"/-->
+			<UpdateCategory  file="GroupList.xml.lua" func="UpdateCategory"/>
+	</method_def>
+<objtemplate>
+	<children>
+	<obj id="category.bkg" class="FillObject">
+		<attr>
+			<width>father.width</width>
+			<height>30</height>
+			<left>0</left>
+			<top>0</top>
+			<filltype>Monochrome</filltype>
+			<blendtype>Source</blendtype>
+			<srcpt>0,0</srcpt>
+			<destpt>0,height</destpt>
+			<srccolor>255,255,255,0</srccolor>
+		</attr>
+		<children>
+			<obj id="category.status" class="ImageObject">
+				<attr>
+					<width>10</width>
+					<height>10</height>
+					<left>14</left>
+					<top>13</top>
+					<drawmode >1</drawmode>
+					<image>userlist.collapse</image>
+				</attr>	
+			</obj>
+			<obj id="category.name" class="TextObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<left>32</left>
+					<top>7</top>
+					<text></text>
+					<font>wnd.14.font</font>
+				</attr>	
+			</obj>	
+			<obj id="category.info" class="TextObject">
+				<attr>
+					<width>150</width>
+					<height>20</height>
+					<left>100</left>
+					<top>9</top>
+					<text></text>
+					<font>wnd.12.font</font>
+				</attr>	
+			</obj>				
+		</children>
+		<eventlist>
+			<event name="OnLButtonUp" file="GroupList.xml.lua" func="OnCategoryClick" />
+			<event name="OnMouseEnter" file="GroupList.xml.lua" func="OnCategoryHover" />
+			<event name="OnMouseLeave" file="GroupList.xml.lua" func="OnCategoryLeave" />
+		</eventlist>
+	</obj>	
+	<obj id="category.groups" class="TextureObject">
+	<attr>
+		<width>father.width</width>
+		<height>father.height</height>
+		<visible>0</visible>
+		<top>30</top>
+	</attr>
+	<children>
+	</children>
+	</obj>
+	</children>
+</objtemplate>			
+</control>
+
+
+<control class="XiaoP.GroupList.GroupItem">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+	</attr_def>
+	<method_def>
+			<!--CreateList  file="GroupList.xml.lua" func="CreateDeptUserList"/-->
+			<UpdateGroup  file="GroupList.xml.lua" func="UpdateGroup"/>
+	</method_def>	
+	<objtemplate>
+		<children>
+			<obj id="group.bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>28</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>255,255,255,0</srccolor>			
+				</attr>
+				<children>
+				
+					<obj id="group.icon"  class="ImageObject">
+						<attr>
+							<left>14</left>
+							<top>5</top>
+							<width>16</width>
+							<height>16</height>
+							<drawmode>1</drawmode>							
+							<image>dept.icon</image>
+						</attr>
+						<eventlist>
+							<!--event name="OnMouseEnter" file="GroupList.xml.lua" func="OnUserFaceEnter" />
+							<event name="OnMouseLeave" file="GroupList.xml.lua" func="OnUserFaceLeave" /-->	
+						</eventlist>
+					</obj>	
+
+					<obj id="group.name" class="TextObject">
+						<attr>
+						<left>44</left>
+						<top>5</top>
+						<width>400</width>
+						<height>25</height>
+						<font>wnd.12.font</font>
+						<text></text>
+						</attr>
+					</obj>
+				</children>	
+			</obj>	
+		</children>
+		<eventlist>
+			<event name="OnLButtonDbClick" file="GroupList.xml.lua" func = "OnGroupDbClick"/>
+			<event name="OnLButtonUp" file="GroupList.xml.lua" func="OnGroupClick" />
+			<event name="OnMouseEnter" file="GroupList.xml.lua" func="OnGroupHover" />
+			<event name="OnMouseLeave" file="GroupList.xml.lua" func="OnGroupLeave" />	
+			<event name="OnMouseWheel" file="GroupList.xml.lua" func="OnGroupMouseWheel" />			
+		</eventlist>
+	</objtemplate>
+</control>
+
+<control class="XiaoP.GroupList">
+	<attr_def>
+		<attr name="select" type="int" desc="只支持选中一个任务,taskID，0表示未选中,"/>
+	</attr_def>
+	<method_def>
+			<UpdateGroupInfo file="GroupList.xml.lua" func = "UpdateGroupInfo"/>
+			<TwinkleGroup file="GroupList.xml.lua" func = "TwinkleGroup"/>
+			<CreateGroupList  file="GroupList.xml.lua" func="CreateGroupList"/>
+			<ClearGroupList  file="GroupList.xml.lua" func="ClearGroupList"/>
+			<!--CreateDept  file="GroupList.xml.lua" func="CreateDept"/-->
+			<SetListPos file="GroupList.xml.lua" func="SetListPos" />
+			<MouseWheel file="GroupList.xml.lua" func="MouseWheel" />
+			<UpdateScroll file="GroupList.xml.lua" func="UpdateScroll" />
+	</method_def>
+	
+	<event_def>
+			<OnGroupItemDbClick>
+			<param>
+				<string/>
+			</param>
+			</OnGroupItemDbClick>
+	</event_def>	
+	<objtemplate>
+		<children>
+			<obj id="bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>248,250,241,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+				</children>
+				<eventlist>
+					<event name="OnMouseWheel" file="GroupList.xml.lua" func="OnMouseWheel" />
+				</eventlist>
+			</obj>
+			<obj id="scrollCtrl" class="Thunder.ScrollBar">
+			<attr>
+				<Type>1</Type>
+				<ThumbBtn_normal>texture.vsb.small.thumb.normal</ThumbBtn_normal>
+				<ThumbBtn_hover>texture.vsb.small.thumb.hover</ThumbBtn_hover>
+				<ThumbBtn_down>texture.vsb.small.thumb.down</ThumbBtn_down>
+				<LeftBtn_normal>texture.vsb.leftbtn.normal</LeftBtn_normal>
+				<LeftBtn_hover>texture.vsb.leftbtn.hover</LeftBtn_hover>
+				<LeftBtn_down>texture.vsb.leftbtn.down</LeftBtn_down>
+				<RightBtn_normal>texture.vsb.rightbtn.normal</RightBtn_normal>
+				<RightBtn_hover>texture.vsb.rightbtn.hover</RightBtn_hover>
+				<RightBtn_down>texture.vsb.rightbtn.down</RightBtn_down>
+				<SideBtnLength>0</SideBtnLength>
+				<ThumbBtnWidth>10</ThumbBtnWidth>
+				<PageSize>10</PageSize>
+				<RangeBegin>0</RangeBegin>
+				<RangeEnd>0</RangeEnd>
+				<ScrollPos>0</ScrollPos>
+				<left>father.width-11</left>
+				<top>0</top>
+				<width>10</width>
+				<height>father.height - 4</height>
+				<zorder>600</zorder>
+				<cursor>IDC_ARROW</cursor>
+			</attr>
+			<eventlist>
+				<event name="OnVScroll" file="GroupList.xml.lua" func="OnVScroll" />
+				<event name="OnScrollBarMouseWheel" file="GroupList.xml.lua" func="OnScrollBarMouseWheel" />
+			</eventlist>			
+			</obj>		
+		</children>
+		<eventlist>
+			<event name="OnBind" file="GroupList.xml.lua" func="OnBind" />
+			
+			<event name="OnInitControl">
+				--[[
+					local arg = {...}
+					local self = arg[1]
+					
+					
+					local group = {}
+					group.groupId = "D0560"
+					group.groupName = "运维系统开发组"
+					
+					
+					local category = {}	
+					category.id = "mail"
+					category.name = "邮件组"
+					category.expand =  true
+					category.groups = {}
+					category.groups[1]=group
+					
+					local categorys = {}
+					categorys[1] = category
+					
+					self:CreateGroupList(categorys)]]
+							
+			</event>
+			<!--event name="OnLButtonDown">
+				local arg = {...}
+				local self = arg[1]
+				self:SelectUser(-1,false)
+			</event>
+			<event name="OnMouseWheel" file="UserList.xml.lua" func="OnListMouseWheel" /-->		
+		</eventlist>
+	</objtemplate>	
+</control>
+
+</xlue>

@@ -1,0 +1,477 @@
+<xlue>
+<objtreetemplate id="XiaoP.Main.Tree" class="ObjectTreeTemplate">
+	<attr>
+			<left>-200</left>
+			<top>-200</top>
+			<width>2000</width>
+			<height>2000</height>
+			
+	</attr>
+	<obj id="root" class="LayoutObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>286</width>
+			<height>614</height>
+		</attr>
+		<children>	
+		<obj id="bkg_border" class="TextureObject">
+			<attr>
+				<left>0</left>
+				<top>0</top>
+				<width>father.width</width>
+				<height>father.height</height>
+				<texture>texture.wndborder.bkg</texture>
+				<limitchild>1</limitchild> 					
+			</attr>
+			<children>
+				<obj id="bkg" class="TextureObject">
+					<attr>
+						<left>6</left>
+						<top>6</top>
+						<width>father.width-12</width>
+						<height>father.height-12</height>
+						<texture>texture.mainwnd.bkg</texture>
+					</attr>
+					<children>
+							<obj id="body" class="LayoutObject">
+								<attr>
+									<left>0</left>
+									<top>0</top>
+									<width>father.width</width>
+									<height>father.height</height>
+								</attr>
+								<children>
+							<obj id="mainwnd.resize.right" class="ResizeObject">
+								<attr>
+									<top>0</top>
+									<left>father.width-4</left>
+									<width>4</width>
+									<height>father.height</height>
+									<type>right</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.bottom" class="ResizeObject">
+								<attr>
+									<top>father.height-4</top>
+									<width>father.width</width>
+									<height>4</height>
+									<type>bottom</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.top" class="ResizeObject">
+								<attr>
+									<top>-2</top>
+									<width>father.width</width>
+									<height>4</height>
+									<type>top</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.left" class="ResizeObject">
+								<attr>
+									<left>-2</left>
+									<width>4</width>
+									<height>father.height</height>
+									<type>left</type>
+									<zorder>10000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.topleft" class="ResizeObject">
+								<attr>
+									<left>0</left>
+									<top>0</top>
+									<width>4</width>
+									<height>4</height>
+									<type>topleft</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.bottomleft" class="ResizeObject">
+								<attr>
+									<left>0</left>
+									<top>father.height-4</top>
+									<width>4</width>
+									<height>4</height>
+									<type>bottomleft</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.topright" class="ResizeObject">
+								<attr>
+									<left>father.width-4</left>
+									<top>0</top>
+									<width>4</width>
+									<height>4</height>
+									<type>topright</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>
+							
+							<obj id="mainwnd.resize.bottomright" class="ResizeObject">
+								<attr>
+									<left>father.width-4</left>
+									<top>father.height-4</top>
+									<width>4</width>
+									<height>4</height>
+									<type>bottomright</type>
+									<zorder>1000000</zorder>
+								</attr>
+							</obj>									
+									
+									
+							<obj id="mainwnd.caption" class="CaptionObject">
+								<attr>
+									<left>0</left>
+									<top>0</top>
+									<width>father.width</width>
+									<height>father.height</height>
+								</attr>
+								<children>
+									<obj  id="xiaop.logo" class="ImageObject">
+										<attr>
+											<left>10</left>
+											<top>5</top>
+											<width>17</width>
+											<height>16</height>
+											<image>xiaop</image>
+										</attr>
+									</obj>
+									
+									<obj id="xiaop.text" class="TextObject">
+									<attr>
+											<left>18</left>
+											<top>3</top>
+											<width>50</width>
+											<height>20</height>
+											<text>小P</text>
+											<font>wnd.13.font</font>
+											<halign>center</halign>
+											<valign>center</valign>
+											<textcolor>wnd.default.font.color</textcolor>
+										</attr>
+									</obj>
+									
+									<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+										<attr>
+											<left>father.width-60</left>
+											<top>0</top>
+											<width>60</width>
+											<height>30</height>
+											<MaxShow>false</MaxShow>
+											<Mini_NormalImageID>mainwndsys.min.icon.normal</Mini_NormalImageID>
+											<Mini_HoverImageID>mainwndsys.min.icon.hover</Mini_HoverImageID>
+											<Mini_DownImageID>mainwndsys.min.icon.down</Mini_DownImageID>
+											<Close_NormalImageID>mainwndsys.close.icon.normal</Close_NormalImageID>
+											<Close_HoverImageID>mainwndsys.close.icon.hover</Close_HoverImageID	>
+											<Close_DownImageID>mainwndsys.close.icon.down</Close_DownImageID>														
+										</attr>
+										<eventlist>
+											<event name="OnMinisize" file="MainWnd.xml.lua" func="OnMinisize" />
+											<event name="OnClose" file="MainWnd.xml.lua" func="OnClose" />
+										</eventlist>
+									</obj>
+								</children>
+							</obj>
+										
+							<obj  id="userFace.mask" class="MaskObject">
+								<attr>
+								 	<left>5</left>
+									<top>32</top>
+									<height>78</height>
+									<width>78</width>
+									<type>bitmap</type>
+									<chanel>r</chanel>
+									<resid>face.mask</resid>
+									<masksizex>78</masksizex>
+									<masksizey>78</masksizey>
+									<maskorgx>0</maskorgx>
+									<maskorgy>0</maskorgy>	
+								</attr>
+								<children>
+									<obj id="userFace"  class="ImageObject">
+										<attr>
+											<left>5</left>
+											<top>5</top>
+											<width>68</width>
+											<height>68</height>
+											<drawmode>1</drawmode>
+											<inheritmask>1</inheritmask> 
+											<maskwidth>68</maskwidth>
+											<maskheight>68</maskheight>										
+											<image></image>
+										</attr>
+										<eventlist>
+											<event name="OnMouseEnter" file="MainWnd.xml.lua" func="OnMouseEnterFace"/>
+											<event name="OnMouseLeave" file="MainWnd.xml.lua" func="OnMouseLeaveFace"/>
+										</eventlist>
+									</obj>	
+								</children>
+							</obj>
+							
+							<obj id="userName" class="TextObject">
+								<attr>
+								<left>88</left>
+								<top>35</top>
+								<width>336</width>
+								<height>28</height>
+								<font>wnd.16.font</font>
+								<text></text>
+								<textcolor>wnd.default.font.color</textcolor> 
+								</attr>
+							</obj>							
+	
+							<obj id="userIntro" class="TextObject">
+								<attr>
+								<left>88</left>
+								<top>60</top>
+								<width>155</width>
+								<height>18</height>
+								<font>wnd.12.font</font>
+								<transparent>1</transparent>
+								<wordellipsis>1</wordellipsis>
+								<textcolor>wnd.default.font.color</textcolor>
+								<text></text>
+								</attr>
+								<eventlist>
+									<!--event name="OnLButtonDbClick"  file="MainWnd.xml.lua" func="OnUserIntroDbClick"/-->
+								</eventlist>
+							</obj>		
+							<!--obj id="userIntro" class="EditObject">
+								<attr>
+								<left>88</left>
+								<top>60</top>
+								<width>155</width>
+								<height>18</height>
+								<font>wnd.12.font</font>
+								<transparent>1</transparent>
+								<wordellipsis>1</wordellipsis>
+								<textcolor>wnd.default.font.color</textcolor>
+								<text></text>
+								<readonly>1</readonly>
+								<nocaret>1</nocaret>
+								</attr>
+								<eventlist>
+									<event name="OnLButtonDbClick"  file="MainWnd.xml.lua" func="OnUserIntroDbClick"/>
+								</eventlist>
+							</obj-->	
+							
+							<obj id="nova.todo.btn" class="Thunder.ImageTextButton">
+								<attr>
+									<left>88</left>
+									<top>80</top>
+									<width>24</width>
+									<height>24</height>
+									<Text></Text>
+									<IconWidth>24</IconWidth>
+									<IconHeight>24</IconHeight>
+									<TipText>我的待办</TipText>
+									<IconBitmapID>wnd.nova.todo.icon.normal</IconBitmapID>
+									<IconBitmapID_Hover>wnd.nova.todo.icon.hover</IconBitmapID_Hover>
+									<IconBitmapID_Down>wnd.nova.todo.icon.down</IconBitmapID_Down>									
+								</attr>
+								<eventlist>
+									<event name="OnButtonClick" file="MainWnd.xml.lua" func="OnTodoClick" />			
+								</eventlist>		
+							</obj>							
+							<obj id="nova.todo.txt" class="TextObject">
+								<attr>
+								<left>114</left>
+								<top>86</top>
+								<width>50</width>
+								<height>28</height>
+								<font>wnd.12.font</font>
+								<text>(0)</text>
+								<textcolor>wnd.default.font.color</textcolor> 
+								</attr>
+							</obj>	
+							
+							<obj id="nova.mine.btn" class="Thunder.ImageTextButton">
+								<attr>
+									<left>143</left>
+									<top>80</top>
+									<width>24</width>
+									<height>24</height>
+									<TipText>我的申请</TipText>
+									<IconWidth>24</IconWidth>
+									<IconHeight>24</IconHeight>
+									<IconBitmapID>wnd.nova.mine.icon.normal</IconBitmapID>
+									<IconBitmapID_Hover>wnd.nova.mine.icon.hover</IconBitmapID_Hover>
+									<IconBitmapID_Down>wnd.nova.mine.icon.down</IconBitmapID_Down>									
+								</attr>
+								<eventlist>
+									<event name="OnButtonClick" file="MainWnd.xml.lua" func="OnMineClick" />	
+								</eventlist>		
+							</obj>
+							<obj id="nova.mine.txt" class="TextObject">
+								<attr>
+								<left>169</left>
+								<top>86</top>
+								<width>50</width>
+								<height>28</height>
+								<font>wnd.12.font</font>
+								<text>(0)</text>
+								<textcolor>wnd.default.font.color</textcolor> 
+								</attr>
+							</obj>									
+							
+							<obj id="suggCtrl" class="XiaoP.Main.SuggListCtrl">
+								<attr>
+									<left>0</left>
+									<top>116</top>
+									<width>father.width</width>
+									<height>father.height-184</height>
+								</attr>	
+								<eventlist>
+									<event name="OnUserItemClick" file="MainWnd.xml.lua" func="OnSuggUserItemClick" />								
+									<event name="OnSuggEditChange" file="MainWnd.xml.lua" func="OnSuggEditChange" />
+								</eventlist>
+							</obj>										
+							
+
+							<obj id="tabCtrl" class="LayoutObject">
+								<attr>
+									<left>0</left>
+									<top>150</top>
+									<width>father.width</width>
+									<height>father.height-30</height>
+								</attr>
+								<children>
+									<obj id="tabHeader" class="Thunder.TabCtrl">
+
+										<attr>
+											<left>0</left>
+											<top>0</top>
+											<width>father.width</width>
+											<height>35</height>
+											<ButtonWidth>76</ButtonWidth>
+                                            <ButtonHeight>35</ButtonHeight>
+                                            <ButtonInternalSpace>0</ButtonInternalSpace>     
+										    <TextLeftPos>0</TextLeftPos>
+                                            <TextTopPos>7</TextTopPos>
+											<BtnBkgNormal>texture.main.tab.normal</BtnBkgNormal>
+											<BtnBkgHover>texture.main.tab.hover</BtnBkgHover>
+											<BtnBkgDown>texture.main.tab.select</BtnBkgDown>
+											<ActiveBtnBkgNormal>texture.main.tab.normal</ActiveBtnBkgNormal>
+											<ActiveBtnBkgHover>texture.main.tab.normal</ActiveBtnBkgHover>
+											<ActiveBtnBkgDown>texture.main.tab.normal</ActiveBtnBkgDown>
+											<ActiveBtnBkgDisable>texture.main.tab.normal</ActiveBtnBkgDisable>
+											<IconLeftPos>(father.width-30)/2</IconLeftPos>
+											<IconTopPos>1</IconTopPos>
+											<IconWidth>30</IconWidth>
+											<IconHeight>34</IconHeight>											
+										</attr>
+
+										<eventlist>
+											<event name="OnInitControl" file="MainWnd.xml.lua" func="OnInitTabHeader" />
+											<event name="OnActiveTabChanged" file="MainWnd.xml.lua" func="OnActiveTabChanged" />
+										</eventlist>
+									</obj>								
+									<obj id="tabbkg" class="Thunder.TabCtrlBkg">
+										<attr>
+											<zorder>-1</zorder>
+											<left>0</left>
+											<top>35</top>
+											<width>father.width</width>
+											<height>father.height-186</height>
+											<BorderTexture></BorderTexture>
+										</attr>
+										<children>	
+										</children>
+									</obj>									
+								</children>
+							</obj>						
+
+							<obj id="mainmenu.btn" class="Thunder.ImageTextButton">
+								<attr>
+									<left>14</left>
+									<top>father.height-25</top>
+									<width>30</width>
+									<height>20</height>
+									<Text></Text>
+									<TipText>主菜单</TipText>
+									<IconWidth>30</IconWidth>
+									<IconHeight>20</IconHeight>
+									<IconBitmapID>wnd.mainmenu.icon.normal</IconBitmapID>
+									<IconBitmapID_Hover>wnd.mainmenu.icon.hover</IconBitmapID_Hover>
+									<IconBitmapID_Down>wnd.mainmenu.icon.down</IconBitmapID_Down>									
+								</attr>
+								<eventlist>
+									<event name="OnButtonClick" file="MainWnd.xml.lua" func="OnClickMainMenu"/>
+								</eventlist>		
+							</obj>							
+	
+							<!--obj id="yt.btn" class="Thunder.ImageTextButton">
+								<attr>
+									<left>father.width - 20 -76</left>
+									<top>father.height-25</top>
+									<width>76</width>
+									<height>20</height>
+									<Text></Text>
+									<IconWidth>76</IconWidth>
+									<IconHeight>20</IconHeight>
+									<IconBitmapID>yt.btn.normal</IconBitmapID>
+									<IconBitmapID_Hover>yt.btn.hover</IconBitmapID_Hover>
+									<IconBitmapID_Down>yt.btn.down</IconBitmapID_Down>									
+								</attr>
+								<eventlist>
+									
+								</eventlist>		
+							</obj-->	
+	
+							</children>
+							<eventlist>
+								<event name="OnFocusChange"  file="MainWnd.xml.lua" func="OnMainBodyFocusChange"/>
+								<event name="OnInitControl" file="MainWnd.xml.lua" func="OnInit" />
+								<event name="OnLButtonDown" file="MainWnd.xml.lua" func="OnBodyLButtonDown"/>
+							</eventlist>
+						</obj>
+					</children>
+					
+				</obj>				
+				</children>	
+			</obj>		
+		</children>
+	</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.Main.Wnd" class="FrameHostWnd">
+	<attr> 
+		<loginwnd>1</loginwnd>
+		<title>XiaoP</title>
+		<layered>1</layered>
+		<left>100</left> 
+		<top>100</top>
+		<width>286</width>
+		<height>614</height>
+		<cacheleft>0</cacheleft> 
+		<cachetop>0</cachetop>
+		<cachewidth>1200</cachewidth>
+		<cacheheight>1000</cacheheight>
+		<topmost>0</topmost>
+		<visible>1</visible>
+		<enable>1</enable>
+		<active>1</active>
+		<maxbox>0</maxbox>
+		<minbox>0</minbox>
+		<minwidth>286</minwidth>
+		<minheight>614</minheight>
+		<appwindow>0</appwindow>
+		<fps>30</fps>
+	</attr>
+	<eventlist>
+		<event name="OnCreate" file="MainWnd.xml.lua" func="OnCreateWnd" />
+		<event name="OnSize" file="MainWnd.xml.lua" func="OnMainWndSize"/>
+		<event name="OnMove" file="MainWnd.xml.lua" func="OnMainWndMove"/>
+		<event name="OnDestroy" file="MainWnd.xml.lua" func = "OnMainWndDestroy"/>
+	</eventlist>
+</hostwndtemplate>
+</xlue>

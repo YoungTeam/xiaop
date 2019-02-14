@@ -1,0 +1,30 @@
+D:\workspace\C#\20130514 - 副本\ImgView\bin\Release\ImgView.dll
+D:\workspace\C#\20130514 - 副本\ImgView\bin\Release\ImgView.pdb
+D:\workspace\C#\20130514 - 副本\ImgView\bin\Release\PSkin.dll
+D:\workspace\C#\20130514 - 副本\ImgView\bin\Release\PSkin.pdb
+D:\workspace\C#\20130514 - 副本\ImgView\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514 - 副本\ImgView\obj\Release\Pandora.ImgView.resources
+D:\workspace\C#\20130514 - 副本\ImgView\obj\Release\ImgView.Properties.Resources.resources
+D:\workspace\C#\20130514 - 副本\ImgView\obj\Release\ImgView.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514 - 副本\ImgView\obj\Release\ImgView.dll
+D:\workspace\C#\20130514 - 副本\ImgView\obj\Release\ImgView.pdb
+D:\workspace\C#\20130514\ImgView\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514\ImgView\obj\Release\Pandora.ImgView.resources
+D:\workspace\C#\20130514\ImgView\obj\Release\ImgView.Properties.Resources.resources
+D:\workspace\C#\20130514\ImgView\obj\Release\ImgView.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514\ImgView\bin\Release\ImgView.dll
+D:\workspace\C#\20130514\ImgView\bin\Release\ImgView.pdb
+D:\workspace\C#\20130514\ImgView\bin\Release\PSkin.dll
+D:\workspace\C#\20130514\ImgView\bin\Release\PSkin.pdb
+D:\workspace\C#\20130514\ImgView\obj\Release\ImgView.dll
+D:\workspace\C#\20130514\ImgView\obj\Release\ImgView.pdb
+D:\workspace\C#\XiaoP\ImgView\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\XiaoP\ImgView\obj\Release\Pandora.ImgView.resources
+D:\workspace\C#\XiaoP\ImgView\obj\Release\ImgView.Properties.Resources.resources
+D:\workspace\C#\XiaoP\ImgView\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\workspace\C#\XiaoP\ImgView\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\workspace\C#\XiaoP\ImgView\obj\Release\ImgView.dll
+D:\workspace\C#\XiaoP\ImgView\obj\Release\ImgView.pdb
+D:\workspace\C#\XiaoP\ImgView\bin\Release\ImgView.dll
+D:\workspace\C#\XiaoP\ImgView\bin\Release\ImgView.pdb
+D:\workspace\C#\XiaoP\ImgView\obj\Release\PSkin.PControl.PButton.ImgButton.resources

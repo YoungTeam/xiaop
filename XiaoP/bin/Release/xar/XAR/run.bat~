@@ -1,0 +1,8 @@
+@echo off
+set UE_LOADER=D:\boltsdk\tools\UELoader.exe
+set LESSION=1
+
+
+set XAR_SEARH_PATH=%~dp0%\
+%UE_LOADER% -s %XAR_SEARH_PATH% MsgBox
+pause

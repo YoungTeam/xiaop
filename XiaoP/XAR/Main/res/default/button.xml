@@ -1,0 +1,73 @@
+<xlue>
+	<resource>
+	<imagelist id="imagelist.tab.detp.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.detp.icon.png"/>
+	<imagelist id="imagelist.tab.group.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.group.icon.png"/>
+	<imagelist id="imagelist.tab.recent.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.recent.icon.png"/>
+	<imagelist id="imagelist.mainwndsys.close.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.close.btn.png"/>
+	<imagelist id="imagelist.mainwndsys.min.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.min.btn.png"/>
+
+	<imagelist id="imagelist.wnd.nova.todo.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wnd.nova.todo.btn.png"/>
+	<imagelist id="imagelist.wnd.nova.mine.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wnd.nova.mine.btn.png"/>
+	<imagelist id="imagelist.wnd.mainmenu.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wnd.mainmenu.btn.png"/>
+	<imagelist id="imagelist.yt.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\sogou_btn.png"/>
+	<imagelist id="imagelist.mainwnd.sugg.cancel.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\mainwnd.sugg.cancel.btn.png"/>
+
+	<bitmap id="yt.btn.normal"  imagelist = "imagelist.yt.btn" index = "1" />
+	<bitmap id="yt.btn.hover"  imagelist = "imagelist.yt.btn" index = "2" />
+	<bitmap id="yt.btn.down"  imagelist = "imagelist.yt.btn" index = "3" />	
+	
+	<bitmap id="mainwnd.sugg.cancel.btn.normal"  imagelist = "imagelist.mainwnd.sugg.cancel.btn" index = "1" />
+	<bitmap id="mainwnd.sugg.cancel.btn.hover"  imagelist = "imagelist.mainwnd.sugg.cancel.btn" index = "2" />
+	<bitmap id="mainwnd.sugg.cancel.btn.down"  imagelist = "imagelist.mainwnd.sugg.cancel.btn" index = "3" />	
+	
+	<bitmap id="tab.detp.icon.normal"  imagelist = "imagelist.tab.detp.icon" index = "1" />
+	<bitmap id="tab.detp.icon.hover"  imagelist = "imagelist.tab.detp.icon" index = "2" />
+	<bitmap id="tab.detp.icon.down"  imagelist = "imagelist.tab.detp.icon" index = "3" />
+	<bitmap id="tab.group.icon.normal"  imagelist = "imagelist.tab.group.icon" index = "1" />
+	<bitmap id="tab.group.icon.hover"  imagelist = "imagelist.tab.group.icon" index = "2" />
+	<bitmap id="tab.group.icon.down"  imagelist = "imagelist.tab.group.icon" index = "3" />
+	<bitmap id="tab.recent.icon.normal"  imagelist = "imagelist.tab.recent.icon" index = "1" />
+	<bitmap id="tab.recent.icon.hover"  imagelist = "imagelist.tab.recent.icon" index = "2" />
+	<bitmap id="tab.recent.icon.down"  imagelist = "imagelist.tab.recent.icon" index = "3" />	
+	
+	<bitmap id="mainwndsys.min.icon.normal"  imagelist = "imagelist.mainwndsys.min.btn" index = "1" />
+	<bitmap id="mainwndsys.min.icon.hover"  imagelist = "imagelist.mainwndsys.min.btn" index = "2" />
+	<bitmap id="mainwndsys.min.icon.down"  imagelist = "imagelist.mainwndsys.min.btn" index = "3" />	
+
+	<bitmap id="mainwndsys.close.icon.normal"  imagelist = "imagelist.mainwndsys.close.btn" index = "1" />
+	<bitmap id="mainwndsys.close.icon.hover"  imagelist = "imagelist.mainwndsys.close.btn" index = "2" />
+	<bitmap id="mainwndsys.close.icon.down"  imagelist = "imagelist.mainwndsys.close.btn" index = "3" />	
+
+	<bitmap id="wnd.nova.todo.icon.normal"  imagelist = "imagelist.wnd.nova.todo.btn" index = "1" />
+	<bitmap id="wnd.nova.todo.icon.hover"  imagelist = "imagelist.wnd.nova.todo.btn" index = "2" />
+	<bitmap id="wnd.nova.todo.icon.down"  imagelist = "imagelist.wnd.nova.todo.btn" index = "3" />	
+
+	<bitmap id="wnd.nova.mine.icon.normal"  imagelist = "imagelist.wnd.nova.mine.btn" index = "1" />
+	<bitmap id="wnd.nova.mine.icon.hover"  imagelist = "imagelist.wnd.nova.mine.btn" index = "2" />
+	<bitmap id="wnd.nova.mine.icon.down"  imagelist = "imagelist.wnd.nova.mine.btn" index = "3" />	
+
+	<bitmap id="wnd.mainmenu.icon.normal"  imagelist = "imagelist.wnd.mainmenu.btn" index = "1" />
+	<bitmap id="wnd.mainmenu.icon.hover"  imagelist = "imagelist.wnd.mainmenu.btn" index = "2" />
+	<bitmap id="wnd.mainmenu.icon.down"  imagelist = "imagelist.wnd.mainmenu.btn" index = "3" />	
+
+
+		<imagelist id="imagelist.general.button.bkg" vertical="0" splitter="1" varyblock="1" image="bitmap\general.button.bkg.png"/>
+		<texture id="general.button.normal" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="1"/>
+		<texture id="general.button.down" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="3"/>
+		<texture id="general.button.hover" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="2"/>
+		<texture id="general.button.disable" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="4"/>
+		<texture id="siamese.button.left.normal" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="5" />
+		<texture id="siamese.button.left.hover" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="6" />
+		<texture id="siamese.button.left.down" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="7" />
+		<texture id="siamese.button.left.disable" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="8" />
+		<texture id="siamese.button.right.normal" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="9" />
+		<texture id="siamese.button.right.hover" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="10" />
+		<texture id="siamese.button.right.down" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="11" />
+		<texture id="siamese.button.right.disable" type="ThreeInOneH" imagelist="imagelist.general.button.bkg" index="12" />
+	
+		<texture id="texture.mask.btn" type="ThreeInOneH" image="bitmap/mask.btn.png" />
+		<bitmap id="general.button.light" path="bitmap\btn.light.png"/>
+		<texture id="texture.bkg.normal"  type="Stretch" path="bitmap/mainwnd.bkg.normal.png"/>
+		<texture id="texture.bkg.disable" type="Stretch" path="bitmap/mainwnd.bkg.normal.png"/>
+	</resource>
+</xlue>

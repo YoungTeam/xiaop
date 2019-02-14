@@ -1,0 +1,7 @@
+D:\workspace\C#\20130514\xiaopcmd\bin\Debug\xiaopcmd.exe
+D:\workspace\C#\20130514\xiaopcmd\bin\Debug\xiaopcmd.pdb
+D:\workspace\C#\20130514\xiaopcmd\bin\Debug\Newtonsoft.Json.dll
+D:\workspace\C#\20130514\xiaopcmd\bin\Debug\RabbitMQ.Client.dll
+D:\workspace\C#\20130514\xiaopcmd\obj\Debug\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514\xiaopcmd\obj\Debug\xiaopcmd.exe
+D:\workspace\C#\20130514\xiaopcmd\obj\Debug\xiaopcmd.pdb

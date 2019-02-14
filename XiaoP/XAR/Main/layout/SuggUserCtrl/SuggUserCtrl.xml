@@ -1,0 +1,345 @@
+<xlue>
+<control class="XiaoP.SuggUserList.UserItem">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+		<attr name="height" type="int">
+			<default>30</default>
+		</attr>		
+	</attr_def>
+	<method_def>
+		 <UpdateUser file="SuggUserCtrl.xml.lua" func="UpdateUser" />
+	</method_def>	
+	<objtemplate>
+		<children>
+			<obj id="user.bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>30</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>255,255,255,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+						
+					<obj id="user.normal.layout" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>30</height>
+					</attr>	
+					<children>
+					
+						<obj  id="user.normal.face.mask" class="MaskObject">
+						<attr>
+							<left>5</left>
+							<top>3</top>
+							<height>24</height>
+							<width>24</width>
+							<type>bitmap</type>
+							<chanel>r</chanel>
+							<resid>sugg.face.mask</resid>
+							<masksizex>24</masksizex>
+							<masksizey>24</masksizey>
+							<maskorgx>0</maskorgx>
+							<maskorgy>0</maskorgy>	
+						</attr>
+						<children>
+							<obj id="user.normal.face" class="ImageObject">
+								<attr>
+								<left>2</left>
+								<top>2</top>
+								<width>20</width>
+								<height>20</height>
+								<zorder>100</zorder>
+								<drawmode>1</drawmode>
+								<inheritmask>1</inheritmask> 
+								<maskwidth>20</maskwidth>
+								<maskheight>20</maskheight>		
+								<image></image>
+								</attr>	
+							</obj>
+						</children>
+						</obj>
+					
+						<obj id="user.normal.name" class="TextObject">
+							<attr>
+							<left>40</left>
+							<top>5</top>
+							<width>336</width>
+							<height>25</height>
+							<font>wnd.12.font</font>
+							<text></text>
+							</attr>
+						</obj>									
+					</children>					
+					</obj>
+					
+					<obj id="user.detail.layout" class="LayoutObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>56</height>
+					</attr>	
+					<children>	
+
+				
+						<obj  id="user.detail.face.mask" class="MaskObject">
+						<attr>
+							<left>5</left>
+							<top>3</top>
+							<height>50</height>
+							<width>50</width>
+							<type>bitmap</type>
+							<chanel>r</chanel>
+							<resid>userlist.face.mask</resid>
+							<masksizex>50</masksizex>
+							<masksizey>50</masksizey>
+							<maskorgx>0</maskorgx>
+							<maskorgy>0</maskorgy>	
+						</attr>
+						<children>
+							<obj id="user.detail.face" class="ImageObject">
+								<attr>
+								<left>5</left>
+								<top>5</top>
+								<width>40</width>
+								<height>40</height>
+								<zorder>100</zorder>
+								<drawmode>1</drawmode>
+								<inheritmask>1</inheritmask> 
+								<maskwidth>40</maskwidth>
+								<maskheight>40</maskheight>		
+								<image></image>
+								</attr>	
+								<eventlist>
+									<event name="OnMouseEnter" file="SuggUserCtrl.xml.lua" func="OnUserFaceEnter" />
+									<event name="OnMouseLeave" file="SuggUserCtrl.xml.lua" func="OnUserFaceLeave" />
+								</eventlist>
+							</obj>
+						</children>
+						</obj>					
+						<obj id="user.detail.name" class="TextObject">
+							<attr>
+							<left>60</left>
+							<top>5</top>
+							<width>336</width>
+							<height>25</height>
+							<font>wnd.12.font</font>
+							<text></text>
+							</attr>
+						</obj>							
+					
+						<obj id="user.phone.icon" class="ImageObject">
+							<attr>
+							<left>60</left>
+							<top>35</top>
+							<width>16</width>
+							<height>16</height>
+							<image>mainwnd.sugg.user.phone.icon</image>
+							</attr>
+						</obj>						
+						<obj id="user.phone" class="TextObject">
+							<attr>
+							<left>80</left>
+							<top>30</top>
+							<width>father.width</width>
+							<height>30</height>
+							<font>wnd.12.font</font>
+							<text></text>
+							<valign>center</valign>
+							</attr>
+						</obj>
+
+						<obj id="user.mobile.icon" class="ImageObject">
+							<attr>
+							<left>174</left>
+							<top>35</top>
+							<width>16</width>
+							<height>16</height>
+							<image>mainwnd.sugg.user.mobile.icon</image>
+							</attr>
+						</obj>						
+						<obj id="user.mobile" class="TextObject">
+							<attr>
+							<left>190</left>
+							<top>30</top>
+							<width>father.width</width>
+							<height>30</height>
+							<font>wnd.12.font</font>
+							<text></text>
+							<valign>center</valign>
+							</attr>
+						</obj>		
+					</children>							
+					</obj>
+						
+					
+					
+				</children>	
+
+			</obj>	
+		</children>
+		<eventlist>
+			<event name="OnInitControl" file="SuggUserCtrl.xml.lua" func="OnInitUserItem"/>
+			<event name="OnMouseEnter" file="SuggUserCtrl.xml.lua" func="OnUserHover"/>
+			<event name="OnMouseLeave" file="SuggUserCtrl.xml.lua" func="OnUserLeave"/>
+			<event name="OnLButtonDown" file="SuggUserCtrl.xml.lua" func="OnUserClick"/>
+		</eventlist>	
+		
+	</objtemplate>
+</control>
+<control class="XiaoP.Main.SuggListCtrl">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+	</attr_def>
+	<method_def>
+		<SetSuggUserCtrlFocus file="SuggUserCtrl.xml.lua" func="SetSuggUserCtrlFocus"/>
+	</method_def>	
+	<event_def>
+		<OnUserItemClick>
+			<param>
+				<string/>
+			</param>
+		</OnUserItemClick>	
+		<OnSuggEditChange>
+			<param>
+				<string/>
+			</param>
+		</OnSuggEditChange>
+	</event_def>
+	<objtemplate>
+			<children>	
+				<obj id="sugg.icon" class="ImageObject">
+				<attr>
+					<width>17</width>
+					<height>17</height>
+					<left>10</left>
+					<top>8</top>
+					<image>mainwnd.sugg.icon</image>
+					<zorder>600</zorder>
+				</attr>
+				</obj>
+				<obj id="sugg.edit" class="Thunder.Edit">
+					<attr>
+						<width>father.width</width>
+						<height>34</height>
+						<left>0</left>
+						<top>0</top>
+						<EditCustom>true</EditCustom>
+						<EditLeft>0</EditLeft>
+						<EditTop>8</EditTop>
+						<EditWidth>father.width</EditWidth>
+						<EditHeight>34</EditHeight>
+						
+						<Text>       可在全公司范围内查找员工</Text>
+						<Font>wnd.12.font</Font>
+						<NormalBkgID>texture.main.sugg.edit.normal.bkg</NormalBkgID>
+						<HoverBkgID>texture.main.sugg.edit.hover.bkg</HoverBkgID>
+						<SelectBkgID>texture.main.sugg.edit.select.bkg</SelectBkgID>
+						
+						<NormalTextColor>mainwnd.white.color</NormalTextColor>
+						<HoverTextColor>mainwnd.white.color</HoverTextColor>
+						<SelectTextColor>mainwnd.black.color</SelectTextColor>
+						<DisableTextColor>mainwnd.white.color</DisableTextColor>
+					</attr>
+					<eventlist>
+						<event name="OnEditChange" file="SuggUserCtrl.xml.lua" func = "OnEditChange"/>
+						<event name="OnEditFocusChange" file="SuggUserCtrl.xml.lua" func="OnEditFocusChange"/>
+						<event name="OnEditKeyDown" file="SuggUserCtrl.xml.lua" func="OnEditKeyDown"/>
+					</eventlist>
+				</obj>
+				
+				<obj id="sugg.cancel.btn" class="Thunder.ImageTextButton">
+					<attr>
+						<left>father.width - 20</left>
+						<top>7</top>
+						<width>16</width>
+						<height>16</height>
+						<Text></Text>
+						<IconWidth>16</IconWidth>
+						<IconHeight>16</IconHeight>
+						<IconBitmapID>mainwnd.sugg.cancel.btn.normal</IconBitmapID>
+						<IconBitmapID_Hover>mainwnd.sugg.cancel.btn.hover</IconBitmapID_Hover>
+						<IconBitmapID_Down>mainwnd.sugg.cancel.btn.down</IconBitmapID_Down>	
+						<zorder>600</zorder>
+					</attr>
+					<eventlist>
+						<event name="OnLButtonDown" file="SuggUserCtrl.xml.lua" func = "OnSuggCancel"/>
+							
+					</eventlist>		
+				</obj>				
+				<!--List背景-->
+				
+				<obj id="sugg.list" class="FillObject">
+
+					<attr>
+						<left>0</left>
+						<top>35</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<filltype>Monochrome</filltype>
+						<blendtype>Source</blendtype>
+						<srcpt>0,0</srcpt>
+						<destpt>0,height</destpt>
+						<srccolor>255,255,255,255</srccolor>
+						<zorder>999999</zorder>
+					</attr>
+					<children>
+						<obj id="sugg.list.tip" class="FillObject">
+							<attr>
+								<left>0</left>
+								<top>0</top>
+								<width>father.width</width>
+								<height>34</height>
+								<filltype>Monochrome</filltype>
+								<blendtype>Source</blendtype>
+								<srcpt>0,0</srcpt>
+								<destpt>0,height</destpt>
+								<srccolor>191,217,251,255</srccolor>
+							</attr>	
+							<children>
+								<obj id="sugg.list.tip.text" class="TextObject">
+								<attr>
+									<left>10</left>
+									<top>0</top>
+									<width>father.width</width>
+									<height>34</height>
+									<font>wnd.12.font</font>
+									<text>请输入姓名/工号/分机号/部门</text>
+									<valign>center</valign>
+								</attr>
+								</obj>
+							</children>
+						</obj>	
+						<obj id="sugg.users" class="XiaoP.Ctrl.BaseList">
+							<attr>
+								<left>0</left>
+								<Top>34</Top>
+								<width>father.width</width>
+								<height>0</height>
+								<itemCtrl>XiaoP.SuggUserList.UserItem</itemCtrl>								
+							</attr>	
+							<eventlist>
+										<event name="OnItemSelected" file="SuggUserCtrl.xml.lua" func="OnItemSelected"/>
+							</eventlist>							
+						</obj>						
+					</children>
+				</obj>
+			
+			</children>
+			<eventlist>
+					
+						<event name="OnInitControl" file="SuggUserCtrl.xml.lua" func="OnInitControl"/>
+			</eventlist>
+	</objtemplate>		
+</control>			
+</xlue>

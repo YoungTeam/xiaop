@@ -1,0 +1,192 @@
+<xlue>
+<control class="XiaoP.MembersCtrl.Member">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+		<attr name="height" type="int">
+			<default>28</default>
+		</attr>		
+	</attr_def>
+	<method_def>
+		 <UpdateMember file="MembersCtrl.xml.lua" func="UpdateMember" />
+	</method_def>	
+	<objtemplate>
+		<children>
+			<obj id="user.bkg" class="FillObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>28</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>255,255,255,0</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+					<obj id="manager" class="ImageObject">
+						<attr>
+						<left>10</left>
+						<top>7</top>
+						<width>16</width>
+						<height>16</height>
+						<image>chat.member.manager</image>
+						<visible>0</visible>
+						</attr>	
+					</obj>					
+					<obj  id="user.face.mask" class="MaskObject">
+					<attr>
+						<left>25</left>
+						<top>2</top>
+						<height>24</height>
+						<width>24</width>
+						<type>bitmap</type>
+						<chanel>r</chanel>
+						<resid>chat.member.face.mask</resid>
+						<masksizex>24</masksizex>
+						<masksizey>24</masksizey>
+						<maskorgx>0</maskorgx>
+						<maskorgy>0</maskorgy>	
+					</attr>
+					<children>
+						<obj id="user.face" class="ImageObject">
+							<attr>
+							<left>2</left>
+							<top>2</top>
+							<width>20</width>
+							<height>20</height>
+							<zorder>100</zorder>
+							<drawmode>1</drawmode>
+							<inheritmask>1</inheritmask> 
+							<maskwidth>20</maskwidth>
+							<maskheight>20</maskheight>		
+							<image>xiaop.face</image>
+							</attr>	
+						</obj>
+					</children>
+					</obj>
+				
+					<obj id="user.name" class="TextObject">
+						<attr>
+						<left>54</left>
+						<top>2</top>
+						<width>336</width>
+						<height>25</height>
+						<font>chatwnd.12.font</font>
+						<text>youngteam</text>
+						<valign>center</valign>
+						</attr>
+					</obj>			
+				</children>	
+
+			</obj>	
+		</children>
+		<eventlist>
+			<event name="OnInitControl" file="MembersCtrl.xml.lua" func="OnInitMember"/>
+			<event name="OnLButtonDbClick" file="MembersCtrl.xml.lua" func = "OnMemberDbClick"/>
+			<event name="OnMouseEnter" file="MembersCtrl.xml.lua" func="OnMemberHover"/>
+			<event name="OnMouseLeave" file="MembersCtrl.xml.lua" func="OnMemberLeave"/>
+			<event name="OnLButtonDown" file="MembersCtrl.xml.lua" func="OnMemberClick"/>
+			<event name="OnMouseWheel" file="MembersCtrl.xml.lua" func="OnMemberMouseWheel" />	
+		</eventlist>	
+		
+	</objtemplate>
+</control>
+<control class="XiaoP.Chat.MembersCtrl">
+	<attr_def>
+		<attr name="index" type="int"/>
+		<attr name="userId" type="int" />
+		<attr name="userName" type="string" />
+	</attr_def>
+	<method_def>
+			<CreateList  file="MembersCtrl.xml.lua" func="CreateMembersList"/>
+			<!--UpdateUser  file="DeptUserList.xml.lua" func="UpdateUser"/-->
+	</method_def>	
+	<event_def>
+		<OnMemberItemDbClick>
+			<param>
+				<string/>
+			</param>
+		</OnMemberItemDbClick>	
+		<!--OnSuggEditChange>
+			<param>
+				<string/>
+			</param>
+		</OnSuggEditChange-->
+	</event_def>
+	<objtemplate>
+			<children>	
+				<obj id="members.title" class="TextObject">
+				<attr>
+					<width>father.width</width>
+					<height>20</height>
+					<left>10</left>
+					<top>0</top>
+					<text>群成员</text>
+					<font>chatwnd.14.font</font>
+					<valign>center</valign>					
+				</attr>
+				</obj>
+				<obj id="members.title.info" class="TextObject">
+				<attr>
+					<width>150</width>
+					<height>20</height>
+					<left>10</left>
+					<top>0</top>
+					<text></text>
+					<font>chatwnd.12.font</font>
+					<valign>center</valign>					
+				</attr>
+				</obj>				
+				<obj id="members.spliter" class="LineObject">
+				  <attr>
+					<left>5</left>
+					<top>25</top>
+					<width>father.width-10</width>
+					<height>1</height>
+					<color>chatwnd.spliter.color</color>
+					<srcpt>0,0</srcpt>
+					<destpt>father.width,0</destpt>
+					<pen>pen.solid</pen>
+				  </attr>
+				</obj>
+				<!--List背景-->
+				
+				<obj id="members.area" class="LayoutObject">
+
+					<attr>
+						<left>0</left>
+						<top>26</top>
+						<width>father.width</width>
+						<height>father.height</height>
+						<!--filltype>Monochrome</filltype>
+						<blendtype>Source</blendtype>
+						<srcpt>0,0</srcpt>
+						<destpt>0,height</destpt>
+						<srccolor>255,0,255,255</srccolor>
+						<zorder>999999</zorder-->
+					</attr>
+					<children>
+						<obj id="members.list" class="XiaoP.Ctrl.BaseList">
+							<attr>
+								<left>0</left>
+								<top>34</top>
+								<width>father.width</width>
+								<height>father.height</height>
+								<itemCtrl>XiaoP.MembersCtrl.Member</itemCtrl>
+								<bgColor>RGBA(241,250,248,255)</bgColor>								
+							</attr>
+						</obj>						
+					</children>
+				</obj>
+			
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="MembersCtrl.xml.lua" func="OnInitControl"/>
+			</eventlist>
+	</objtemplate>		
+</control>			
+</xlue>

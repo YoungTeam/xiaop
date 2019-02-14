@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>nsisSlideShow</title>
+  <style type="text/css">
+    <!--
+      body
+      {
+          padding: 10px;
+          background-color: #F0F0F0;
+          font-size: 13px;
+          font-family: Verdana, Arial, Helvetica, sans-serif;
+          font-weight: normal;
+          text-align: justify;
+          text-justify: distribute;
+      }
+      p, li
+      {
+          font-size: 13px;
+      }
+      table
+      {
+          margin: auto;
+          background-color: #FFFFFF;
+      }
+      .maintable
+      {
+          border: 1px solid #376EAB;
+      }
+      h1
+      {
+          font-size: 26px;
+          color: #808080;
+          font-weight: bold;
+      }
+      h2
+      {
+          font-size: 20px;
+          color: #7A7272;
+          font-weight: normal;
+      }
+      h3
+      {
+          font-size: 14px;
+          font-weight: bold;
+          color: #303030;
+      }
+      div
+      {
+          margin: 20px;
+      }
+      div.comment
+      {
+          color: #606060;
+      }
+      a:link, a:visited, a:active
+      {
+          color: #294F75;
+          text-decoration: none;
+      }
+      a:hover
+      {
+          color: #182634;
+          text-decoration: underline;
+      }
+    -->
+  </style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+</head>
+<body>
+<table width="750" class="maintable" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+      <h1 align="center">nsisSlideshow</h1>
+      <div>nsisSlideshow 是一个用于显示渐变效果标志图/幻灯片的小型 NSIS 插件</br>网址：<a target="_blank" href="http://wiz0u.free.fr/prog/nsisSlideshow">http://wiz0u.free.fr/prog/nsisSlideshow</a></div>
+      <div>你可以用它在安装过程中显示广告或提示。标志图的显示可以是手动 (同步的)，也可以是自动的。</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div>
+        <h2>说明</h2>
+        <div>
+          <ul>
+            <li>此插件已在 Windows XP 和 Vista 下测试，但可能兼容 Windows 2000、XP、Vista 以及最新系统。</li>
+            <li>实际例子查看样例脚本。</li>
+          </ul>
+        </div>
+        <h2>用法</h2>
+        <div>
+          <ul>
+            <li>nsisSlideshow::show /NOUNLOAD [选项] &lt;图片文件名&gt; (手动模式)</li>
+            <li>nsisSlideshow::show /NOUNLOAD [选项] /auto=&lt;控制文件&gt; (自动模式)</li>
+          </ul>
+          <h3>可用的选项</h3>
+            <div>/HWND=&lt;句柄值&gt;</br>使用指定窗口的边界矩形来绘制标志图 (默认使用显示详情的列表视图区域)</div>
+            <div>/FIT=HEIGHT|WIDTH|BOTH|STRETCH</br>缩放图片以适合该矩形框的限定 (默认：BOTH)</div>
+            <div>/HALIGN=LEFT|CENTER|RIGHT</br>矩形框内的水平位置 (默认：CENTER)</div>
+            <div>/VALIGN=TOP|CENTER|BOTTOM</br>矩形框内的垂直平位置 (默认：CENTER)</div>
+            <div>/CCOLOR=0xBBGGRR</br>用于可选的字幕文字颜色的 BGR 十六进制值 (默认：白色)</br>(确保图片底色让字幕易于阅读)</div>
+          <h3>手动模式选项</h3>
+            <div>/DURATION=&lt;延迟毫秒数&gt;</br>矩显示图片的淡入时间 (默认：1000 毫秒)</div>
+            <div>"/CAPTION=&lt;字符串&gt;"</br>矩在图片底部添加指定的字幕字符串 (如果有空格请使用引号)</div>
+            <div>图片格式可以是 JPEG、PNG、GIF、BMP、WMF</div>
+            <div>自动控制文件是一个定义了根据当前语言显示在幻灯片中的图片的文本文件。</div>
+          <h3>定义分组格式</h3>
+            <div>[语言 ID] ; 十进制区域语言 ID 值，查看 <a target="_blank" href="http://msdn.microsoft.com/en-us/library/0h88fahh.aspx">http://msdn.microsoft.com/en-us/library/0h88fahh.aspx</a></br>=&lt;图片文件名&gt;,&lt;淡入时间&gt;,&lt;停留时间&gt;[,&lt;字幕&gt;]</br>=&lt;图片文件名&gt;,&lt;淡入时间&gt;,&lt;停留时间&gt;[,&lt;字幕&gt;]</br>=&lt;图片文件名&gt;,&lt;淡入时间&gt;,&lt;停留时间&gt;[,&lt;字幕&gt;]</br>......</div>
+            <div>图片最好应该与控制文件放在同一文件夹，通常将幻灯片文件夹释放到 $PLUGINSDIR。</br>延迟单位为毫秒。停留时间是指在切换到下一张图片之前的等待时间。</br>字幕必须用适当的语言代码页来编码，就像 NSIS 中的语言字符串那样。</div>
+            <div>如果组以仅包含一个句号 (.) 的行结束，幻灯片将会在最后张图片处停止。</br>否则，幻灯片将会循环回到第一张图片。</div>
+            <div>你可以将多个语言组放在控制文件里，并根据语言修改图片、字幕等等。</br>如果没有找到当前语言，将使用默认的 [1033] 组 (英文)，如果还没找到将使用 [0] 组。</div>
+            <ul><li>nsisSlideshow::stop</li></ul>
+            <div>当安装过程结束时，调用此行以中止或终止标志图的显示。</br>这也将会释放插件使用的内存并卸载 DLL。</div>
+        </div>
+        <h2>历史</h2>
+        <div>
+          <ul>
+            <li>2006-06-21 v1.0: 最初 EBanner 插件由 Takhir Bedertdinov 编写</li>
+            <li>2009-01-08 v1.1: 大量重写，不再闪烁</li>
+            <li>2009-02-17 v1.2: 后台自动交叉淡入淡出</li>
+            <li>2009-06-16 v1.3: 使用 Slides 文件夹添加自定幻灯片模式</li>
+            <li>2009-08-19 v1.4: 将插件更名为 nsisSlideshow 并归档</li>
+            <li>2009-09-07 v1.5: 移植到 Unicode NSIS</li>
+            <li>2010-04-27 v1.6: 修正自动模式的两处 BUG</li>
+            <li>2011-05-07 v1.7: 兼容 IE9</li>
+          </ul>
+        </div>
+        <h2>协议</h2>
+        <div>
+          <p>Copyright (c) 2009-2011 Olivier Marcoux</p>
+          <p>This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.</p>
+          <p>Permission is granted to anyone to use this library for any purpose, including commercial applications, and to redistribute it freely, subject to the following restriction:</p>
+          <p>The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.</p>
+        </div>
+        <div class="comment">此文档由贾可 (jiake@vip.qq.com) 根据该插件官方网站翻译制作</div>
+      </div>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

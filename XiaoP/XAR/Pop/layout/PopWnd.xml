@@ -1,0 +1,577 @@
+<xlue>	
+
+<control class="XiaoP.PopWnd.Control">
+	<attr_def>
+	</attr_def>
+	<method_def>
+		<Popup file="PopWnd.xml.lua" func="Popup"/>
+	</method_def>
+	<objtemplate>
+		<children>
+
+		</children>
+		<eventlist>
+			<event name="OnInitControl" file="PopWnd.xml.lua" func="OnInitControl"/>	
+		</eventlist>
+	</objtemplate>
+</control>
+
+	<objtemplate id="xiaop.popwnd.imgtext.panel" class="LayoutObject">
+	<children>
+		<obj id="bkg_border" class="TextureObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>312</width>
+			<height>212</height>
+			<texture>texture.wndborder.bkg</texture>
+			<limitchild>1</limitchild> 					
+		</attr>
+		<children>
+			<obj id="bkg" class="TextureObject">
+				<attr>
+					<left>6</left>
+					<top>6</top>
+					<width>300</width>
+					<height>200</height>
+					<texture>texture.popwnd.txt.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>		
+				<children>	
+					<obj id="chatwnd.caption" class="CaptionObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						<obj  id="pop.title" class="TextObject">
+							<attr>
+								<left>10</left>
+								<top>0</top>
+								<width>father.width-100</width>
+								<height>30</height>
+								<text>Pandora图文</text>
+								<valign>center</valign>
+								<textcolor>popwnd.white.color</textcolor>
+								<font>popwnd.14.font</font>
+							</attr>
+						</obj>
+						<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+							<attr>
+								<left>father.width-30</left>
+								<top>0</top>
+								<width>30</width>
+								<height>30</height>
+								<MaxShow>false</MaxShow>
+								<MiniShow>false</MiniShow>
+								<SingleClose_NormalImageID>popwndsys.close.icon.normal</SingleClose_NormalImageID>
+								<SingleClose_HoverImageID>popwndsys.close.icon.hover</SingleClose_HoverImageID>
+								<SingleClose_DownImageID>popwndsys.close.icon.down</SingleClose_DownImageID>	
+							</attr>
+							<eventlist>
+								<event name="OnClose" file="PopWnd.xml.lua" func="OnClose" />
+							</eventlist>
+						</obj>
+						
+						
+						<obj id="img" class="ImageObject">
+						<attr>
+							<left>10</left>
+							<top>40</top>
+							<width>120</width>
+							<height>150</height>
+							<image></image>
+							<drawmode>1</drawmode>
+						</attr>
+						</obj>
+
+						<obj id="txt.title" class="TextObject">
+						<attr>
+							<left>140</left>
+							<top>40</top>
+							<width>143</width>
+							<height>40</height>
+							<halign>center</halign>
+							<valign>center</valign>
+							<font>popwnd.13.bold.font</font>
+							<text>title</text>
+							<multiline>1</multiline>
+							<wordellipsis>1</wordellipsis>
+						</attr>
+						</obj>
+
+						<obj id="txt.content" class="TextObject">
+						<attr>
+							<left>140</left>
+							<top>80</top>
+							<width>143</width>
+							<height>80</height>
+							<text>testest</text>
+							<multiline>1</multiline>
+							<wordellipsis>1</wordellipsis>
+						</attr>
+						</obj>
+							
+						<obj id="detail.btn" class="Thunder.Button">
+							<attr>
+								<left>father.width - 110 </left>
+								<top>170</top>
+								<width>100</width>
+								<height>25</height>
+								<Text>点击查看>></Text>
+								<TextColor>popwnd.white.color</TextColor>
+								<TextFont>popwnd.14.font</TextFont>
+								<ShowFocusRect>false</ShowFocusRect>
+								<NormalBkgID>popwnd.button.normal</NormalBkgID>
+								<DownBkgID>popwnd.button.down</DownBkgID>
+								<DisableBkgID>popwnd.button.disable</DisableBkgID>
+								<HoverBkgID>popwnd.button.hover</HoverBkgID>																							
+							</attr>
+							<eventlist>
+								<event name="OnClick" file="PopWnd.xml.lua" func="OnOpen" />
+							</eventlist>
+						</obj>						
+					</children>
+					</obj>
+				</children>
+				<eventlist>
+					<event name="OnLButtonUp" file="PopWnd.xml.lua" func="OnOpen"/>
+				</eventlist>
+			</obj>
+		</children>
+		<eventlist>
+				<event name = "OnInitControl" file="PopWnd.xml.lua" func="OnInitImgTxtPopWndInfo"/>
+		</eventlist>
+		</obj>
+	 </children>
+	</objtemplate>
+
+	<objtemplate id="xiaop.popwnd.text.panel" class="LayoutObject">
+	<children>
+		<obj id="bkg_border" class="TextureObject">
+		<attr>
+			<left>0</left>
+			<top>0</top>
+			<width>312</width>
+			<height>212</height>
+			<texture>texture.wndborder.bkg</texture>
+			<limitchild>1</limitchild> 					
+		</attr>
+		<children>
+			<obj id="bkg" class="TextureObject">
+				<attr>
+					<left>6</left>
+					<top>6</top>
+					<width>300</width>
+					<height>200</height>
+					<texture>texture.popwnd.txt.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>		
+				<children>	
+					<obj id="chatwnd.caption" class="CaptionObject">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height</height>
+					</attr>
+					<children>
+						<obj  id="pop.title" class="TextObject">
+							<attr>
+								<left>10</left>
+								<top>0</top>
+								<width>father.width-100</width>
+								<height>30</height>
+								<text>Pandora纯文</text>
+								<valign>center</valign>
+								<textcolor>popwnd.white.color</textcolor>
+								<font>popwnd.14.font</font>
+							</attr>
+						</obj>
+						<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+							<attr>
+								<left>father.width-30</left>
+								<top>0</top>
+								<width>30</width>
+								<height>30</height>
+								<MaxShow>false</MaxShow>
+								<MiniShow>false</MiniShow>
+								<SingleClose_NormalImageID>popwndsys.close.icon.normal</SingleClose_NormalImageID>
+								<SingleClose_HoverImageID>popwndsys.close.icon.hover</SingleClose_HoverImageID>
+								<SingleClose_DownImageID>popwndsys.close.icon.down</SingleClose_DownImageID>	
+							</attr>
+							<eventlist>
+								<event name="OnClose" file="PopWnd.xml.lua" func="OnClose" />
+							</eventlist>
+						</obj>
+						
+						<obj id="txt.title" class="TextObject">
+						<attr>
+							<left>10</left>
+							<top>40</top>
+							<width>father.width-20</width>
+							<height>40</height>
+							<halign>center</halign>
+							<valign>center</valign>
+							<text>title</text>
+							<font>popwnd.13.bold.font</font>
+							<multiline>1</multiline>
+							<wordellipsis>1</wordellipsis>
+						</attr>
+						</obj>
+
+						<obj id="txt.content" class="TextObject">
+						<attr>
+							<left>10</left>
+							<top>80</top>
+							<width>father.width-20</width>
+							<height>father.height-110</height>
+							<text>testest</text>
+							<multiline>1</multiline>
+							<wordellipsis>1</wordellipsis>
+						</attr>
+						</obj>	
+
+						<obj id="detail.btn" class="Thunder.Button">
+							<attr>
+								<left>father.width - 110 </left>
+								<top>165</top>
+								<width>100</width>
+								<height>25</height>
+								<Text>点击查看>></Text>
+								<TextColor>popwnd.white.color</TextColor>
+								<TextFont>popwnd.14.font</TextFont>
+								<ShowFocusRect>false</ShowFocusRect>
+								<NormalBkgID>popwnd.button.normal</NormalBkgID>
+								<DownBkgID>popwnd.button.down</DownBkgID>
+								<DisableBkgID>popwnd.button.disable</DisableBkgID>
+								<HoverBkgID>popwnd.button.hover</HoverBkgID>																							
+							</attr>
+							<eventlist>
+								<event name="OnClick" file="PopWnd.xml.lua" func="OnOpen" />
+							</eventlist>
+						</obj>
+						
+					</children>
+					</obj>
+				</children>
+				<eventlist>
+					<event name="OnLButtonUp" file="PopWnd.xml.lua" func="OnOpen"/>
+				</eventlist>
+			</obj>
+		</children>
+		<eventlist>
+				<event name = "OnInitControl" file="PopWnd.xml.lua" func="OnInitTxtPopWndInfo"/>
+		</eventlist>
+		</obj>
+	 </children>
+	</objtemplate>	
+	
+	<objtemplate id="xiaop.popwnd.nova.panel" class="LayoutObject">
+
+		 <attr>
+
+		 </attr>
+
+		 <children>
+		 
+		 <obj id="bkg_border" class="TextureObject">
+			<attr>
+				<left>0</left>
+				<top>0</top>
+				<width>312</width>
+				<height>212</height>
+				<texture>texture.wndborder.bkg</texture>
+				<limitchild>1</limitchild> 					
+			</attr>
+			<children>
+
+			<obj id="bkg" class="TextureObject">
+				<attr>
+					<left>6</left>
+					<top>6</top>
+					<width>300</width>
+					<height>200</height>
+					<texture>texture.popwnd.bkg</texture>
+					<limitchild>1</limitchild> 					
+				</attr>		
+				<children>
+						<obj id="chatwnd.caption" class="CaptionObject">
+
+							<attr>
+
+								<left>0</left>
+
+								<top>0</top>
+
+								<width>father.width</width>
+
+								<height>father.height</height>
+
+							</attr>
+
+							<children>
+								<obj  id="pop.title" class="TextObject">
+									<attr>
+										<left>35</left>
+										<top>0</top>
+										<width>father.width-100</width>
+										<height>30</height>
+										<text>Pandora待办</text>
+										<valign>center</valign>
+										<textcolor>popwnd.white.color</textcolor>
+										<font>popwnd.14.font</font>
+									</attr>
+								</obj>
+								<obj id="SystemBtn" class="Thunder.System.ButtonEx.Ctrl">
+									<attr>
+										<left>father.width-30</left>
+										<top>0</top>
+										<width>30</width>
+										<height>30</height>
+										<MaxShow>false</MaxShow>
+										<MiniShow>false</MiniShow>
+										<SingleClose_NormalImageID>popwndsys.close.icon.normal</SingleClose_NormalImageID>
+										<SingleClose_HoverImageID>popwndsys.close.icon.hover</SingleClose_HoverImageID>
+										<SingleClose_DownImageID>popwndsys.close.icon.down</SingleClose_DownImageID>	
+									</attr>
+									<eventlist>
+										<event name="OnClose" file="PopWnd.xml.lua" func="OnClose" />
+									</eventlist>
+								</obj>
+								
+								
+								<obj  id="userFace.mask" class="MaskObject">
+									<attr>
+										<left>5</left>
+										<top>40</top>
+										<height>50</height>
+										<width>50</width>
+										<type>bitmap</type>
+										<chanel>r</chanel>
+										<resid>pop.face.mask</resid>
+										<masksizex>90</masksizex>
+										<masksizey>90</masksizey>
+										<maskorgx>0</maskorgx>
+										<maskorgy>0</maskorgy>	
+									</attr>
+									<children>
+										<obj id="userFace"  class="ImageObject">
+											<attr>
+												<left>5</left>
+												<top>5</top>
+												<width>40</width>
+												<height>40</height>
+												<drawmode>1</drawmode>
+												<inheritmask>1</inheritmask> 
+												<maskwidth>40</maskwidth>
+												<maskheight>40</maskheight>										
+												<image>pop.face</image>
+											</attr>
+										</obj>	
+									</children>
+								</obj>										
+								
+								<obj  id="pop.nova.beginner" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>36</top>
+										<width>240</width>
+										<height>35</height>
+										<text>李佳莼</text>
+										<valign>center</valign>
+										<halign>left</halign>
+										<textcolor>popwnd.black.color</textcolor>
+										<font>popwnd.14.font</font>
+									</attr>
+								</obj>	
+								<obj  id="pop.nova.time" class="TextObject">
+									<attr>
+										<left>190</left>
+										<top>36</top>
+										<width>230</width>
+										<height>35</height>
+										<text>2014-01-02 00:00</text>
+										<valign>center</valign>
+										<halign>left</halign>
+										<textcolor>popwnd.gray.color</textcolor>
+										<font>popwnd.12.font</font>
+									</attr>
+								</obj>	
+								<obj  id="pop.nova.entry" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>70</top>
+										<width>230</width>
+										<height>25</height>
+										<text>工单名称</text>
+										<valign>center</valign>
+										<wordellipsis>1</wordellipsis>
+										<halign>left</halign>
+										<textcolor>popwnd.darkgray.color</textcolor>
+										<font>popwnd.12.font</font>
+									</attr>
+								</obj>	
+								<obj  id="pop.nova.propname" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>87</top>
+										<width>230</width>
+										<height>35</height>
+										<text>流程名称:</text>
+										<wordellipsis>1</wordellipsis>
+										<valign>center</valign>
+										<halign>left</halign>
+										<textcolor>popwnd.darkgray.color</textcolor>
+										<font>popwnd.12.font</font>
+									</attr>
+								</obj>	
+								<obj  id="pop.nova.handler" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>107</top>
+										<width>240</width>
+										<height>35</height>
+										<text>上环节处理人:</text>
+										<wordellipsis>1</wordellipsis>
+										<valign>center</valign>
+										<halign>left</halign>
+										<textcolor>popwnd.darkgray.color</textcolor>
+										<font>popwnd.12.font</font>
+									</attr>
+								</obj>		
+								<obj  id="pop.nova.act" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>127</top>
+										<width>240</width>
+										<height>35</height>
+										<text>待办环节:</text>
+										<wordellipsis>1</wordellipsis>
+										<valign>center</valign>
+										<halign>left</halign>
+										<textcolor>popwnd.green.color</textcolor>
+										<font>popwnd.12.font</font>
+									</attr>
+								</obj>									
+								<!--obj  id="pop.txt.title" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>36</top>
+										<width>240</width>
+										<height>35</height>
+										<text>李佳莼</text>
+										<valign>center</valign>
+										<halign>left</halign>
+										<textcolor>popwnd.black.color</textcolor>
+										<font>popwnd.14.font</font>
+									</attr>
+								</obj>									
+								<obj  id="pop.txt.content" class="TextObject">
+									<attr>
+										<left>70</left>
+										<top>70</top>
+										<width>240</width>
+										<height>90</height>
+										<multiline>1</multiline>
+										<text>测试
+										测试
+										测试
+										测试
+										测试
+										测试
+										测试</text>
+										<valign>center</valign>
+										<textcolor>popwnd.black.color</textcolor>
+										<font>popwnd.12.font</font>
+									</attr>
+								</obj-->										
+								
+							</children>
+
+						</obj>
+						
+						<obj id="loginwnd.login.btn" class="Thunder.Button">
+							<attr>
+								<left>father.width - 110 </left>
+								<top>165</top>
+								<width>100</width>
+								<height>25</height>
+								<Text>点击查看>></Text>
+								<TextColor>popwnd.white.color</TextColor>
+								<TextFont>popwnd.14.font</TextFont>
+								<ShowFocusRect>false</ShowFocusRect>
+								<NormalBkgID>popwnd.button.normal</NormalBkgID>
+								<DownBkgID>popwnd.button.down</DownBkgID>
+								<DisableBkgID>popwnd.button.disable</DisableBkgID>
+								<HoverBkgID>popwnd.button.hover</HoverBkgID>																							
+							</attr>
+							<eventlist>
+								<event name="OnClick" file="PopWnd.xml.lua" func="OnOpen" />
+							</eventlist>
+						</obj>
+											
+				</children>
+				<eventlist>
+					<event name="OnLButtonUp" file="PopWnd.xml.lua" func="OnOpen"/>
+				</eventlist>
+			</obj>
+			</children>
+			<eventlist>
+				<event name = "OnInitControl" file="PopWnd.xml.lua" func="OnInitNovaPopWndInfo"/>
+			</eventlist>
+		</obj>	
+		 
+		 
+		<!--obj id="bkg" class="FillObject">
+			<attr>
+				<width>300</width>
+				<height>200</height>
+				<filltype>Monochrome</filltype>
+				<blendtype>Source</blendtype>
+				<srcpt>0,0</srcpt>
+				<destpt>0,height</destpt>
+				<srccolor>100,255,255,255</srccolor>
+			</attr>
+			<children>
+				   <obj id="userName" class="TextObject">
+					<attr>
+					<left>80</left>
+					<top>30</top>
+					<width>336</width>
+					<height>25</height>
+					<font>userlist.font</font>
+					<text>ffffffffffffffffff</text>
+					</attr>
+				</obj>	
+			</children>
+			
+
+		</obj-->
+		
+		 </children>
+	</objtemplate>
+
+	
+	<hostwndtemplate id = "XiaoP.Pop.Wnd" class = "TipsHostWnd">
+		<attr>
+			<layered>1</layered>
+			<left>200</left>
+			<top>0</top>
+			<width>312</width>
+			<height>212</height>
+			<topmost>1</topmost>
+
+			<visible>1</visible>
+
+			<fps>30</fps>
+
+	   </attr>
+		
+		<eventlist>
+			<event name="OnDestroy" file="PopWnd.xml.lua" func="OnDestroy"/>
+		</eventlist>
+	</hostwndtemplate>
+</xlue>	

@@ -1,0 +1,94 @@
+<xlue>
+
+<control class="XiaoP.Ctrl.BaseList">
+	<attr_def>
+		<attr name="Top" type="int"><default>0</default></attr>
+		<attr name="itemCtrl" type="string">
+			<default>XiaoP.DeptUserList.UserItem</default>	
+		</attr>
+		<attr name="bgColor" type="string">
+			<default>RGBA(255,255,255,255)</default>	
+		</attr>
+		<attr name="select" type="int" desc="只支持选中一个Item,itemId，0表示未选中,"/>
+	</attr_def>
+	<method_def>
+			<InsertItem  file="BaseList.xml.lua" func="InsertItem"/>
+			<SelectItem file="BaseList.xml.lua" func="SelectItem"/>
+			<CreateList  file="BaseList.xml.lua" func="CreateList"/>
+			<ClearList  file="BaseList.xml.lua" func="ClearList"/>
+			<SetListPos file="BaseList.xml.lua" func="SetListPos" />
+			<MouseWheel file="BaseList.xml.lua" func="MouseWheel" />
+			<UpdateScroll file="BaseList.xml.lua" func="UpdateScroll" />
+			<UpdateList file="BaseList.xml.lua" func="UpdateList" />		
+	</method_def>
+	<event_def>
+			<OnItemSelected>
+			<param>
+				<layoutobj/>
+			</param>
+			</OnItemSelected>
+			<OnItemDbClick>
+			<param>
+				<table/>
+			</param>
+			</OnItemDbClick>
+	</event_def>	
+	<objtemplate>
+		<children>
+			<obj id="bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height-1</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>255,255,255,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+				</children>
+				<eventlist>
+					<event name="OnMouseWheel" file="BaseList.xml.lua" func="OnMouseWheel" />
+				</eventlist>
+			</obj>
+			<obj id="scrollCtrl" class="Thunder.ScrollBar">
+			<attr>
+				<Type>1</Type>
+				<ThumbBtn_normal>texture.vsb.small.thumb.normal</ThumbBtn_normal>
+				<ThumbBtn_hover>texture.vsb.small.thumb.hover</ThumbBtn_hover>
+				<ThumbBtn_down>texture.vsb.small.thumb.down</ThumbBtn_down>
+				<LeftBtn_normal>texture.vsb.leftbtn.normal</LeftBtn_normal>
+				<LeftBtn_hover>texture.vsb.leftbtn.hover</LeftBtn_hover>
+				<LeftBtn_down>texture.vsb.leftbtn.down</LeftBtn_down>
+				<RightBtn_normal>texture.vsb.rightbtn.normal</RightBtn_normal>
+				<RightBtn_hover>texture.vsb.rightbtn.hover</RightBtn_hover>
+				<RightBtn_down>texture.vsb.rightbtn.down</RightBtn_down>
+				<SideBtnLength>0</SideBtnLength>
+				<ThumbBtnWidth>10</ThumbBtnWidth>
+				<PageSize>10</PageSize>
+				<RangeBegin>0</RangeBegin>
+				<RangeEnd>0</RangeEnd>
+				<ScrollPos>0</ScrollPos>
+				<left>father.width-11</left>
+				<top>0</top>
+				<width>10</width>
+				<height>father.height - 4</height>
+				<zorder>600</zorder>
+				<cursor>IDC_ARROW</cursor>
+			</attr>
+			<eventlist>
+				<event name="OnVScroll" file="BaseList.xml.lua" func="OnVScroll" />
+				<event name="OnScrollBarMouseWheel" file="BaseList.xml.lua" func="OnScrollBarMouseWheel" />
+			</eventlist>			
+			</obj>		
+		</children>
+		<eventlist>
+			<event name="OnBind" file="BaseList.xml.lua" func="OnBind" />
+			<event name="OnInitControl" file="BaseList.xml.lua" func="OnInitControl"/>
+			<event name="OnMouseWheel" file="BaseList.xml.lua" func="OnMouseWheel" />
+		</eventlist>
+	</objtemplate>	
+</control>
+
+</xlue>

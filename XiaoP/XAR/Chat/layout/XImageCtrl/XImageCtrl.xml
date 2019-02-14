@@ -1,0 +1,82 @@
+<xlue>
+	<control class="XImageCtrl">
+		<attr_def>
+			<attr name="id" type="string" >
+				<default></default>
+			</attr>
+			<attr name="pos" type="int" >
+				<default>0</default>
+			</attr>
+			<attr name="width" type="int" >
+				<default>0</default>
+			</attr>
+			<attr name="height" type="int">
+				<default>0</default>
+			</attr>
+			<attr name="type" type="string">
+				<default>jpg</default>
+			</attr>		
+			<attr name="from" type="string">
+				<default>file</default>
+			</attr>				
+		</attr_def>
+		<method_def>
+			<SetId file="XImageCtrl.xml.lua" func="SetId" />
+			<GetId file="XImageCtrl.xml.lua" func="GetId" />
+			<SetPos file="XImageCtrl.xml.lua" func="SetPos" />
+			<GetPos file="XImageCtrl.xml.lua" func="GetPos" />		
+			<SetWidth file="XImageCtrl.xml.lua" func="SetWidth" />
+			<GetWidth file="XImageCtrl.xml.lua" func="GetWidth" />	
+			<GetHeight file="XImageCtrl.xml.lua" func="GetHeight" />		
+			<SetHeight file="XImageCtrl.xml.lua" func="SetHeight" />
+
+			<GetType file="XImageCtrl.xml.lua" func="GetType" />		
+			<SetType file="XImageCtrl.xml.lua" func="SetType" />
+			
+			<GetFrom file="XImageCtrl.xml.lua" func="GetFrom" />		
+			<SetFrom file="XImageCtrl.xml.lua" func="SetFrom" />
+			
+			<SetXImage file="XImageCtrl.xml.lua" func="SetXImage" />
+			<GetXImage file="XImageCtrl.xml.lua" func="GetXImage" />			
+		</method_def>
+		<objtemplate>
+			<children>
+				<obj id = "layout" class="LayoutObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>					
+				</attr>
+				<children>
+					
+				</children>
+				</obj>
+				<!--obj id="image" class="ImageObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<drawmode>1</drawmode>
+				</attr>
+				</obj-->
+				
+				<!--obj id="gif" class="SeqImageObject">
+				<attr>
+					<left>0</left>
+					<top>0</top>
+					<width>father.width</width>
+					<height>father.height</height>
+					<loop>1</loop>
+				</attr>
+				</obj-->
+				
+			</children>
+			<eventlist>
+				<event name="OnInitControl" file="XImageCtrl.xml.lua" func="OnInitControl" />
+				<event name="OnLButtonDbClick" file="XImageCtrl.xml.lua" func="OnLButtonDbClick" />
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>

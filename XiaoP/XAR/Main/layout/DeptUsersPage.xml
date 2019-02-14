@@ -1,0 +1,43 @@
+<xlue>
+	<control class="XiaoP.TabPage.DeptUsersPage">
+		<objtemplate>
+			<children>
+			<obj id="page.bkg" class="FillObject">
+				<attr>
+					<width>father.width</width>
+					<height>father.height</height>
+					<filltype>Monochrome</filltype>
+					<blendtype>Source</blendtype>
+					<srcpt>0,0</srcpt>
+					<destpt>0,height</destpt>
+					<srccolor>222,235,209,255</srccolor>
+					<limitchild>1</limitchild>
+				</attr>
+				<children>
+				<obj id="contactList" class="XiaoP.DeptUserList">
+					<attr>
+						<left>0</left>
+						<top>0</top>
+						<width>father.width</width>
+						<height>father.height-1</height>
+					</attr>	
+					<eventlist>
+						<event name="OnUserItemDbClick" file="MainWnd.xml.lua" func="OnUserItemDbClick"/>
+						<event name="OnUserItemDelete" file="MainWnd.xml.lua" func="OnUserItemDelete"/>
+					</eventlist>	
+				</obj>	
+				</children>
+			</obj>	
+			</children>
+			<eventlist>
+				<event name="OnBind">
+					local arg = {...}
+					local self = arg[1]
+					self:SetObjPos(0,0,"father.width","father.height")
+				</event>
+				<!--event name="OnInitControl" file="MainWnd.xml.lua" func="OnInitDeptUsers"/-->			
+			</eventlist>
+		</objtemplate>
+	</control>
+</xlue>
+

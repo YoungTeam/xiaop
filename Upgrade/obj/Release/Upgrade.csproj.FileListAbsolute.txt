@@ -1,0 +1,31 @@
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\Upgrade.exe
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\Upgrade.pdb
+D:\workspace\C#\20130514 - 副本\Upgrade\bin\Release\Upgrade.exe
+D:\workspace\C#\20130514 - 副本\Upgrade\bin\Release\Upgrade.pdb
+D:\workspace\C#\20130514 - 副本\Upgrade\bin\Release\PSkin.dll
+D:\workspace\C#\20130514 - 副本\Upgrade\bin\Release\PSkin.pdb
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\Upgrade.Properties.Resources.resources
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\Upgrade.UpdateForm.resources
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\Upgrade.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514\Upgrade\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514\Upgrade\obj\Release\Upgrade.Properties.Resources.resources
+D:\workspace\C#\20130514\Upgrade\obj\Release\Upgrade.UpdateForm.resources
+D:\workspace\C#\20130514\Upgrade\obj\Release\Upgrade.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514\Upgrade\obj\Release\Upgrade.exe
+D:\workspace\C#\20130514\Upgrade\bin\Release\Upgrade.exe
+D:\workspace\C#\20130514\Upgrade\bin\Release\Upgrade.pdb
+D:\workspace\C#\20130514\Upgrade\bin\Release\PSkin.dll
+D:\workspace\C#\20130514\Upgrade\bin\Release\PSkin.pdb
+D:\workspace\C#\20130514\Upgrade\obj\Release\Upgrade.pdb
+D:\workspace\C#\20130514\Upgrade\obj\Release\Upgrade.MainForm.resources
+D:\workspace\C#\20130514 - 副本\Upgrade\obj\Release\Upgrade.MainForm.resources
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\Upgrade.exe
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\Upgrade.pdb
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\Upgrade.MainForm.resources
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\Upgrade.Properties.Resources.resources
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\workspace\C#\XiaoP\Upgrade\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\workspace\C#\XiaoP\Upgrade\bin\Release\Upgrade.exe
+D:\workspace\C#\XiaoP\Upgrade\bin\Release\Upgrade.pdb

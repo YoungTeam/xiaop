@@ -1,0 +1,9 @@
+<xlue name = "Popup" author="YoungTeam" copyright="(C) yt-OP.INFO Corporation.">
+	<nametablecfg path="./nametable.cfg" type="xml"/>
+	<mainres package="default"/>
+	<loadscript path="./onload.lua" type="lua"/>
+	<include>
+		<package name="Util" />
+	</include>
+</xlue>
+

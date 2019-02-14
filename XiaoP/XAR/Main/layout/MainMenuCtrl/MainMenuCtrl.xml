@@ -1,0 +1,118 @@
+<xlue>
+<objtemplate id="XiaoP.MainMenu.Context" class="MenuObject" templateid="menu.object.template">
+<attr>
+</attr>
+<children>
+	<obj id="mainmenu.feedback" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.feedback.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight>
+			<height>25</height>
+			<Text>问题反馈</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="MainMenuCtrl.xml.lua" func="OnFeedBackSelect"/>	
+		</eventlist>
+	</obj>
+	<!--obj id="thunder.edit.line.1" class="MenuItemObject" templateid="menu.main.splitter">
+		<attr>
+			<Icon>menu.line.1</Icon>
+		</attr>
+	</obj-->
+	<obj id="mainmenu.about" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.xiaopabout.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight>
+			<height>25</height>
+			<Text>关于小P</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="MainMenuCtrl.xml.lua" func="OnAboutSelect"/>	
+		</eventlist>
+	</obj>
+	<obj id="mainmenu.upgrade" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.upgrade.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight>
+			<height>25</height>		
+			<Text>软件升级</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="MainMenuCtrl.xml.lua" func="OnUpgradeSelect"/>	
+		</eventlist>
+	</obj>	
+	<obj id="mainmenu.settings" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.settings.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight>
+			<height>25</height>
+			<Text>设置</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="MainMenuCtrl.xml.lua" func="OnSettingsSelect"/>	
+		</eventlist>
+	</obj>		
+	<obj id="mainmenu.logout" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.logout.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight>
+			<height>25</height>
+			<Text>切换账号</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="MainMenuCtrl.xml.lua" func="OnLogoutSelect"/>	
+		</eventlist>
+	</obj>
+	<obj id="mainmenu.exit" class="MenuItemObject" templateid="menu.main.item">
+		<attr>
+			<Icon>menu.exit.icon</Icon>
+			<IconWidth>18</IconWidth>
+			<IconHeight>18</IconHeight>
+			<height>25</height>
+			<Text>退出</Text>
+		</attr>
+		<eventlist>
+			<event name="OnSelect" file="MainMenuCtrl.xml.lua" func="OnExitSelect"/>	
+		</eventlist>
+	</obj>		
+	
+</children>
+</objtemplate>
+	
+<objtreetemplate id="XiaoP.MainWnd.MainMenu">
+<attr>
+	<left>-1000</left>
+	<top>-1000</top>
+	<width>2000</width>
+	<height>2000</height>
+</attr>
+<obj id="XiaoP.ManiMenu" class="NormalMenu">
+	<attr>
+		<ContextID>XiaoP.MainMenu.Context</ContextID>
+		<BknID>texture.wndborder.bkg</BknID>
+		<ShadingID>mainmenu.light</ShadingID>
+		<SrcColorID>menu.color.src</SrcColorID>
+		<DestColorID>menu.color.dest</DestColorID>
+		<DefaultItemTemplate>menu.main.itemex</DefaultItemTemplate>
+		<DefaultSpliterTemplate>menu.main.splitter</DefaultSpliterTemplate>
+	</attr>
+</obj>
+</objtreetemplate>	
+
+<hostwndtemplate id="XiaoP.MainMenu.Wnd" class="MenuHostWnd">
+
+	<attr>
+	</attr>
+	<eventlist>
+		<!--event name="OnPopupMenu" file="MainMenuCtl.xml.lua" func="OnPopupMenu" /-->
+	</eventlist>
+</hostwndtemplate>
+	
+</xlue>
+
+

@@ -1,0 +1,229 @@
+<xlue>
+
+<objtreetemplate  id="MessageBox" class="ObjectTreeTemplate">
+	<attr>
+	   <left>-200</left>
+	   <top>-200</top>
+	   <width>2000</width>
+	   <height>2000</height>
+	</attr>
+
+	<obj id="bkg_border" class="TextureObject">
+	<attr>
+		<left>0</left>
+		<top>0</top>
+		<width>262</width>
+		<height>162</height>
+		<texture>texture.wndborder.bkg</texture>
+		<limitchild>1</limitchild> 					
+	</attr>
+	<children>
+		<obj id="bkg" class="TextureObject">
+		<attr>
+			<left>6</left>
+			<top>6</top>
+			<width>250</width>
+			<height>150</height>
+			<texture>texture.msgwnd.bkg</texture>
+			<limitchild>1</limitchild> 					
+		</attr>		
+		<children>
+		<obj id="box.icon" class="ImageObject">
+		<attr>
+				<left>8</left>
+				<top>7</top>
+				<width>17</width>
+				<height>16</height>
+				<image>xiaop</image>
+		</attr>		
+		</obj>		
+		<obj id="box.title" class="TextObject">
+		<attr>
+				<left>36</left>
+				<top>5</top>
+				<width>250</width>
+				<height>20</height>
+				<text>关于小P</text>
+				<font>msgboxwnd.13.font</font>
+				<valign>center</valign>
+				<textcolor>msgboxwnd.white.color</textcolor>
+		</attr>
+		</obj>		
+
+		<obj id="box.content" class="TextObject">
+		<attr>
+				<left>0</left>
+				<top>30</top>
+				<width>250</width>
+				<height>140</height>
+				<text>fsdfsdfsdfsdf</text>
+				<font>msgboxwnd.12.font</font>
+				<halign>center</halign>
+				<valign>center</valign>
+				<multiline>1</multiline>
+				<textcolor>msgboxwnd.black.color</textcolor>
+		</attr>
+		</obj>			
+		
+		<obj id="ok.btn" class="Thunder.Button">
+			<attr>
+				<left>father.width - 110 </left>
+				<top>100</top>
+				<width>100</width>
+				<height>24</height>
+				<Text>确定</Text>
+				<TextColor>msgboxwnd.white.color</TextColor>
+				<TextFont>msgboxwnd.14.font</TextFont>
+				<ShowFocusRect>false</ShowFocusRect>
+				<NormalBkgID>wnd.msg.button.normal</NormalBkgID>
+				<DownBkgID>wnd.msg.button.down</DownBkgID>
+				<DisableBkgID>wnd.msg.button.disable</DisableBkgID>
+				<HoverBkgID>wnd.msg.button.hover</HoverBkgID>																							
+			</attr>
+			<eventlist>
+				<event name="OnClick" file="MsgBox.xml.lua" func="OnOK" />
+			</eventlist>
+		</obj>				
+		</children>
+		</obj>	
+	</children>	
+	</obj> 
+<eventlist>
+	<event name="OnBindHostWnd" file="MsgBox.xml.lua" func="OnBindMessageWnd"/>
+</eventlist>
+</objtreetemplate>  
+
+<objtreetemplate  id="ConfirmBox" class="ObjectTreeTemplate">
+	<attr>
+	   <left>-200</left>
+	   <top>-200</top>
+	   <width>2000</width>
+	   <height>2000</height>
+	</attr>
+
+	<obj id="bkg_border" class="TextureObject">
+	<attr>
+		<left>0</left>
+		<top>0</top>
+		<width>262</width>
+		<height>162</height>
+		<texture>texture.wndborder.bkg</texture>
+		<limitchild>1</limitchild> 					
+	</attr>
+	<children>
+		<obj id="bkg" class="TextureObject">
+		<attr>
+			<left>6</left>
+			<top>6</top>
+			<width>250</width>
+			<height>150</height>
+			<texture>texture.msgwnd.bkg</texture>
+			<limitchild>1</limitchild> 					
+		</attr>		
+		<children>
+	
+		<obj id="box.title" class="TextObject">
+		<attr>
+				<left>36</left>
+				<top>6</top>
+				<width>250</width>
+				<height>20</height>
+				<text>关于小P</text>
+				<font>msgboxwnd.13.font</font>
+				<valign>center</valign>
+				<textcolor>msgboxwnd.white.color</textcolor>
+		</attr>
+		</obj>		
+
+		<obj id="box.content" class="TextObject">
+		<attr>
+				<left>0</left>
+				<top>10</top>
+				<width>250</width>
+				<height>140</height>
+				<text>fsdfsdfsdfsdf</text>
+				<font>msgboxwnd.12.font</font>
+				<halign>center</halign>
+				<valign>center</valign>
+				<multiline>1</multiline>
+				<textcolor>msgboxwnd.black.color</textcolor>
+		</attr>
+		</obj>			
+		
+		<obj id="yes.btn" class="Thunder.Button">
+			<attr>
+				<left>45</left>
+				<top>father.height-40</top>
+				<width>70</width>
+				<height>24</height>
+				<Text>是</Text>
+				<TextColor>msgboxwnd.white.color</TextColor>
+				<TextFont>msgboxwnd.14.font</TextFont>
+				<ShowFocusRect>false</ShowFocusRect>
+				<NormalBkgID>wnd.msg.button.normal</NormalBkgID>
+				<DownBkgID>wnd.msg.button.down</DownBkgID>
+				<DisableBkgID>wnd.msg.button.disable</DisableBkgID>
+				<HoverBkgID>wnd.msg.button.hover</HoverBkgID>																							
+			</attr>
+			<eventlist>
+				<event name="OnClick" file="MsgBox.xml.lua" func="OnYes" />
+			</eventlist>
+		</obj>
+
+		<obj id="no.btn" class="Thunder.Button">
+			<attr>
+				<left>father.width - 125 </left>
+				<top>father.height-40</top>
+				<width>70</width>
+				<height>24</height>
+				<Text>否</Text>
+				<TextColor>msgboxwnd.white.color</TextColor>
+				<TextFont>msgboxwnd.14.font</TextFont>
+				<ShowFocusRect>false</ShowFocusRect>
+				<NormalBkgID>wnd.msg.button.normal</NormalBkgID>
+				<DownBkgID>wnd.msg.button.down</DownBkgID>
+				<DisableBkgID>wnd.msg.button.disable</DisableBkgID>
+				<HoverBkgID>wnd.msg.button.hover</HoverBkgID>																							
+			</attr>
+			<eventlist>
+				<event name="OnClick" file="MsgBox.xml.lua" func="OnNo" />
+			</eventlist>
+		</obj>				
+
+		
+		</children>
+		</obj>	
+		
+		
+	</children>
+	</obj>	
+<eventlist>
+	<event name="OnBindHostWnd" file="MsgBox.xml.lua" func="OnBindConfirmWnd"/>
+</eventlist>
+</objtreetemplate>  
+
+<hostwndtemplate id="MessageWnd" class="ModalHostWnd" >
+<attr>
+   <title></title>
+   <layered>1</layered>   
+   <left>0</left>
+   <top>0</top>
+   <width>262</width>
+   <height>162</height>
+   <visible>1</visible>
+   <enable>1</enable>
+   <minwidth>262</minwidth>
+   <minheight>162</minheight>
+   <fps>30</fps>
+   <appwindow>0</appwindow>
+</attr>
+<eventlist>
+		<event name="OnCreate">
+			local arg = {...}
+			local self = arg[1]
+			self:Center()
+		</event>
+</eventlist>
+</hostwndtemplate>
+</xlue>
+

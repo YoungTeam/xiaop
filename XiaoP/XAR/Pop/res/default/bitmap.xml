@@ -1,0 +1,6 @@
+<XLUE>
+<resource>
+	<bitmap id="pop.face"  path="bitmap\face.png"/>
+	<bitmap id="pop.face.mask"  path="bitmap\face_mask.png"/>
+</resource>
+</XLUE>	

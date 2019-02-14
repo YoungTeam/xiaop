@@ -1,0 +1,30 @@
+<XLUE>
+<resource>
+	<bitmap id="xiaop"  path="bitmap\xiaop.png"/>
+	<bitmap id="xiaop.face"  path="bitmap\face.png"/>
+	<imagelist id="imagelist.tab.detp.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.detp.icon.png"/>
+	<imagelist id="imagelist.tab.group.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.group.icon.png"/>
+	<imagelist id="imagelist.tab.recent.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.recent.icon.png"/>
+	<imagelist id="imagelist.tab.recent.icon" vertical="0" splitter="1" varyblock="1" image="bitmap\tab.recent.icon.png"/>
+	<imagelist id="imagelist.wndsys.close.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.close.btn.png"/>
+	<imagelist id="imagelist.wndsys.min.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\wndsys.min.btn.png"/>
+	
+	<bitmap id="tab.detp.icon.normal"  imagelist = "imagelist.tab.detp.icon" index = "1" />
+	<bitmap id="tab.detp.icon.hover"  imagelist = "imagelist.tab.detp.icon" index = "2" />
+	<bitmap id="tab.detp.icon.down"  imagelist = "imagelist.tab.detp.icon" index = "3" />
+	<bitmap id="tab.group.icon.normal"  imagelist = "imagelist.tab.group.icon" index = "1" />
+	<bitmap id="tab.group.icon.hover"  imagelist = "imagelist.tab.group.icon" index = "2" />
+	<bitmap id="tab.group.icon.down"  imagelist = "imagelist.tab.group.icon" index = "3" />
+	<bitmap id="tab.recent.icon.normal"  imagelist = "imagelist.tab.recent.icon" index = "1" />
+	<bitmap id="tab.recent.icon.hover"  imagelist = "imagelist.tab.recent.icon" index = "2" />
+	<bitmap id="tab.recent.icon.down"  imagelist = "imagelist.tab.recent.icon" index = "3" />	
+	
+	<bitmap id="wndsys.min.icon.normal"  imagelist = "imagelist.wndsys.min.btn" index = "1" />
+	<bitmap id="wndsys.min.icon.hover"  imagelist = "imagelist.wndsys.min.btn" index = "2" />
+	<bitmap id="wndsys.min.icon.down"  imagelist = "imagelist.wndsys.min.btn" index = "3" />	
+
+	<bitmap id="wndsys.close.icon.normal"  imagelist = "imagelist.wndsys.close.btn" index = "1" />
+	<bitmap id="wndsys.close.icon.hover"  imagelist = "imagelist.wndsys.close.btn" index = "2" />
+	<bitmap id="wndsys.close.icon.down"  imagelist = "imagelist.wndsys.close.btn" index = "3" />	
+</resource>
+</XLUE>	

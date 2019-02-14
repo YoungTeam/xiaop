@@ -1,0 +1,27 @@
+<XLUE>
+<resource>
+	<bitmap id="xiaop"  path="bitmap\xiaop.png"/>
+	<bitmap id="xiaop.face"  path="bitmap\face.png"/>
+	
+	<bitmap id="menu.feedback.icon"  path="bitmap\menu_feedback.png"/>
+	<bitmap id="menu.xiaopabout.icon"  path="bitmap\menu_about.png"/>
+	<bitmap id="menu.upgrade.icon"  path="bitmap\menu_upgrade.png"/>
+	<bitmap id="menu.settings.icon"  path="bitmap\menu_settings.png"/>
+	<bitmap id="menu.logout.icon"  path="bitmap\menu_logout.png"/>
+	<bitmap id="menu.exit.icon"  path="bitmap\menu_exit.png"/>
+	
+	<bitmap id="contact.empty.icon"  path="bitmap\contact_empty.png"/>
+	
+	
+	<bitmap id="mainwnd.sugg.icon"  path="bitmap\mainwnd.sugg.icon.png"/>
+	
+	<bitmap id="mainwnd.sugg.user.mobile.icon"  path="bitmap\sugg.user.mobile.png"/>
+	<bitmap id="mainwnd.sugg.user.phone.icon"  path="bitmap\sugg.user.phone.png"/>
+	
+	<bitmap id="face.mask"  path="bitmap\face_mask.png"/>
+	<bitmap id="userlist.face.mask"  path="bitmap\usrlist_face_mask.png"/>
+	<bitmap id="sugg.face.mask"  path="bitmap\sugg_face_mask.png"/>
+	<bitmap id="mail.icon"  path="bitmap\mail_icon.png"/>
+	<bitmap id="dept.icon"  path="bitmap\dept_icon.png"/>
+</resource>
+</XLUE>	

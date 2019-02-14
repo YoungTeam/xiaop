@@ -1,0 +1,50 @@
+D:\workspace\C#\20130514\CaptureTool\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514\CaptureTool\obj\Release\CaptureTool.ColorBox.resources
+D:\workspace\C#\20130514\CaptureTool\obj\Release\CaptureTool.FrmCapture.resources
+D:\workspace\C#\20130514\CaptureTool\obj\Release\CaptureTool.Properties.Resources.resources
+D:\workspace\C#\20130514\CaptureTool\obj\Release\CaptureTool.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514\CaptureTool\obj\Release\CaptureTool.pdb
+D:\workspace\C#\20130514\CaptureTool\bin\Release\CaptureTool.dll
+D:\workspace\C#\20130514\CaptureTool\bin\Release\CaptureTool.pdb
+D:\workspace\C#\20130514\CaptureTool\obj\Release\CaptureTool.dll
+D:\workspace\C#\20130514 - 副本\CaptureTool\bin\Release\CaptureTool.dll
+D:\workspace\C#\20130514 - 副本\CaptureTool\bin\Release\CaptureTool.pdb
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\CaptureTool.ColorBox.resources
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\CaptureTool.FrmCapture.resources
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\CaptureTool.Properties.Resources.resources
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\CaptureTool.csproj.GenerateResource.Cache
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\CaptureTool.dll
+D:\workspace\C#\20130514 - 副本\CaptureTool\obj\Release\CaptureTool.pdb
+D:\workspace\C#\XiaoP-new\CaptureTool\bin\Release\CaptureTool.dll
+D:\workspace\C#\XiaoP-new\CaptureTool\bin\Release\CaptureTool.pdb
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\CaptureTool.ColorBox.resources
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\CaptureTool.FrmCapture.resources
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\CaptureTool.Properties.Resources.resources
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\ResGen.read.1.tlog
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\ResGen.write.1.tlog
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\CaptureTool.dll
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\CaptureTool.pdb
+D:\workspace\C#\XiaoP-new\CaptureTool\bin\Release\XiaoP.UI.Core.dll
+D:\workspace\C#\XiaoP-new\CaptureTool\bin\Release\XiaoP.UI.Core.pdb
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\GenerateResource.read.1.tlog
+D:\workspace\C#\XiaoP-new\CaptureTool\obj\Release\GenerateResource.write.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\bin\Release\CaptureTool.dll
+D:\workspace\C#\XiaoP\CaptureTool\bin\Release\CaptureTool.pdb
+D:\workspace\C#\XiaoP\CaptureTool\bin\Release\XiaoP.UI.Core.dll
+D:\workspace\C#\XiaoP\CaptureTool\bin\Release\XiaoP.UI.Core.pdb
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\ResolveAssemblyReference.cache
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\CaptureTool.ColorBox.resources
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\CaptureTool.FrmCapture.resources
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\CaptureTool.Properties.Resources.resources
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\GenerateResource.read.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\ResGen.read.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\GenerateResource.write.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\ResGen.write.1.tlog
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\CaptureTool.dll
+D:\workspace\C#\XiaoP\CaptureTool\obj\Release\CaptureTool.pdb

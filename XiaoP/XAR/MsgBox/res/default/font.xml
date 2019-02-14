@@ -1,0 +1,8 @@
+<XLUE>
+<resource>
+  <font id="msgboxwnd.16.font" height="16" facename="微软雅黑" />
+  <font id="msgboxwnd.12.font" height="12" facename="微软雅黑" />
+  <font id="msgboxwnd.13.font" height="13" weight="bold" facename="微软雅黑" />
+  <font id="msgboxwnd.14.font" height="14" facename="微软雅黑" />
+</resource>
+</XLUE>

@@ -1,0 +1,10 @@
+<xlue>
+	<resource>
+	<imagelist id="imagelist.idcard.addcontact.btn" vertical="0" splitter="1" varyblock="1" image="bitmap\idcard.addcontact.btn.png"/>
+	
+	<bitmap id="idcard.addcontact.icon.normal"  imagelist = "imagelist.idcard.addcontact.btn" index = "1" />
+	<bitmap id="idcard.addcontact.icon.hover"  imagelist = "imagelist.idcard.addcontact.btn" index = "2" />
+	<bitmap id="idcard.addcontact.icon.down"  imagelist = "imagelist.idcard.addcontact.btn" index = "3" />
+	
+	</resource>
+</xlue>
